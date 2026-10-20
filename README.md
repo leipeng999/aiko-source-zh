@@ -10,6 +10,10 @@
 - WuXu's Library：`https://raw.githubusercontent.com/leipeng999/aiko-source-zh/main/wuxu_zh.json`
 - Kevin's Legit GitHub Sideload：`https://raw.githubusercontent.com/leipeng999/aiko-source-zh/main/kevin_zh.json`
 
+## Alan 中文源
+
+- Alan's Gigantic Repo（轻量版）：`https://raw.githubusercontent.com/leipeng999/aiko-source-zh/main/alan_zh.json`
+
 ## 上游源
 
 - Aiko: https://Aiko3993.github.io/iOS-Sideload-Source/sources/standard/coexist/source.json
