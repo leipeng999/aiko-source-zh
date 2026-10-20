@@ -7,7 +7,7 @@
   "tintColor": "#3B82F6",
   "apps": [
     {
-      "name": "Aidoku",
+      "name": "Aidoku（漫画阅读器）",
       "bundleIdentifier": "app.aidoku.Aidoku",
       "developerName": "Skitty",
       "subtitle": "适用于 iOS 和 iPadOS 的免费开源漫画阅读器",
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "name": "AirCard-iOS",
+      "name": "AirCard-iOS（卡片管理工具）",
       "bundleIdentifier": "com.mak5er.aircard",
       "developerName": "Mak5er",
       "subtitle": "Apple Wallet 卡片皮肤、密码主题和壁纸",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "name": "AniBaka",
+      "name": "AniBaka（动漫应用）",
       "bundleIdentifier": "ani.baka",
       "developerName": "AniBakaBaka",
       "subtitle": "跨平台番剧聚合、媒体播放与弹幕客户端",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "name": "AnimeFlow",
+      "name": "AnimeFlow（动漫应用）",
       "bundleIdentifier": "com.ligg.anime_flow",
       "developerName": "openAnimeFlow",
       "subtitle": "跨平台动漫视频播放器，支持多数据源、实时 4K 超分辨率与弹幕",
@@ -104,7 +104,7 @@
       ]
     },
     {
-      "name": "Animeko",
+      "name": "Animeko（动漫应用）",
       "bundleIdentifier": "org.animeko.animeko",
       "developerName": "open-ani",
       "subtitle": "一站式弹幕追番平台",
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "name": "Apollo for Reddit - GLASS",
+      "name": "Apollo for Reddit - GLASS（Reddit 客户端）",
       "bundleIdentifier": "com.christianselig.Apollo",
       "developerName": "Christian Selig (& Apollo-Reborn contributors)",
       "subtitle": "添加 Liquid Glass 补丁的 Apollo-Reborn 构建版",
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "name": "ARMSX2",
+      "name": "ARMSX2（PS2 模拟器）",
       "bundleIdentifier": "com.armsx2.ios",
       "developerName": "ARMSX2",
       "subtitle": "适用于 ARM64 的 PlayStation 2 模拟器",
@@ -177,7 +177,7 @@
       ]
     },
     {
-      "name": "Doer",
+      "name": "Doer（任务管理工具）",
       "bundleIdentifier": "com.naine.doer",
       "developerName": "moliango",
       "subtitle": "Linux.do 原生 iOS 客户端",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "DolphiniOS",
+      "name": "DolphiniOS（GameCube 与 Wii 模拟器）",
       "bundleIdentifier": "me.oatmealdome.DolphiniOS-njb-patreon-beta",
       "developerName": "OatmealDome",
       "subtitle": "适用于 iOS/iPadOS 的 GameCube 和 Wii 模拟器",
@@ -225,7 +225,7 @@
       ]
     },
     {
-      "name": "DukeX",
+      "name": "DukeX（游戏模拟器）",
       "bundleIdentifier": "com.mafty.dukex",
       "developerName": "Manic EMU Development Team",
       "subtitle": "iOS 上的原版 Xbox 模拟器",
@@ -249,7 +249,7 @@
       ]
     },
     {
-      "name": "EhPanda",
+      "name": "EhPanda（漫画阅读器）",
       "bundleIdentifier": "app.ehpanda",
       "developerName": "EhPanda-Team",
       "subtitle": "使用 SwiftUI 和 TCA 构建的非官方 iOS E-Hentai 应用",
@@ -273,7 +273,7 @@
       ]
     },
     {
-      "name": "Fathom",
+      "name": "Fathom（音频播放器）",
       "bundleIdentifier": "app.fathom.emulator",
       "developerName": "Leviidev",
       "subtitle": "iOS x86-64 PC 模拟器",
@@ -296,7 +296,7 @@
       ]
     },
     {
-      "name": "Husk",
+      "name": "Husk（应用工具）",
       "bundleIdentifier": "com.husk.app",
       "developerName": "Leviidev",
       "subtitle": "适用于 iOS 的 Android 应用启动器",
@@ -319,7 +319,7 @@
       ]
     },
     {
-      "name": "Iridium",
+      "name": "Iridium（浏览器）",
       "bundleIdentifier": "software.iridium",
       "developerName": "intraducine",
       "subtitle": "适用于 iPhone 和 iPad 的实验性 Windows 游戏运行环境",
@@ -342,7 +342,7 @@
       ]
     },
     {
-      "name": "iTorrent",
+      "name": "iTorrent（BT 下载工具）",
       "bundleIdentifier": "com.xitrix.iTorrent2",
       "developerName": "XITRIX",
       "subtitle": "适用于 iOS 的 Torrent 客户端",
@@ -366,7 +366,7 @@
       ]
     },
     {
-      "name": "Kazumi",
+      "name": "Kazumi（动漫播放器）",
       "bundleIdentifier": "com.example.kazumi",
       "developerName": "Predidit",
       "subtitle": "基于自定义规则的番剧采集 App，支持在线观看流媒体、弹幕和实时超分辨率。",
@@ -393,7 +393,7 @@
       ]
     },
     {
-      "name": "KMusic",
+      "name": "KMusic（音乐播放器）",
       "bundleIdentifier": "com.macxk.KMusic",
       "developerName": "Mac-XK",
       "subtitle": "基于 SwiftUI 的多源音乐聚合播放器",
@@ -417,7 +417,7 @@
       ]
     },
     {
-      "name": "Kumone",
+      "name": "Kumone（漫画阅读器）",
       "bundleIdentifier": "sb.moe.kumone",
       "developerName": "missuo",
       "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）",
@@ -441,7 +441,7 @@
       ]
     },
     {
-      "name": "LiveContainer+SideStore",
+      "name": "LiveContainer+SideStore（应用侧载工具）",
       "bundleIdentifier": "com.kdt.livecontainer",
       "developerName": "LiveContainer Team",
       "subtitle": "无需实际安装即可运行 iOS 应用！",
@@ -473,7 +473,7 @@
       ]
     },
     {
-      "name": "Madeira",
+      "name": "Madeira（应用工具）",
       "bundleIdentifier": "com.willfaust.madeora",
       "developerName": "Will Faust",
       "subtitle": "在 iPhone 上畅玩 Windows PC 游戏",
@@ -497,7 +497,7 @@
       ]
     },
     {
-      "name": "Mangayomi",
+      "name": "Mangayomi（漫画阅读器）",
       "bundleIdentifier": "com.kodjodevf.mangayomi",
       "developerName": "Moustapha Kodjo Amadou",
       "subtitle": "阅读漫画、小说，观看动漫",
@@ -520,7 +520,7 @@
       ]
     },
     {
-      "name": "ManicEMU",
+      "name": "ManicEMU（游戏模拟器）",
       "bundleIdentifier": "com.aoshuang.manicemu",
       "developerName": "Manic EMU Development Team",
       "subtitle": "适用于 iOS 的全能复古游戏模拟器",
@@ -544,7 +544,7 @@
       ]
     },
     {
-      "name": "MiniWatts",
+      "name": "MiniWatts（电量监测工具）",
       "bundleIdentifier": "org.zhaohe.MiniWatts",
       "developerName": "ResistanceTo",
       "subtitle": "电池、充电与温度监测仪",
@@ -569,7 +569,7 @@
       ]
     },
     {
-      "name": "MoviePilotLite",
+      "name": "MoviePilotLite（影视管理工具）",
       "bundleIdentifier": "com.altman.moviepilot",
       "developerName": "singleton-altman",
       "subtitle": "MoviePilot 移动端，基于 Flutter 实现",
@@ -593,7 +593,7 @@
       ]
     },
     {
-      "name": "Musly",
+      "name": "Musly（音乐播放器）",
       "bundleIdentifier": "com.dddevid.musly",
       "developerName": "dddevid",
       "subtitle": "免费的 Navidrome 客户端和 Subsonic 音乐播放器",
@@ -617,7 +617,7 @@
       ]
     },
     {
-      "name": "NeoStation iOS",
+      "name": "NeoStation iOS（游戏模拟器）",
       "bundleIdentifier": "com.neogamelab.neostation",
       "developerName": "TarbleFR",
       "subtitle": "适用于 iPhone 和 iPad 的模拟器前端",
@@ -641,7 +641,7 @@
       ]
     },
     {
-      "name": "Novella",
+      "name": "Novella（小说阅读器）",
       "bundleIdentifier": "sh.celia.novella",
       "developerName": "CELIA",
       "subtitle": "轻书架第三方客户端",
@@ -665,7 +665,7 @@
       ]
     },
     {
-      "name": "Opaline",
+      "name": "Opaline（应用工具）",
       "bundleIdentifier": "com.verback.YTLite",
       "developerName": "verback2308",
       "subtitle": "适用于 iOS 12 及更高版本的 YouTube 客户端",
@@ -689,7 +689,7 @@
       ]
     },
     {
-      "name": "Orchard",
+      "name": "Orchard（应用工具）",
       "bundleIdentifier": "com.makr.orchard",
       "developerName": "MakrSas",
       "subtitle": "在 iPhone 应用中运行 Apple Silicon 版 macOS Ventura",
@@ -711,7 +711,7 @@
       ]
     },
     {
-      "name": "PiliPlus",
+      "name": "PiliPlus（哔哩哔哩第三方客户端）",
       "bundleIdentifier": "com.example.piliplus",
       "developerName": "bggRGjQaUbCoE",
       "subtitle": "使用 Flutter 开发的 BiliBili 第三方客户端",
@@ -736,7 +736,7 @@
       ]
     },
     {
-      "name": "Pixiv-SwiftUI",
+      "name": "Pixiv-SwiftUI（Pixiv 第三方客户端）",
       "bundleIdentifier": "org.eu.eslzzyl.Pixiv-SwiftUI",
       "developerName": "Eslzzyl",
       "subtitle": "基于 SwiftUI 的 Pixiv 第三方客户端",
@@ -760,7 +760,7 @@
       ]
     },
     {
-      "name": "Playport",
+      "name": "Playport（游戏管理工具）",
       "bundleIdentifier": "dev.playport.app",
       "developerName": "playportdev",
       "subtitle": "在 iPhone 上玩 PC 游戏。本机运行，无需串流。",
@@ -784,7 +784,7 @@
       ]
     },
     {
-      "name": "PSX3IOS",
+      "name": "PSX3IOS（游戏模拟器）",
       "bundleIdentifier": "com.miguel.psx3ios",
       "developerName": "xmiguel911x",
       "subtitle": "适用于 iPhone 和 iPad 的 PlayStation 3 模拟器",
@@ -808,7 +808,7 @@
       ]
     },
     {
-      "name": "PureLive",
+      "name": "PureLive（直播应用）",
       "bundleIdentifier": "com.mystyle.purelive.liu",
       "developerName": "liuchuancong",
       "subtitle": "基于 Flutter 的开源多平台直播聚合播放器",
@@ -832,7 +832,7 @@
       ]
     },
     {
-      "name": "Roam Control",
+      "name": "Roam Control（漫游控制工具）",
       "bundleIdentifier": "com.sean.roamcontrol",
       "developerName": "seanhowarthdev",
       "subtitle": "选择、测试并移动 iPhone 显示的位置",
@@ -856,7 +856,7 @@
       ]
     },
     {
-      "name": "SceneBox",
+      "name": "SceneBox（影视媒体库）",
       "bundleIdentifier": "app.scenebox.SceneBox",
       "developerName": "donbytyqi",
       "subtitle": "种子流媒体客户端",
@@ -880,7 +880,7 @@
       ]
     },
     {
-      "name": "SpotiFLAC",
+      "name": "SpotiFLAC（音乐播放器）",
       "bundleIdentifier": "com.zarz.spotiflac",
       "developerName": "zarzet",
       "subtitle": "iOS FLAC 下载器",
@@ -905,7 +905,7 @@
       ]
     },
     {
-      "name": "StikDebug",
+      "name": "StikDebug（调试工具）",
       "bundleIdentifier": "com.stik.stikdebug",
       "developerName": "StikDebug",
       "subtitle": "设备端 JIT 启用工具和设备工具箱。",
@@ -929,7 +929,7 @@
       ]
     },
     {
-      "name": "TiebaPure",
+      "name": "TiebaPure（贴吧客户端）",
       "bundleIdentifier": "dev.infinityf4p.tiebapure",
       "developerName": "infinityf4p",
       "subtitle": "基于 SwiftUI 的第三方百度贴吧客户端",
@@ -953,7 +953,7 @@
       ]
     },
     {
-      "name": "Tsumiru",
+      "name": "Tsumiru（漫画阅读器）",
       "bundleIdentifier": "com.suwayomi.tachideskSorayomi",
       "developerName": "Suwayomi",
       "subtitle": "Suwayomi-Server 原生漫画阅读器",
@@ -976,7 +976,7 @@
       ]
     },
     {
-      "name": "UTM",
+      "name": "UTM（虚拟机）",
       "bundleIdentifier": "com.utmapp.UTM",
       "developerName": "osy",
       "subtitle": "适用于 iOS 的虚拟机",
@@ -1000,7 +1000,7 @@
       ]
     },
     {
-      "name": "VeneraNext",
+      "name": "VeneraNext（漫画阅读器）",
       "bundleIdentifier": "com.github.cyrilpeng.veneranext",
       "developerName": "CyrilPeng",
       "subtitle": "跨平台漫画阅读器",
@@ -1025,7 +1025,7 @@
       ]
     },
     {
-      "name": "YouProEXTRA",
+      "name": "YouProEXTRA（YouTube 客户端）",
       "bundleIdentifier": "com.google.ios.youtube",
       "developerName": "alibusut",
       "subtitle": "可自定义调整的 YouTube 修改版",
@@ -1049,7 +1049,7 @@
       ]
     },
     {
-      "name": "ZhihuMinusMinus",
+      "name": "ZhihuMinusMinus（知乎客户端）",
       "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
       "developerName": "huamurui",
       "subtitle": "轻量、纯净的第三方知乎客户端",

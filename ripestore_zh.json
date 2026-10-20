@@ -14,7 +14,7 @@
   ],
   "apps": [
     {
-      "name": "SimpleFrontend",
+      "name": "SimpleFrontend（前端工具）",
       "bundleIdentifier": "com.jimdude.SimpleFrontend",
       "developerName": "Stossy11",
       "subtitle": "适用于网页应用和模拟器的前端",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "name": "ImageX",
+      "name": "ImageX（图像工具）",
       "bundleIdentifier": "com.tinyperfectapps.imagex",
       "developerName": "Lyu Jiahao",
       "subtitle": "使用 Waifu2x 放大并增强图像",
@@ -74,7 +74,7 @@
       }
     },
     {
-      "name": "蝙蝠侠：Telltale 系列",
+      "name": "Batman - The Telltale Series（蝙蝠侠：剧情系列）",
       "bundleIdentifier": "com.telltalegames.BAT100",
       "developerName": "LCG Entertainment, Inc",
       "subtitle": "走进布鲁斯·韦恩支离破碎的内心，你的每个选择都将带来深远影响",
@@ -108,7 +108,7 @@
       }
     },
     {
-      "name": "Delight Games 高级版书库",
+      "name": "Delight Games Premium Library（精品游戏库）",
       "bundleIdentifier": "com.your-company.DelightGames",
       "developerName": "Delight Games LLC",
       "subtitle": "选择式文字冒险",
@@ -158,7 +158,7 @@
       }
     },
     {
-      "name": "Flappy Bird",
+      "name": "Flappy Bird（飞扬的小鸟）",
       "bundleIdentifier": "org.brandonplank.flappybird",
       "developerName": "BrandonPlank",
       "subtitle": "简单却难到让人抓狂的游戏",
@@ -188,7 +188,7 @@
       }
     },
     {
-      "name": "RamBench",
+      "name": "RamBench（内存基准测试）",
       "bundleIdentifier": "com.Autumn.RamBench",
       "developerName": "Propenchiefer",
       "subtitle": "iOS 内存基准测试工具",
@@ -218,7 +218,7 @@
       }
     },
     {
-      "name": "Gacha Club",
+      "name": "Gacha Club（扭蛋俱乐部）",
       "bundleIdentifier": "com.lunime.gachaclub",
       "developerName": "Lunime",
       "subtitle": "角色扮演",
@@ -276,7 +276,7 @@
       }
     },
     {
-      "name": "Infinity Blade III",
+      "name": "Infinity Blade III（无尽之刃 III）",
       "bundleIdentifier": "com.chairentertainment.IB3",
       "developerName": "ChAIR Entertainment",
       "subtitle": "Infinity Blade 传奇史诗终章",
@@ -309,7 +309,7 @@
       }
     },
     {
-      "name": "Infinity Blade II",
+      "name": "Infinity Blade II（无尽之刃 II）",
       "bundleIdentifier": "com.chairentertainment.IB2",
       "developerName": "ChAIR Entertainment",
       "subtitle": "IB 系列的第二部作品",
@@ -341,7 +341,7 @@
       }
     },
     {
-      "name": "Infinity Blade I",
+      "name": "Infinity Blade I（无尽之刃 I）",
       "bundleIdentifier": "com.chairentertainment.birthright",
       "developerName": "ChAIR Entertainment",
       "subtitle": "一款开创性的动作角色扮演剑斗游戏。",
@@ -372,7 +372,7 @@
       }
     },
     {
-      "name": "Keka",
+      "name": "Keka（文件压缩工具）",
       "bundleIdentifier": "com.aone.Keka-iOS",
       "developerName": "aonez",
       "subtitle": "iOS 文件归档工具",

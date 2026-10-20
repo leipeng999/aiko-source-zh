@@ -15,7 +15,7 @@
       "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
       "developerName": "DuyTranKhanh",
       "versionDescription": "Initial addition.",
-      "name": "LiveContainer",
+      "name": "LiveContainer（应用容器）",
       "localizedDescription": "无需实际安装即可运行 iOS 应用！"
     },
     {
@@ -52,7 +52,7 @@
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/lQt6WqH.png",
       "developerName": "alfiecg24",
       "versionDescription": "• Update for Xcode 15.4+ compilation\n• Removing confusing logging around exploit deinitialisation\n• Fix arm64e devices on iOS 15.7.x that couldn't download the kernelcache by updating libgrabkernel2",
-      "name": "TrollInstallerX",
+      "name": "TrollInstallerX（安装工具）",
       "localizedDescription": "概述\n\nTrollInstallerX 是一款通用的 TrollStore 安装器，着重于可靠易用。在较新的设备上，它还可以在数秒内安装 TrollStore 和/或其持久化助手，速度非常快。\n\nTrollInstallerX 支持运行 iOS 14.0 - 16.6.1 的所有设备，包括 arm64 和 arm64e。它会根据你的设备和 iOS 版本，使用以下两种方法之一安装 TrollStore：\n\n• 直接安装：在 iOS 15.2+ 的 arm64e 设备上，利用 kfd 内核漏洞和 dmaFail PPL 绕过，TrollInstallerX 可以直接在设备上安装 TrollStore 及其持久化助手，无需离开安装器。\n\n   - 支持 iOS 14.0 - 16.6.1（arm64）和 iOS 14.0 - 16.5.1（arm64e）。\n      • 注意：运行 iOS 16.5.1 的 A15、A16 和 M2 设备不支持此方法。\n      • 注意：目前 A8 设备仅支持 iOS 14.0 - 15.1。\n• 间接安装：利用 kfd 内核漏洞，TrollInstallerX 可以将你选择的系统应用替换为 TrollStore 持久化助手。此方法仅因 iOS 16.6 及更高版本缺少 PPL 绕过方式，以及 dmaFail 在运行 iOS 16.5.1 的 A15、A16 和 M2 设备上无法使用而提供。\n\n   - 支持 iOS 16.5.1 - 16.6.1（arm64e）。\n      • 注意：对于运行 iOS 16.5.1 的 A15、A16 和 M2 设备，此方法是唯一可用的方法。\n\n两种方法都允许你将持久化助手安装到可移除的系统应用中。之所以需要这样做，是因为 CoreTrust 漏洞（TrollStore 所利用的漏洞）的工作方式所致：在某些情况下，TrollStore 及其安装的其他应用会被重置为用户注册，而不是系统注册。在使用持久化助手将它们恢复为系统注册之前，你无法打开这些应用。\n\n\n使用方法\n\nTrollInstallerX 非常易用。只需从 Releases 页面下载最新版本，然后使用你喜欢的方法侧载安装。安装完成后，打开应用并点击“Install”按钮。随后，TrollStore 和/或其持久化助手就会安装到你的设备上。\n\nTrollInstallerX 会自动为你的设备选择最佳 exploit。不过，在某些情况下，你可能希望选择特定的 exploit。为此，只需打开设置视图并选择要使用的 exploit。选择后，点击“Install TrollStore”按钮，TrollInstallerX 就会使用你所选的 exploit。\n\n注意：iOS 16.2 - 16.6.1 和 iOS 15.7.2 - 15.8.2 需要连接互联网，以便 TrollInstallerX 下载 kernelcache 并对其进行 patchfind。",
       "appPermissions": {
         "privacy": {
@@ -91,7 +91,7 @@
       "iconURL": "https://static.appdb.to/images/cydia-102005202-icon-1661962646.png",
       "developerName": "PostBox Team",
       "versionDescription": "• Added PostBox v0.8.1",
-      "name": "PostBox",
+      "name": "PostBox（应用管理工具）",
       "localizedDescription": "• 丰富的信息流。畅享来自各种来源的动态，随时关注越狱圈的最新消息。信息源会频繁更新，让你不错过任何内容！\n\n• 支持外部信息源。PostBox 支持 r/jailbreak 和 iDownloadBlog 等第三方越狱信息源。未来还会推出更多内容。\n\n• 软件源是软件包的集合。PostBox 收录了 200 多个软件源，便于集中管理，并提供高效查找软件源的系统。现在，你可以轻松查找过去需要费力才能找到的信息。\n\n• 设计直观。不同对比度的按钮可引导用户进行操作。动画、触觉反馈和颜色变化则会在选择时提供灵动的交互反馈。\n\n• 评价软件包。评价软件包为用户和开发者创造了新的机会。无论软件源或描述页面有何差异，都可以评价任何软件包。",
       "appPermissions": {
         "privacy": {
@@ -136,7 +136,7 @@
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/5wBkakf.png",
       "developerName": "Antique",
       "versionDescription": "Added:\n\n• Emulation menu to the in-game options button.\n• Pause and resume emulation option to the Emulation menu.\n• Preload textures by default to improve performance.\n• Portrait touch and drag support.\nReimplemented landscape mode for testing (screens will not be side-by-side yet).\n\nChanged:\n\n• Layout of the emulation to display below the status bar.\n• Increased priority of the emulation thread to squeeze out more performance.\n\nFixed:\n\n• Issue where the status bar would display black text on a black background.",
-      "name": "emuThreeDS",
+      "name": "emuThreeDS（3DS 模拟器）",
       "localizedDescription": "基于 Citra，为 Apple 设备打造的 Nintendo 3DS 模拟器。",
       "appPermissions": {
         "entitlements": [
@@ -183,7 +183,7 @@
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/JP0Fncv.png",
       "developerName": "Henrik Rydgård",
       "versionDescription": "• PPSSPP updated to v1.20.4",
-      "name": "PPSSPP",
+      "name": "PPSSPP（PSP 模拟器）",
       "localizedDescription": "PPSSPP 是 iOS 上最优秀、也是唯一一款使用 C++ 编写的 PSP 模拟器。它能够运行许多原版游戏，但受非越狱设备的限制，具体运行效果取决于设备性能，并非所有游戏都能满速运行。\n\n这款应用最初由 Henrik Rydgård 于 2012 年 11 月创建；不过，iOS 版本主要由才华横溢的开发者 Karen Tsai（又名 @angelxwind）以及众多提交问题报告和修复的贡献者维护。PPSSPP 的多个版本可在 Android、Windows、Mac、Linux 和 BlackBerry 10 等平台上运行。iOS 版本适用于越狱和非越狱设备。\n\nPPSSPP 支持运行 iOS 5 及更高版本的所有 iPad、iPhone 和 iPod touch，包括 iPhone 5 等配备 Retina 显示屏的设备。此模拟器无需 BIOS 即可运行游戏，在很多方面可算作一款“HLE”模拟器。PPSSPP 需要使用 ROM 镜像（具体为 .ISO 或 .CSO 文件）来运行游戏。本模拟器不包含任何 ROM。如果你拥有游戏，可以通过 iTunes 文件共享或“iExplorer”等程序添加。请注意，这些文件体积很大，有时会占用数 GB 空间。\n\n此模拟器旨在使用 JIT 反编译器（动态重编译器），但由于代码签名要求，只有越狱设备才能使用。因此，大多数游戏在非越狱设备上运行会非常缓慢；不过，一些较早的 PSP 游戏可以正常运行，甚至能达到满速，具体取决于你的 iOS 设备。",
       "appPermissions": {
         "privacy": {
@@ -212,7 +212,7 @@
       "iconURL": "https://pbs.twimg.com/profile_images/1367920028813787144/cwvAQV9f_400x400.jpg",
       "developerName": "DebianArch",
       "versionDescription": "• Added Ability to import/Export app backups.\n• Added ability to modify IPA (Add/Remove Tweaks etc.)",
-      "name": "Scarlet",
+      "name": "Scarlet（应用侧载工具）",
       "localizedDescription": "注意：开发者不会更改版本号（1.0），因此，如果你在网上看到新功能，或应用停止运行，请卸载并重新安装。AltStore 上的下载链接来自官方网站，因此你在这里下载的始终是最新版本。\n\n此外，通过 AltStore 获取 Scarlet，只要持续刷新应用，就永远不会失去它；而从官方网站下载则很可能导致证书被撤销，你只能等待应用重新签名。\n\n\n为什么选择我们？\n\nScarlet 为开发者提供了一个全新的社区，可供他们提交付费应用，让用户轻松避免应用证书被撤销。我们打造 Scarlet 的目标，是让每个人都能使用一个不会让用户去折腾各种变通方法的应用商店。为此，我们开发了一款以每位用户为中心、力求带来流畅体验的应用。\n\n\n真正的源系统\n\nScarlet 为所有用户提供首个真正的源系统。\n什么是真正的源系统？我们的源系统支持越狱源，非越狱用户也能使用额外提供的部分功能。\n这些功能包括：\n1. 在非越狱状态下强制安装越狱应用\n2. 自动或手动将 tweak 注入指定应用（无需越狱）\n\n我们还提供专为 Scarlet 设计的原生源。开发者可以选择要注入指定应用的 dylib 或 deb 文件。\n \n\n专业打造\n\nScarlet 的图形界面由 Xeviks 设计。\n他为界面带来了色彩、活力、动感与现代感，同时保持了简洁的风格。\nDebianArch 是 Scarlet 应用的独立开发者，正通过创新功能，为这个停滞不前的社区带来改变。",
       "appPermissions": {
         "entitlements": [
@@ -253,7 +253,7 @@
       "iconURL": "https://theodyssey.dev/assets/images/icon.png",
       "developerName": "Odyssey Team",
       "versionDescription": "• Updated Sileo to 2.3-1",
-      "name": "Odyssey",
+      "name": "Odyssey（越狱工具）",
       "localizedDescription": "支持的 iOS 版本：13.0 - 13.7。\n\nOdyssey 是首款几乎完全使用 Swift 编写的越狱工具。它完全开源，欢迎社区贡献代码和提交拉取请求，以此纪念已故的 s0uthwes，以及他对这个项目始终抱有的乐观与信念。它内置开源的 Procursus bootstrap，从设计之初就着眼于开放性和兼容性，并采用全新的 tweak 注入平台 libhooker。",
       "appPermissions": {
         "privacy": {
@@ -296,7 +296,7 @@
       "iconURL": "https://taurine.app/assets/images/icon.png",
       "developerName": "Odyssey Team",
       "versionDescription": "• Fix kfd change being implemented incorrectly",
-      "name": "Taurine",
+      "name": "Taurine（越狱工具）",
       "localizedDescription": "Taurine 是适用于 iOS 14.0–14.8.1 的越狱工具，使用 Procursus 和 Libhooker。",
       "appPermissions": {}
     },
@@ -329,7 +329,7 @@
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/5aehDxj.png",
       "developerName": "Pwn20wnd",
       "versionDescription": "• Added exploit guidance to improve reliability on A12-A13 iPhones running iOS 14.6-14.8\n• Fixed exploit reliability on iPhone XS devices running iOS 14.6-14.8",
-      "name": "unc0ver",
+      "name": "unc0ver（越狱工具）",
       "localizedDescription": "unc0ver 是一款适用于 iOS 设备的高级越狱工具。使用 unc0ver 越狱可释放 iDevice 的真正潜能。自定义设备外观、全面掌控设备运行方式、访问 iOS 隐藏功能等。\n\n兼容性：\n• unc0ver 支持 iOS 11.0 至 iOS 14.3（不包括 13.5.1 和 13.3.1）\n\n稳定性：\n• 使用最新稳定版 APT 和 Mobile Substrate，确保稳定运行。\n\n安全性：\n• 使用原生系统沙盒例外机制，在开放越狱文件访问权限的同时确保安全性。",
       "appPermissions": {}
     },
@@ -374,7 +374,7 @@
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/67ffxsD.jpeg",
       "developerName": "opa334",
       "versionDescription": "• Dopamine updated to v3.0.12",
-      "name": "Dopamine",
+      "name": "Dopamine（越狱工具）",
       "localizedDescription": "适用于 iOS 15.0 - 16.5.1（arm64e）和 iOS 15.0 - 16.6.1（arm64）的无根 arm64e 越狱工具。更多详情即将发布。",
       "appPermissions": {}
     },
@@ -413,7 +413,7 @@
       "iconURL": "https://user-images.githubusercontent.com/9553519/80646366-3d271680-8a75-11ea-8b60-9c5edd4ffd60.png",
       "developerName": "XITRIX",
       "versionDescription": "• iTorrent updated to v2.2.0-1",
-      "name": "iTorrent",
+      "name": "iTorrent（BT 下载工具）",
       "localizedDescription": "iTorrent - 一款支持“文件”App 的 iOS 种子客户端。\n\n此 App 的功能：\n\n• 后台下载\n• 顺序下载（加载影片时可使用 VLC 观看）\n• 从共享菜单添加种子文件（Safari 和其他 App）\n• 直接从 Safari 添加磁力链接\n• 将文件存储在“文件”App 中（iOS 11+）\n• 直接通过 App 共享文件\n• 通过链接下载种子\n• 通过磁力链接下载种子\n• 种子下载完成时发送通知\n• WebDAV 服务器\n• 选择要下载或不下载的文件\n• 切换为深色主题\n• RSS Feed",
       "appPermissions": {
         "entitlements": [
@@ -483,7 +483,7 @@
       "iconURL": "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png",
       "developerName": "Leminlimez",
       "versionDescription": "• Cowabunga updated to v10.3.2",
-      "name": "Cowabunga",
+      "name": "Cowabunga（系统自定义工具）",
       "localizedDescription": "一款适用于 iOS 14.0–15.7.1 和 16.0–16.1.2 的免越狱工具箱应用，使用 CVE-2022-46689\n\n请启用通知并将定位服务设为“始终”，以便应用在后台运行、保持隐藏 Dock 和文件夹背景，并防止某些音效恢复原状。\n\n警告：iOS 14.0–14.8.1 上的部分更改是永久性的\n\n\n功能：\n\n• 在后台运行，防止部分更改恢复原状\n\t- 根据测试结果，频繁使用时耗电可忽略不计（约每天 1%），但实际情况可能有所不同\n\nSpringboard\n\n• 隐藏 Dock\n• 隐藏主屏幕横条\n• 隐藏文件夹背景\n• 关闭文件夹背景模糊效果\n• 关闭应用切换器模糊效果\n• 隐藏控制中心模块背景\n• 隐藏通知横幅背景\n\n应用图标主题\n\n• 导入应用图标文件夹\n• 不使用 WebClip！\n\n音频\n\n• 自定义音效\n• 上传自己的音效（几乎支持所有音频格式！）\n• 上传音频大小上限为 150 kb；文件过大时不会应用音频！\n\n密码\n\n• 自定义密码键盘按键\n• 从 TrollTools 导入密码键盘按键文件（.passthm）\n\n锁屏\n\n• 从 TrollLock 导入锁屏\n• 自定义帧数和动画速度（见下文）\n\n探索\n\n• 查找并下载密码键盘、锁屏和应用图标主题！\n• 如需提交自己的作品，请加入 Discord\n\n状态栏\n\n• 更改运营商名称\n• 更改电池显示详情\n• 更改时间文本\n• 更改面包屑文本\n• 显示 Wi-Fi/蜂窝网络信号的数值\n• 隐藏状态栏中的多个图标\n\n其他工具\n\n• 自定义字体\n• 锁屏脚注\n• 通知标记更改工具（仅限 iOS 14–15）\n• Springboard 颜色\n• 设置应用自定义工具\n• 计算器错误消息\n\n杂项\n\n• 关闭快捷指令横幅\n• 将快捷指令转换为 App Clip\n• 监管设备警告：请自行承担使用以下功能的风险！\n• 更改系统版本（显示在“设置”中，iOS 15+）\n• 启用 iPhone X 手势\n• 启用灵动岛（iOS 16+）\n\n额外工具\n\n• 锁屏脚注\n• Respring 时不锁定\n• 关闭低电量提醒",
       "appPermissions": {
         "privacy": {
@@ -555,7 +555,7 @@
       "iconURL": "https://static.appdb.to/images/cydia-1900000897-icon-1651011412.png",
       "developerName": "esign.yyyue.xyz",
       "versionDescription": "• ESign updated to v4.8.1\n• The list of installed applications supports filtering",
-      "name": "ESign",
+      "name": "ESign（应用签名工具）",
       "localizedDescription": "Easy Sign (esign) 是一款无需越狱即可签名 IPA 文件的工具，还支持注入或移除库等功能。",
       "appPermissions": {
         "entitlements": [
@@ -595,7 +595,7 @@
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/WfWpKOF.png",
       "developerName": "Atrasis Team",
       "versionDescription": "• Link now only installs latest version.",
-      "name": "Atrasis",
+      "name": "Atrasis（游戏服务器）",
       "localizedDescription": "这是一个魔改版《部落冲突》私人服务器。你拥有无限宝石、圣水和金币。在全球聊天中输入 /help 查看命令。\n\n注意：如果应用提示需要更新，请通过此链接重新安装，因为下载链接始终指向最新版本，我不会手动更改链接。\n\n如需保留进度，请创建 Atrasis ID，方法与创建 Supercell ID 相同；重新安装后登录即可。\n\n\n请注意，此魔改版与 Supercell 无关，未经其认可、赞助或特别批准，Supercell 也不对此负责。\n\n由 Ksyrex 魔改。他的 Telegram 群组➡️ https://t.me/+wwYy4wEMS1gwMTAy",
       "appPermissions": {
         "privacy": {
@@ -659,7 +659,7 @@
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/ZDQVF7n.jpeg",
       "developerName": "Null",
       "versionDescription": "• Updated Clash Royale to v4.88.4",
-      "name": "Null's Royale",
+      "name": "Null's Royale（皇室战争私服）",
       "localizedDescription": "想在《皇室战争》中获得免费宝石、金币和资源吗？Null's Royale 可以帮你实现。\n\n• 解锁所有卡牌 - 现在可以免费获得《皇室战争》中的所有卡牌，包括挑战赛中的自定义卡牌。\n\n• 资源无限 - 不必再担心《皇室战争》中的宝石和金币用完。现在可以无限获取这些资源。\n\n• 与真实玩家对战 - 在网络稳定的 PvP 模式中，尽情与真实玩家在线竞技。",
       "appPermissions": {
         "entitlements": [
@@ -777,7 +777,7 @@
       "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1e/0d/a8/1e0da8c5-c56a-68ef-601f-33078883892c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
       "developerName": "SpooferPro Team",
       "versionDescription": "• Updated Pokemon Go to v0.269.1",
-      "name": "Pokemon Go（含 SpooferPro）",
+      "name": "Pokémon Go（含 SpooferPro 定位修改器）",
       "localizedDescription": "适用于 POGO 的 SpooferPro - iOS GPS 位置修改工具\n\n使用我们这款插件中的工具，你可以更快升级，并在世界各地捕捉最棒的宝可梦。",
       "appPermissions": {
         "privacy": {

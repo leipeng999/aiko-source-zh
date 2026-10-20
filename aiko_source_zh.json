@@ -8,7 +8,7 @@
   "website": "https://Aiko3993.github.io/iOS-Sideload-Source",
   "apps": [
     {
-      "name": "Aidoku",
+      "name": "Aidoku（漫画阅读器）",
       "githubRepo": "Aidoku/Aidoku",
       "bundleIdentifier": "app.aidoku.Aidoku.coexist",
       "developerName": "Aidoku",
@@ -75,7 +75,7 @@
       "sha256": "c0cab5999242e9a07191a1f576a66700f688d9ef16eb2f6dbf37580330d9b7c9"
     },
     {
-      "name": "Aidoku（Nightly）",
+      "name": "Aidoku（漫画阅读器，夜间版）",
       "githubRepo": "Aidoku/Aidoku",
       "bundleIdentifier": "app.aidoku.Aidoku.nightly.coexist",
       "developerName": "Aidoku",
@@ -142,7 +142,7 @@
       "sha256": "7d45a577edb4ac9dd6762933a6751a035ec4fa794b82f0e829757aa91647ff92"
     },
     {
-      "name": "Amethyst（每夜版）",
+      "name": "Amethyst（夜间版）",
       "githubRepo": "AngelAuraMC/Amethyst-iOS",
       "bundleIdentifier": "org.angelauramc.amethyst.nightly.coexist",
       "developerName": "AngelAuraMC",
@@ -185,7 +185,7 @@
       "category": "other"
     },
     {
-      "name": "Animeko",
+      "name": "Animeko（动漫播放器）",
       "githubRepo": "open-ani/animeko",
       "bundleIdentifier": "org.animeko.animeko.coexist",
       "developerName": "open-ani",
@@ -220,7 +220,7 @@
       "category": "other"
     },
     {
-      "name": "Apollo",
+      "name": "Apollo（Reddit 客户端）",
       "githubRepo": "Balackburn/Apollo",
       "bundleIdentifier": "com.christianselig.Apollo.coexist",
       "developerName": "Balackburn",
@@ -288,7 +288,7 @@
       "sha256": "983d50512a4fb5cf232eece8af45f744b64803f5290da70404b0153918e42bae"
     },
     {
-      "name": "Asspp",
+      "name": "Asspp（应用管理工具）",
       "githubRepo": "Lakr233/Asspp",
       "bundleIdentifier": "wiki.qaq.Asspp.coexist",
       "developerName": "Lakr233",
@@ -323,7 +323,7 @@
       "category": "other"
     },
     {
-      "name": "Feather",
+      "name": "Feather（侧载工具）",
       "githubRepo": "khcrysalis/Feather",
       "bundleIdentifier": "thewonderofyou.Feather.coexist",
       "developerName": "khcrysalis",
@@ -367,7 +367,7 @@
       ]
     },
     {
-      "name": "Ferrite",
+      "name": "Ferrite（播客编辑器）",
       "githubRepo": "Ferrite-iOS/Ferrite",
       "bundleIdentifier": "me.kingbri.Ferrite.coexist",
       "developerName": "Ferrite-iOS",
@@ -400,7 +400,7 @@
       "category": "other"
     },
     {
-      "name": "iSH（预发布版）",
+      "name": "iSH（Linux Shell，预发布版）",
       "githubRepo": "ish-app/ish",
       "bundleIdentifier": "app.ish.iSH.pre.release.coexist",
       "developerName": "ish-app",
@@ -443,7 +443,7 @@
       "category": "other"
     },
     {
-      "name": "iTorrent",
+      "name": "iTorrent（种子下载器）",
       "githubRepo": "XITRIX/iTorrent",
       "bundleIdentifier": "com.xitrix.iTorrent2.coexist",
       "developerName": "XITRIX",
@@ -493,7 +493,7 @@
       "sha256": "5f527c16c2790cc6b0006b88f7753a7b68a1b49fdf15433b8048f16175be48ac"
     },
     {
-      "name": "Kazumi",
+      "name": "Kazumi（动漫追番工具）",
       "githubRepo": "Predidit/Kazumi",
       "bundleIdentifier": "com.example.kazumi.coexist",
       "developerName": "Predidit",
@@ -526,7 +526,7 @@
       "category": "other"
     },
     {
-      "name": "Ksign",
+      "name": "Ksign（应用签名工具）",
       "githubRepo": "Nyasami/Ksign",
       "bundleIdentifier": "nya.asami.ksign.coexist",
       "developerName": "Nyasami",
@@ -559,7 +559,7 @@
       "sha256": "14133d1ceaccb1d909f0a8c131cbe242266689c68dd466957ddd85aaa5bdd1c0"
     },
     {
-      "name": "LiveContainer",
+      "name": "LiveContainer（应用容器）",
       "githubRepo": "LiveContainer/LiveContainer",
       "bundleIdentifier": "com.kdt.livecontainer.coexist",
       "developerName": "LiveContainer",
@@ -637,7 +637,7 @@
       ]
     },
     {
-      "name": "LiveContainer（Nightly）",
+      "name": "LiveContainer（应用容器，夜间版）",
       "githubRepo": "LiveContainer/LiveContainer",
       "bundleIdentifier": "com.kdt.livecontainer.nightly.coexist",
       "developerName": "LiveContainer",
@@ -716,7 +716,7 @@
       ]
     },
     {
-      "name": "LiveContainer+SideStore",
+      "name": "LiveContainer（应用容器）+SideStore（侧载工具）",
       "githubRepo": "LiveContainer/LiveContainer",
       "bundleIdentifier": "com.kdt.livecontainer.sidestore.coexist",
       "developerName": "LiveContainer",
@@ -794,7 +794,7 @@
       ]
     },
     {
-      "name": "LiveContainer+SideStore (Nightly)",
+      "name": "LiveContainer（应用容器）+SideStore（侧载工具，夜间版）",
       "githubRepo": "LiveContainer/LiveContainer",
       "bundleIdentifier": "com.kdt.livecontainer.sidestore.nightly.coexist",
       "developerName": "LiveContainer",
@@ -873,7 +873,7 @@
       ]
     },
     {
-      "name": "Luna",
+      "name": "Luna（月相追踪器）",
       "githubRepo": "cranci1/Luna",
       "bundleIdentifier": "me.cranci.solar.coexist",
       "developerName": "cranci1",
@@ -906,7 +906,7 @@
       "category": "other"
     },
     {
-      "name": "Mangayomi",
+      "name": "Mangayomi（漫画与动漫阅读器）",
       "githubRepo": "kodjodevf/mangayomi",
       "bundleIdentifier": "com.kodjodevf.mangayomi.coexist",
       "developerName": "kodjodevf",
@@ -967,7 +967,7 @@
       ]
     },
     {
-      "name": "NeoFreeBird",
+      "name": "NeoFreeBird（Twitter 客户端）",
       "githubRepo": "NeoFreeBird/app",
       "bundleIdentifier": "com.atebits.Tweetie2.coexist",
       "developerName": "NeoFreeBird",
@@ -1045,7 +1045,7 @@
       ]
     },
     {
-      "name": "NeoFreeBird (Twitter)",
+      "name": "NeoFreeBird（Twitter 客户端）",
       "githubRepo": "orionblur/NeoFreeBird",
       "bundleIdentifier": "com.atebits.Tweetie2.orionblur.twitter.coexist",
       "developerName": "orionblur",
@@ -1107,7 +1107,7 @@
       "category": "other"
     },
     {
-      "name": "NeoFreeBird (X)",
+      "name": "NeoFreeBird (X)（X 客户端）",
       "githubRepo": "orionblur/NeoFreeBird",
       "bundleIdentifier": "com.atebits.Tweetie2.orionblur.x.coexist",
       "developerName": "orionblur",
@@ -1169,7 +1169,7 @@
       "category": "other"
     },
     {
-      "name": "Nyxian",
+      "name": "Nyxian（应用）",
       "githubRepo": "emexlab/Nyxian",
       "bundleIdentifier": "org.emexlabs.nyxian.coexist",
       "developerName": "emexlab",
@@ -1249,7 +1249,7 @@
       "category": "other"
     },
     {
-      "name": "PiliPlus",
+      "name": "PiliPlus（哔哩哔哩客户端）",
       "githubRepo": "bggRGjQaUbCoE/PiliPlus",
       "bundleIdentifier": "com.example.piliplus.coexist",
       "developerName": "bggRGjQaUbCoE",
@@ -1296,7 +1296,7 @@
       "category": "other"
     },
     {
-      "name": "Pixiv-SwiftUI",
+      "name": "Pixiv-SwiftUI（Pixiv 客户端）",
       "githubRepo": "Eslzzyl/Pixiv-SwiftUI",
       "bundleIdentifier": "org.eu.eslzzyl.Pixiv-SwiftUI.coexist",
       "developerName": "Eslzzyl",
@@ -1331,7 +1331,7 @@
       "category": "other"
     },
     {
-      "name": "PPSSPP",
+      "name": "PPSSPP（PSP 模拟器）",
       "githubRepo": "hrydgard/ppsspp",
       "bundleIdentifier": "org.ppsspp.ppsspp.coexist",
       "developerName": "hrydgard",
@@ -1381,7 +1381,7 @@
       "category": "other"
     },
     {
-      "name": "SideStore",
+      "name": "SideStore（侧载工具）",
       "githubRepo": "SideStore/SideStore",
       "bundleIdentifier": "com.SideStore.SideStore.coexist",
       "developerName": "SideStore",
@@ -1430,7 +1430,7 @@
       "category": "other"
     },
     {
-      "name": "SideStore (Nightly)",
+      "name": "SideStore (Nightly)（侧载工具）",
       "githubRepo": "SideStore/SideStore",
       "bundleIdentifier": "com.SideStore.SideStore.nightly.coexist",
       "developerName": "SideStore",
@@ -1481,7 +1481,7 @@
       "category": "other"
     },
     {
-      "name": "StikDebug",
+      "name": "StikDebug（调试工具）",
       "githubRepo": "StephenDev0/StikDebug",
       "bundleIdentifier": "com.stik.stikdebug.coexist",
       "developerName": "StephenDev0",
@@ -1527,7 +1527,7 @@
       "category": "other"
     },
     {
-      "name": "UTM",
+      "name": "UTM（虚拟机）",
       "githubRepo": "utmapp/UTM",
       "bundleIdentifier": "com.utmapp.UTM.coexist",
       "developerName": "utmapp",
@@ -1586,7 +1586,7 @@
       "category": "other"
     },
     {
-      "name": "UTM HV",
+      "name": "UTM HV（虚拟机）",
       "githubRepo": "utmapp/UTM",
       "bundleIdentifier": "com.utmapp.UTM.coexist",
       "developerName": "utmapp",
@@ -1648,7 +1648,7 @@
       "category": "other"
     },
     {
-      "name": "Venera",
+      "name": "Venera（漫画阅读器）",
       "githubRepo": "venera-app/venera",
       "bundleIdentifier": "com.github.wgh136.venera.coexist",
       "developerName": "venera-app",

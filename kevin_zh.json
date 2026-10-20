@@ -15,7 +15,7 @@
   ],
   "apps": [
     {
-      "name": "Delta",
+      "name": "Delta（游戏模拟器）",
       "bundleIdentifier": "com.rileytestut.Delta",
       "developerName": "Riley Testut",
       "subtitle": "一体化复古游戏模拟器（NES/SNES/N64/GBA/DS）",
@@ -46,7 +46,7 @@
       "screenshots": []
     },
     {
-      "name": "Provenance",
+      "name": "Provenance（多平台游戏模拟器）",
       "bundleIdentifier": "org.provenance-emu.provenance",
       "developerName": "Provenance Emu",
       "subtitle": "适用于 iOS/tvOS 的多系统模拟器前端",
@@ -72,7 +72,7 @@
       ]
     },
     {
-      "name": "UTM",
+      "name": "UTM（虚拟机）",
       "bundleIdentifier": "com.utmapp.UTM",
       "developerName": "UTM Team (osy)",
       "subtitle": "适用于 iOS 和 macOS 的虚拟机（QEMU）",
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "name": "UTM SE",
+      "name": "UTM SE（虚拟机）",
       "bundleIdentifier": "com.utmapp.UTM-SE",
       "developerName": "UTM Team (osy)",
       "subtitle": "UTM 慢速版——无需 JIT，符合 App Store 规范",
@@ -124,7 +124,7 @@
       ]
     },
     {
-      "name": "PPSSPP",
+      "name": "PPSSPP（PSP 模拟器）",
       "bundleIdentifier": "org.ppsspp.ppsspp-free",
       "developerName": "Henrik Rydgard",
       "subtitle": "PSP 模拟器（iOS、Android、桌面端）",
@@ -150,7 +150,7 @@
       ]
     },
     {
-      "name": "iTorrent",
+      "name": "iTorrent（种子下载工具）",
       "bundleIdentifier": "com.xitrix.iTorrent2",
       "developerName": "XITRIX",
       "subtitle": "适用于 iOS 16+ 的 Torrent 客户端",
@@ -176,7 +176,7 @@
       ]
     },
     {
-      "name": "Feather",
+      "name": "Feather（应用侧载工具）",
       "bundleIdentifier": "thewonderofyou.Feather",
       "developerName": "Samara (khcrysalis)",
       "subtitle": "设备端 IPA 签名与安装工具",
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "name": "LiveContainer",
+      "name": "LiveContainer（应用容器）",
       "bundleIdentifier": "com.kdt.livecontainer",
       "developerName": "LiveContainer Team",
       "subtitle": "无需安装即可运行 iOS 应用",
@@ -228,7 +228,7 @@
       ]
     },
     {
-      "name": "SideStore",
+      "name": "SideStore（侧载工具）",
       "bundleIdentifier": "com.SideStore.SideStore",
       "developerName": "SideStore Team",
       "subtitle": "AltStore 分支版本——无需 AltServer",
@@ -254,7 +254,7 @@
       ]
     },
     {
-      "name": "iSH",
+      "name": "iSH（Linux 终端）",
       "bundleIdentifier": "app.ish.iSH",
       "developerName": "ish-app (TBL)",
       "subtitle": "在 iOS 上运行 Linux shell——通过用户态 x86 仿真运行 Alpine",
@@ -280,7 +280,7 @@
       ]
     },
     {
-      "name": "StikDebug",
+      "name": "StikDebug（调试工具）",
       "bundleIdentifier": "com.stik.stikdebug",
       "developerName": "StiKDebug (StikDebug)",
       "subtitle": "适用于 iOS 17.4 及更高版本的设备端调试器和 JIT 启用工具",
@@ -306,7 +306,7 @@
       ]
     },
     {
-      "name": "Spotube",
+      "name": "Spotube（音乐播放器）",
       "bundleIdentifier": "oss.krtirtho.spotube",
       "developerName": "KRTirtho (Spotube)",
       "subtitle": "开源 Spotify 客户端——无需 Premium（SwiftUI/Flutter）",
@@ -332,7 +332,7 @@
       ]
     },
     {
-      "name": "BHTwitter",
+      "name": "BHTwitter（Twitter 客户端）",
       "bundleIdentifier": "com.atebits.Tweetie2",
       "developerName": "BandarHL",
       "subtitle": "增强版 Twitter/X — 屏蔽广告、下载内容、解锁高级功能（增强版）",
@@ -358,7 +358,7 @@
       ]
     },
     {
-      "name": "PojavLauncher",
+      "name": "PojavLauncher（Minecraft 启动器）",
       "bundleIdentifier": "net.kdt.pojavlauncher",
       "developerName": "PojavLauncherTeam",
       "subtitle": "在 iOS 上运行 Minecraft: Java Edition（Swift/ObjC + Java）",
@@ -384,7 +384,7 @@
       ]
     },
     {
-      "name": "LBox",
+      "name": "LBox（系统工具箱）",
       "bundleIdentifier": "Lolendor.LBox",
       "developerName": "Lolendor",
       "subtitle": "LiveContainer 的 SwiftUI 源管理器（2025 全新推出）",
@@ -410,7 +410,7 @@
       ]
     },
     {
-      "name": "Apollo（已修补）",
+      "name": "Apollo（Patched）（Reddit 客户端）",
       "bundleIdentifier": "com.christianselig.Apollo",
       "developerName": "ichitaso (ApolloPatcher)",
       "subtitle": "Reddit 的 Apollo——通过自定义 API 密钥重获新生（修改版）",
@@ -436,7 +436,7 @@
       ]
     },
     {
-      "name": "Cowabunga",
+      "name": "Cowabunga（系统自定义工具）",
       "bundleIdentifier": "com.leemin.Cowabunga",
       "developerName": "leminlimez",
       "subtitle": "适用于 iOS 14–16.1.2 的 MacDirtyCow 工具箱——主题、调整，无需越狱",
@@ -462,7 +462,7 @@
       ]
     },
     {
-      "name": "Misaka",
+      "name": "Misaka（系统自定义工具）",
       "bundleIdentifier": "com.straighttamago.misaka",
       "developerName": "straight-tamago",
       "subtitle": "适用于 KFD 和 MDC 的 iOS 与 tvOS 自定义工具——Cowabunga 的继任者",
@@ -488,7 +488,7 @@
       ]
     },
     {
-      "name": "Yattee",
+      "name": "Yattee（视频播放器）",
       "bundleIdentifier": "stream.yattee.app",
       "developerName": "yattee",
       "subtitle": "适用于 iOS/tvOS/macOS 的注重隐私的 YouTube 客户端（AGPL）",
@@ -514,7 +514,7 @@
       ]
     },
     {
-      "name": "Paperback",
+      "name": "Paperback（漫画阅读器）",
       "bundleIdentifier": "com.paperback.ios",
       "developerName": "Paperback-iOS",
       "subtitle": "漫画阅读器 — 扩展、追踪与下载",
@@ -540,7 +540,7 @@
       ]
     },
     {
-      "name": "DebToIPA",
+      "name": "DebToIPA（Deb 转 IPA 工具）",
       "bundleIdentifier": "net.sourceloc.DebToIPA",
       "developerName": "sourcelocation",
       "subtitle": "在设备上将 .deb 插件转换为 .ipa（SwiftUI）",
@@ -566,7 +566,7 @@
       ]
     },
     {
-      "name": "ModMyIPA",
+      "name": "ModMyIPA（IPA 修改工具）",
       "bundleIdentifier": "com.powen.ModMyIPA",
       "developerName": "powenn",
       "subtitle": "复制任意 IPA — 并排安装多个副本",
@@ -592,7 +592,7 @@
       ]
     },
     {
-      "name": "Azula",
+      "name": "Azula（应用管理工具）",
       "bundleIdentifier": "com.paisseon.Azula",
       "developerName": "Paisseon",
       "subtitle": "在设备上向 IPA 注入动态库（SwiftUI + ElleKit）",
@@ -618,7 +618,7 @@
       ]
     },
     {
-      "name": "AppDB",
+      "name": "AppDB（应用数据库）",
       "bundleIdentifier": "it.ned.appdb-ios",
       "developerName": "n3d1117",
       "subtitle": "appdb.to 的完整客户端 — 侧载应用数据库",
@@ -644,7 +644,7 @@
       ]
     },
     {
-      "name": "Mirarr",
+      "name": "Mirarr（应用安装工具）",
       "bundleIdentifier": "com.example.Mirarr",
       "developerName": "Mirarr App",
       "subtitle": "免费开源的影视应用 — 观看电影和电视节目",
