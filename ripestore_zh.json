@@ -1,0 +1,434 @@
+{
+  "name": "RipeStore",
+  "subtitle": "享受你应得的高品质侧载体验。",
+  "identifier": "com.ripestore.source",
+  "sourceURL": "https://raw.githubusercontent.com/RipeStore/repos/main/RipeStore.json",
+  "description": "请勿期待应用内购买或解锁高级功能的修改版。只有在极少数情况下，为确保应用正常运行才会应用重要补丁。\n\n请注意，大多数 IPA 都未经过任何补丁处理，这意味着你需要在签名时自行使用各种 tweak（例如 SideloadFix、FixFilePicker 等）打补丁。",
+  "iconURL": "https://i.imgur.com/pqIZoZo.jpeg",
+  "website": "https://ripestore.github.io/",
+  "patreonURL": "https://ripestore.github.io/",
+  "tintColor": "#6156e2",
+  "featuredApps": [
+    "com.chairentertainment.IB3",
+    "com.your-company.DelightGames"
+  ],
+  "apps": [
+    {
+      "name": "SimpleFrontend",
+      "bundleIdentifier": "com.jimdude.SimpleFrontend",
+      "developerName": "Stossy11",
+      "subtitle": "适用于网页应用和模拟器的前端",
+      "localizedDescription": "SimpleFrontend 是一款简单易用、轻量的前端，可用于原生和网页应用、模拟器等。\n\n只需粘贴想要访问的网站链接或应用 URL Scheme，填写相关信息，应用便会立即在简洁的原生界面中加载，让你轻点一下即可启动。\n\n功能\n- 粘贴 URL 即可启动网页应用\n- 界面简洁，易于使用\n- 性能快速、轻量\n- 通过 URL Scheme 支持多种原生模拟器\n- 无需配置\n\n无论是探索经典体验，还是测试网页工具，SimpleFrontend 都能让你更便捷地启动和使用它们。",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons/SIMPLEFRONTEND/logo.png",
+      "tintColor": "#8c14d4",
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/SIMPLEFRONTEND/1.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/SIMPLEFRONTEND/2.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/SIMPLEFRONTEND/3.webp"
+      ],
+      "versions": [
+        {
+          "version": "1.2",
+          "date": "2025-12-17T05:15:00Z",
+          "localizedDescription": "修复了界面元素",
+          "downloadURL": "https://cdn.yemoja.xyz/SimpleFrontend/v1.2/SimpleFrontend_1.2.ipa",
+          "size": 2900000,
+          "minOSVersion": "15.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "ImageX",
+      "bundleIdentifier": "com.tinyperfectapps.imagex",
+      "developerName": "Lyu Jiahao",
+      "subtitle": "使用 Waifu2x 放大并增强图像",
+      "localizedDescription": "注意：部分功能需通过应用内购买解锁。\n\n• AI 超分辨率\n• AI 帧插值\n• 数十种模型\n• 本地处理\n• GPU 加速\n• 支持丰富格式\n• Waifu2x\n• Real-CUGAN\n• Real-ESRGAN\n• SRMD\n• RealSR\n• RIFE\n• IFRNet\n\n- ImageX 内置多种最新的 AI 图像增强算法。\n\n- AI 超分辨率：放大图像、提升图像质量并减少噪点。\n- AI 帧插值：提升动画图像的流畅度。\n- 数十种预训练模型，适用于不同风格。\n- 本地离线处理，无需上传，保护隐私。\n- 支持 GPU 硬件加速，处理速度更快。\n- 支持 JPG、PNG、APNG、GIF、WebP、HEIC 等丰富格式。\n- 无广告。\n- 支持 iOS 和 Mac（需单独购买）。\n（如需批量处理和更快的处理速度，建议使用 Mac 版。）\n\n隐私保护：\n所有图像均在设备本地离线处理，不会上传，不存在隐私风险。\n\n非 Pro 版限制：\n- iOS\n1. 输出图像任一边超过 1280 像素，或输出为动图时，不支持保存和分享。\n2. 不支持批量保存和分享。\n- Mac\n1. 输出图像任一边超过 1280 像素，或输出为动图时，将会被忽略。\n\n订阅：\n1. 订阅或一次性购买以升级到 Pro，解锁全部功能。\n2. 订阅 Pro 版（月订阅或年订阅；不包括一次性购买）后，订阅将自动续订，除非你在下一次续订日期前至少 24 小时取消订阅。\n3. iOS 和 Mac 的 Pro 版需分别购买；iOS 应用内购买仅适用于 iOS 应用，Mac 应用内购买仅适用于 Mac 应用。\n4. 如需批量处理和更快的处理速度，请选择 Mac 版。\n\n隐私政策：https://www.tinyperfectapps.com/res/imagex/policy/imagex_privacy_policy.html\n使用条款：https://www.tinyperfectapps.com/res/imagex/policy/imagex_terms_and_conditions.html\n\n参考项目：\nWaifu2x\n- nagadomi/waifu2x: https://github.com/nagadomi/waifu2x (MIT)\n- lltcggie/waifu2x-caffe: https://github.com/lltcggie/waifu2x-caffe (MIT)\n- nihui/waifu2x-ncnn-vulkan: https://github.com/nihui/waifu2x-ncnn-vulkan (MIT)\nReal-CUGAN\n- bilibili/ailab: https://github.com/bilibili/ailab/tree/main/Real-CUGAN (MIT)\n- nihui/realcugan-ncnn-vulkan: https://github.com/nihui/realcugan-ncnn-vulkan (MIT)\nReal-ESRGAN\n- xinntao/Real-ESRGAN: https://github.com/xinntao/Real-ESRGAN (BSD3)\n- xinntao/Real-ESRGAN-ncnn-vulkan: https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan (MIT)\nSRMD\n- cszn/SRMD: https://github.com/cszn/SRMD (MIT)\n- cszn/KAIR: https://github.com/cszn/KAIR (MIT)\n- nihui/srmd-ncnn-vulkan: https://github.com/nihui/srmd-ncnn-vulkan (MIT)\nRealSR\n- jixiaozhong/RealSR: https://github.com/jixiaozhong/RealSR (Apache2)\n- nihui/realsr-ncnn-vulkan: https://github.com/nihui/realsr-ncnn-vulkan (MIT)\nRIFE\n- megvii-research/ECCV2022-RIFE: https://github.com/megvii-research/ECCV2022-RIFE (MIT)\n- nihui/rife-ncnn-vulkan: https://github.com/nihui/rife-ncnn-vulkan (MIT)\nIFRNet\n- ltkong218/IFRNet: https://github.com/ltkong218/IFRNet (MIT)\n- nihui/ifrnet-ncnn-vulkan: https://github.com/nihui/ifrnet-ncnn-vulkan (MIT)",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons/IMAGEX/logo.png",
+      "tintColor": "#7f7f7f",
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/IMAGEX/1.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/IMAGEX/2.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/IMAGEX/3.webp"
+      ],
+      "versions": [
+        {
+          "version": "1.1.3",
+          "date": "2023-08-26T23:03:00Z",
+          "localizedDescription": "错误修复。",
+          "downloadURL": "https://cdn.yemoja.xyz/imagex/v1.1.3/ImageX_1.1.3.ipa",
+          "size": 293700000,
+          "minOSVersion": "15.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSAccentColorName": "AccentColor"
+        }
+      }
+    },
+    {
+      "name": "蝙蝠侠：Telltale 系列",
+      "bundleIdentifier": "com.telltalegames.BAT100",
+      "developerName": "LCG Entertainment, Inc",
+      "subtitle": "走进布鲁斯·韦恩支离破碎的内心，你的每个选择都将带来深远影响",
+      "localizedDescription": "主应用将提供免费内容。请从以下地址获取剧集数据，并将其解压后复制到“文件”应用中的应用文稿文件夹（我的 iPhone/Batman...）：https://archive.org/download/telltale-games-ios-archive/Telltale%20Games/Batman%20-%20The%20Telltale%20Series/Episode%20Data/（3.07 GB）\n\n请在此处报告失效链接：https://github.com/RipeStore/repos/issues\n\n加入“Telltale Archival Project”Discord 获取帮助：https://discord.gg/Ztt3GcvexG\n\n----\n\n**现已支持在应用内下载所有剧集！**\n\n走进布鲁斯·韦恩支离破碎的内心，作为黑暗骑士，探索你的选择所带来的强大而深远的影响。\n\n在这部由屡获殊荣的《行尸走肉：Telltale 游戏系列》创作者打造的全新黑暗暴力故事中，你将揭开真相，彻底颠覆布鲁斯·韦恩的世界，也让腐败的哥谭市本就岌岌可危的局势雪上加霜。\n\n你的行动与选择将决定蝙蝠侠的命运。\n\n本系列由屡获殊荣的工作室 Telltale Games 全新打造，包含第 1 集（免费）。",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons/telltale/BATMAN_TTS/icon_BATMAN.webp",
+      "tintColor": "#7f7f7f",
+      "category": "games",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/telltale/BATMAN_TTS/01.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/telltale/BATMAN_TTS/02.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/telltale/BATMAN_TTS/03.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/telltale/BATMAN_TTS/04.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/telltale/BATMAN_TTS/05.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/telltale/BATMAN_TTS/06.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/telltale/BATMAN_TTS/07.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/telltale/BATMAN_TTS/08.webp"
+      ],
+      "versions": [
+        {
+          "version": "1.8",
+          "date": "2017-03-14T06:40:00Z",
+          "localizedDescription": "社区补丁",
+          "downloadURL": "https://cdn.yemoja.xyz/Telltale/Batman_The_Telltale_Series/com.telltalegames.BAT100_824143053.ipa",
+          "size": 849500000,
+          "minOSVersion": "10.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "Delight Games 高级版书库",
+      "bundleIdentifier": "com.your-company.DelightGames",
+      "developerName": "Delight Games LLC",
+      "subtitle": "选择式文字冒险",
+      "localizedDescription": "你发现了一个内容丰富的选择式游戏书宝库！\n\n• 80 多部选择式互动作品，涵盖奇幻、恐怖、悬疑、冒险，甚至浪漫题材。沉浸在全新的世界中！\n• 定期推出新游戏书。\n• 无需 Wi-Fi，随时畅玩。\n• 下载体积小，省电。\n• 为视障用户提供完整无障碍支持（例如兼容 VoiceOver）。\n\n*** 真正免费，做选择无需付费 ***\n只要玩得好，你就能获得完成所有内容所需的货币，一分钱都不用花。解锁成就、冲击高排名，也可以选择观看可用的奖励视频。我当然很感谢你的支持，也相信你会觉得物有所值，但请记住，你完全不必付费。\n\n此外，与许多选择式游戏不同，你无需花费货币来做选择。没有任何选项会因为缺少宝石等道具而无法选择，也不会暗示哪一个才是“更好的选择”。由你来决定！\n\n*** 高级版选项 ***\n一次性付费，即可解锁所有现有及未来内容，不必担心之后还要花大钱。此外，没有广告，还能获得专属奖励内容。App Store 上别无此类体验！\n\n*** 关于 DELIGHT GAMES ***\n如果你刚接触 Delight Games，可能会想：“互动小说？可我不爱看书。”你甚至可能会用抱怨的语气这么说（不过我们希望你不会）。\n\n即便你不爱看书，现在阅读也会让人上瘾：在 Delight Games 互动小说中，你可以替主角做选择、改变故事走向、调整属性，还要努力活下去。你能坚持到结局吗？如果可以，又能获得怎样的分数和排名？\n\n如果你喜欢互动小说，或者只是想体验不同于那些消磨心智的普通手机游戏的内容，这就是最适合你的终极下载之选！",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons/DELIGHTGAMES/icon_DELIGHTGAMES.png",
+      "tintColor": "#e73617",
+      "category": "games",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/DELIGHTGAMES/01.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/DELIGHTGAMES/02.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/DELIGHTGAMES/03.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/DELIGHTGAMES/04.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/DELIGHTGAMES/05.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/DELIGHTGAMES/06.webp"
+      ],
+      "versions": [
+        {
+          "version": "4.6",
+          "date": "2026-05-14T18:29:00Z",
+          "localizedDescription": "- 修复了高级版用户仍可能被提示购买高级版的问题\n- 错误修复与改进",
+          "downloadURL": "https://cdn.yemoja.xyz/delightgames/4.6/com.your-company.DelightGames_4.6.ipa",
+          "size": 212900000,
+          "minOSVersion": "15.6"
+        },
+        {
+          "version": "4.4",
+          "date": "2026-02-22T12:03:00Z",
+          "localizedDescription": "• 《Ranger’s Choice》第 10 章现已上线！\n• 高级版用户可在自定义主题编辑器中使用更多选项，打造专属体验。\n• 对底层进行了大幅升级，并提升了性能。\n• 全新外观，主题针对每个故事量身打造；高级版用户还可设计自己的主题！\n• 根据用户反馈，现在可在所有 iOS 设备间同步金币、运气值和成就。\n• 发现错误？请通过“设置”菜单中的“联系我们”告知我们。",
+          "downloadURL": "https://cdn.yemoja.xyz/delightgames/4.4/com.your-company.DelightGames_4.4.ipa",
+          "size": 179300000,
+          "minOSVersion": "15.6"
+        },
+        {
+          "version": "3.40",
+          "date": "2025-10-06T17:51:00Z",
+          "localizedDescription": "• Ranger's Choice 9 现已上线！",
+          "downloadURL": "https://cdn.yemoja.xyz/delightgames/3.40/Delight_Games_Premium_Library_3.40.ipa",
+          "size": 88100000,
+          "minOSVersion": "15.6"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSUserTrackingUsageDescription": "Tapping Allow will help us to serve relevant ads that are tailored to you."
+        }
+      }
+    },
+    {
+      "name": "Flappy Bird",
+      "bundleIdentifier": "org.brandonplank.flappybird",
+      "developerName": "BrandonPlank",
+      "subtitle": "简单却难到让人抓狂的游戏",
+      "localizedDescription": "Flappy Bird 是一款难到让人抓狂的休闲游戏，你需要操控一只倒霉的像素小鸟穿过管道。\n\n穿越空隙：\n\nFlappy Bird 的玩法非常简单——尽可能多地穿过空隙，不要撞到管道。它的机制类似于 iCopter TNG 等热门的点击悬停直升机游戏。玩起来很有趣——但也让人抓狂！\n\n点击拍打翅膀：\n\nFlappy Bird 的操作很简单——点击屏幕让小鸟拍打翅膀——但游戏难度极高，你可能练上一个小时，也只能穿过五六个空隙。有时你以为自己已经穿过空隙，却在返回时擦到管道边缘，然后就只能从头再来。\n\n重温 90 年代：\n从画面上看，Flappy Bird 非常简单，像是直接从 8 位游戏机上搬出来的。小鸟很可爱，那张像素小脸会让你在第 500 次把它撞到管道上时更加心疼。\n\nFlappy Bird 的背景缺乏新意，看起来像是从 20 世纪 90 年代初无数可爱风格的平台游戏中随便取来的。也别指望有什么华丽的动画，Flappy Bird 的画面相当卡顿。\n\n疯狂又好玩：\n\nFlappy Bird 有时会让你烦到想把手机扔出窗外，但同时又会让你忍不住回来继续玩，因为你会想：“我这次肯定能掌握诀窍。”安装 Flappy Bird 后，你一定会后悔！\n\n这是用 Swift 重制的原版游戏。源代码见 https://github.com/brandonplank/flappybird",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons/FLAPPY/icon_FLAPPYBIRD.png",
+      "tintColor": "#7ce49c",
+      "category": "games",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/FLAPPY/01.PNG",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/FLAPPY/02.PNG",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/FLAPPY/03.PNG",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/FLAPPY/04.PNG"
+      ],
+      "versions": [
+        {
+          "version": "4.3",
+          "date": "2022-06-14T07:44:00Z",
+          "localizedDescription": "• 移除了排行榜\n• 移除了账户\n• 移除了反作弊功能",
+          "downloadURL": "https://cdn.yemoja.xyz/flappybird/4.3/org.brandonplank.flappybird.ipa",
+          "size": 2100000,
+          "minOSVersion": "13.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "RamBench",
+      "bundleIdentifier": "com.Autumn.RamBench",
+      "developerName": "Propenchiefer",
+      "subtitle": "iOS 内存基准测试工具",
+      "localizedDescription": "RAMBench 是一款用于测试 iOS 设备 RAM 容量上限的应用。近期 iOS 更新（18.2–26）对内存管理做出了调整，导致用户感到困惑（尤其是模拟器用户和平台高级用户）。RAMBench 可帮助你清晰地测试设备及 iOS 版本对应的内存分配上限。\n\n应用会逐步分配内存，直到达到系统上限，并记录最大分配量以及对应的 iOS 版本。\n\n功能\n- 测试结果并非完全准确，请谨慎参考\n- 内存基准测试：分批分配内存，直到进程被终止。\n- iOS 版本记录：保存基准测试结果及对应的 iOS 版本（例如 18.5），方便比较不同更新版本的结果。\n- 详细的基准测试结果\n- 内存统计信息每秒更新一次，显示：\n- 设备 RAM 总量\n- 已用 RAM 总量\n- 此应用的 RAM 使用量\n- 可用 RAM\n\n限制：\n- iOS 限制：由于沙盒机制，Mach API 提供的单进程内存信息有限，因此显示的数据可能是系统级或应用级指标。\n\n- 内存压缩：iOS 会压缩内存，因此应用报告的 RAM 用量（例如分配了 6 GB）实际占用的物理 RAM 可能更少（例如 5.8 GB）。\n\n- 舍入：为简化显示，RAM 总量会进行舍入（例如将 7.98 GB 显示为 8 GB），因此计算结果可能略有偏差。",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons/RAMBENCH/icon_RAMBENCH.png",
+      "tintColor": "#314dcd",
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/RAMBENCH/01.PNG",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/RAMBENCH/02.PNG",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/RAMBENCH/03.PNG",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/RAMBENCH/04.PNG"
+      ],
+      "versions": [
+        {
+          "version": "1.3",
+          "date": "2025-08-02T14:11:00Z",
+          "localizedDescription": "• 修复了 iPad 上显示虚假分配量的问题\n• 新增详细的基准测试结果页面（显示分配速率、内存压力、分配图表以及更详细的设备信息）\n• 为 iPad 新增内存分配图表\n• 支持 iOS 26 和着色图标\n• 新增鸣谢和信息标签页\n• 提高了 iPad 上的内存分配速度\n• 提高了内存状态的准确性\n• 提高了操作系统版本识别的准确性",
+          "downloadURL": "https://cdn.yemoja.xyz/iOSRamBench/1.3/RamBench.ipa",
+          "size": 2400000,
+          "minOSVersion": "15.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "Gacha Club",
+      "bundleIdentifier": "com.lunime.gachaclub",
+      "developerName": "Lunime",
+      "subtitle": "角色扮演",
+      "localizedDescription": "- 欢迎来到 Gacha Club -\n你会加入哪个俱乐部？开始派对，创建属于自己的动漫风格角色，并为他们换上你最喜欢的时尚装扮！从数千款连衣裙、衬衫、发型、武器等物品中尽情挑选！设计好角色后，进入工作室，创造任何你想象得到的场景！添加宠物和物品，再选一个你最喜欢的背景！所有自定义内容均完全免费，没有应用内购买！\n\n准备好迎接更多挑战了吗？抽取 180 多个单位，投入战斗！选择四种不同模式，包括故事模式、塔楼模式等！收集宝石、金币和材料，用来强化、觉醒角色并提升技能等级！你还可以玩最喜欢的迷你游戏，收集宝石和字节，再抽取更多单位！还等什么？现在就进入 Gacha Club，开启你的冒险吧！\n\n创建专属角色\n- 自定义 10 个主角色和 90 个额外角色！\n- 几乎所有物品都可以更改颜色！\n- 从 600 种不同姿势中挑选！\n- 调整头发、眼睛和物品，让角色更加合你心意！\n- 挑选并自定义数百种宠物和物品！\n- 为所有角色设置自定义个人资料！\n- 导入和导出好友的角色！\n\n工作室模式\n- 最多可在屏幕任意位置添加 10 个角色！\n- 也可以在场景中添加喜欢的宠物和物品！\n- 从丰富多样的背景和前景中进行选择！\n- 使用自定义文本框让角色和宠物彼此交谈！\n- 添加旁白，创作故事场景！\n- 最多可保存和加载 15 个场景！\n- 使用脸部预设快速更换面容。\n\n抽卡与战斗\n- 抽取 180 多个单位，投入战斗！\n- 抽取 150 种宠物来提升属性！\n- 收集超稀有的腐化角色和 DJ 角色！\n- 使用材料强化、觉醒角色并提升技能等级！\n- 从四种战斗模式中选择：故事、训练、塔楼和腐化之影\n\n迷你游戏\n- 玩 Usagi vs Neko 或 Mascot Whack 等有趣的迷你游戏！\n- 收集宝石和字节，抽取更多角色！\n- 免费游玩，轻松收集宝石！\n- 支持离线游玩！无需 Wi-Fi！\n\n«注意»\n- 游戏在旧设备和配备 4K 屏幕的设备上可能会卡顿。\n- 如果游戏运行一段时间后出现卡顿，请重新启动游戏。\n- 如果游戏出现异常，请确保手机有足够的可用存储空间。\n- 本游戏没有应用内购买。\n\n感谢游玩 Gacha Club！",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons/GACHACLUB/icon_GACHACLUB.webp",
+      "tintColor": "#1cacdc",
+      "category": "games",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/GACHACLUB/01.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/GACHACLUB/02.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/GACHACLUB/03.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/GACHACLUB/04.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/GACHACLUB/05.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/GACHACLUB/06.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/GACHACLUB/07.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons/GACHACLUB/08.webp"
+      ],
+      "versions": [
+        {
+          "version": "4.0.0",
+          "date": "2023-08-18T17:20:00Z",
+          "localizedDescription": "• 修复了一些小问题",
+          "downloadURL": "https://cdn.yemoja.xyz/GachaClub/nov-2025/Gacha.Club_4.0.0.ipa",
+          "size": 106600000,
+          "minOSVersion": "11.0"
+        },
+        {
+          "version": "2.0.0",
+          "date": "2020-08-16T17:18:00Z",
+          "localizedDescription": "• 修复存档问题并提升了图像质量。",
+          "downloadURL": "https://cdn.yemoja.xyz/GachaClub/nov-2025/Gacha.Club_2.0.0.ipa",
+          "size": 126700000,
+          "minOSVersion": "11.0"
+        },
+        {
+          "version": "1.0.6",
+          "date": "2020-08-15T13:31:00Z",
+          "localizedDescription": "• 小幅更新",
+          "downloadURL": "https://cdn.yemoja.xyz/GachaClub/nov-2025/Gacha.Club_1.0.6.ipa",
+          "size": 106800000,
+          "minOSVersion": "11.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSCameraUsageDescription": "Required by Apple",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "Required by Apple",
+          "NSLocationAlwaysUsageDescription": "Required by Apple",
+          "NSLocationWhenInUseUsageDescription": "Required by Apple",
+          "NSMainNibFile": "MainWindow",
+          "NSMainNibFile~ipad": "MainWindow-iPad",
+          "NSPhotoLibraryUsageDescription": "Required by Apple"
+        }
+      }
+    },
+    {
+      "name": "Infinity Blade III",
+      "bundleIdentifier": "com.chairentertainment.IB3",
+      "developerName": "ChAIR Entertainment",
+      "subtitle": "Infinity Blade 传奇史诗终章",
+      "localizedDescription": "Infinity Blade 传奇的史诗终章！Siris 和 Isa 与神王 Raidriar 联手，孤注一掷地试图摧毁秘密工匠，以及他麾下的不死泰坦与战士大军。",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB3/IB3-Icon.webp",
+      "tintColor": "#cd0b0b",
+      "category": "games",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB3/IB3_Screen08_iPad.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB3/IB3_Screen05_iPad.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB3/IB3_Screen02_iPad.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB3/IB3_Screen03_iPad.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB3/IB3_Screen13_iPad.webp"
+      ],
+      "versions": [
+        {
+          "version": "1.4.4",
+          "date": "2024-02-21T13:19:00Z",
+          "localizedDescription": "• 社区补丁",
+          "downloadURL": "https://cdn.yemoja.xyz/ib/r1/Blade_III_-_Community_Patch_v2.2.ipa",
+          "size": 1884300000,
+          "minOSVersion": "10.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSUbiquitousDisplaySet": "com.chair.IB3_iCloudDisplay"
+        }
+      }
+    },
+    {
+      "name": "Infinity Blade II",
+      "bundleIdentifier": "com.chairentertainment.IB2",
+      "developerName": "ChAIR Entertainment",
+      "subtitle": "IB 系列的第二部作品",
+      "localizedDescription": "弑神王者 Siris 得知自己其实是不死者，曾名为 Ausar，于是踏上寻找秘密工匠的旅程。秘密工匠创造了无限之刃，作为能够杀死不死者的武器。Siris 想彻底弄清这把剑的运作方式及其真正用途。Siris 的伙伴 Isa 得知自己追随的男人竟然也是不朽者后深受打击。她原本希望踏上征途，铲除世间的不死者，如今却离开了他，去开创自己的命运。\n\nSiris 前往 Saranthia，寻找囚禁着秘密工匠的泪之宝库。在那里，他遇到了 Ix 家族的至高领主 Thane。击败 Thane 后，Siris 解开了一道封印，却也因此丧命。所幸，一位名叫 Tel 的机械助手在凤凰舱中复活了 Siris。\n\nSiris 一次又一次地返回 Saranthia。他击败了三位血卫士，他们各自守护着一道封印，封印全部解开后才能通往秘密工匠所在之处。每解开一道封印，Siris 都会牺牲自己，但总能重获新生。\n\n终于解开宝库封印后，Siris 见到了秘密工匠，却得知若要让工匠获得自由，就必须由另一位不死者取代他。Siris 于是追捕并抓获了神王，其真名为 Raidriar。\n\nSiris 将 Raidriar 带到泪之宝库，准备终于揭开无限之刃的秘密，然而秘密工匠另有打算。他背叛了 Siris，将他和 Raidriar 一起锁在泪之宝库中。真相揭晓：当初囚禁秘密工匠的正是 Ausar，如今工匠终于得以复仇。\n\n神王与 Siris 一同被囚禁，秘密工匠重获自由。此时 Isa 来到了泪之宝库。想必她是来救出 Siris 的",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB2/IB2_ICON.png",
+      "tintColor": "#ce2929",
+      "category": "games",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB2/IB2_Opening.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB2/screenshot.infinity-blade-2.1280x720.2011-12-01.26.jpg",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB2/screenshot.infinity-blade-2.1280x720.2011-12-01.5.jpg",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB2/Cavalier_waiting_IB2_2.webp"
+      ],
+      "versions": [
+        {
+          "version": "1.3.5",
+          "date": "2024-02-20T07:31:00Z",
+          "localizedDescription": "• 社区补丁",
+          "downloadURL": "https://cdn.yemoja.xyz/ib/r1/Blade_II_-_Community_Patch_v2.1.ipa",
+          "size": 1101900000,
+          "minOSVersion": "10.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSUbiquitousDisplaySet": "com.chair.IB2_iCloudDisplay"
+        }
+      }
+    },
+    {
+      "name": "Infinity Blade I",
+      "bundleIdentifier": "com.chairentertainment.birthright",
+      "developerName": "ChAIR Entertainment",
+      "subtitle": "一款开创性的动作角色扮演剑斗游戏。",
+      "localizedDescription": "每一代都会选出一位骑士，称为祭品，前往黑暗城堡的核心，与不死神王决战。无人生还。然而，每一代献出一位年轻人，让他死于无限之刃下，便能使城堡周边村庄的普通农民免受神王的怒火。\n\n一代又一代，直到另一位来自祭品血脉的后人 Siris 成功弑杀神王，并将无限之刃据为己有。\n\n杀死神王后，Siris 发现无限之刃不只是一把剑，它还是一把钥匙，能打开通往黑暗城堡地牢的秘密通道。在与被囚禁于地牢中的三位不朽不死者交战后，Siris 解锁了另一间密室，里面的舱体中漂浮着一具具毫无生气的神王躯体。\n\n最终，Siris 与机械战士 Zero 展开决战，并将其击败。然而，Zero 在临终前警告 Siris：会有人前来寻找无限之刃。",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB1/IB1_icon.png",
+      "tintColor": "#d83030",
+      "category": "games",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB1/Beta-IB1-Gameplay-A-IGN.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB1/Beta-IB1-Gameplay-B-IGN.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB1/Beta-IB1-Gameplay-C-IGN.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB1/V1.0-IB1-Gameplay-A-IGN.webp",
+        "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB1/V1.0-IB1-Gameplay-D-IGN.webp"
+      ],
+      "versions": [
+        {
+          "version": "1.4.3",
+          "date": "2024-02-19T20:16:00Z",
+          "localizedDescription": "• 社区补丁",
+          "downloadURL": "https://cdn.yemoja.xyz/ib/r1/Blade_I-Community_Patch-v2.1.ipa",
+          "size": 636900000,
+          "minOSVersion": "10.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "Keka",
+      "bundleIdentifier": "com.aone.Keka-iOS",
+      "developerName": "aonez",
+      "subtitle": "iOS 文件归档工具",
+      "localizedDescription": "Keka 是一款功能齐全、简单易用的文件归档工具。\n使用 Keka，你可以将任意数量的文件压缩为多种格式。你还可以为文件加密，以便安全、私密地存储和分享。\nKeka 也能浏览并解压多种压缩文件，从 ZIP、7Z 到 RAR 均可。无论文件是否加密，或使用旧版字符集编码，Keka 都能轻松处理。\n支持的压缩格式：\n7Z、ZIP、TAR、ZSTD、GZIP、BZIP2 和 AppleArchive (AAR)\n支持的解压格式：\n7Z、ZIP、RAR、TAR、GZIP、BZIP2、AAR、XZ、ZSTD、ISO、LZMA、EXE、CAB、MSI、PAX、JAR、APK、APPX、XPI、IPA、CPGZ、CPIO、XIP、CPT 等\n使用条款：https://www.keka.io/termsofuse",
+      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/Keka@main/Keka-Squish-128x128.png",
+      "tintColor": "#9e7060",
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://cdn.jsdelivr.net/gh/RipeStore/Keka@main/Dark-Actions.png",
+        "https://cdn.jsdelivr.net/gh/RipeStore/Keka@main/Dark-Browser.png",
+        "https://cdn.jsdelivr.net/gh/RipeStore/Keka@main/Dark-Compression.png",
+        "https://cdn.jsdelivr.net/gh/RipeStore/Keka@main/Dark-Encryption.png",
+        "https://cdn.jsdelivr.net/gh/RipeStore/Keka@main/Dark-Tasks.png"
+      ],
+      "versions": [
+        {
+          "version": "1.6.6",
+          "date": "2026-07-01T02:06:00Z",
+          "localizedDescription": "• 修复源文件体积过大时 ZIP 分卷的问题（感谢 Tino）",
+          "downloadURL": "https://cdn.yemoja.xyz/Keka/v1.6.6/com.aone.Keka-iOS_1.6.6.ipa",
+          "size": 32100000,
+          "minOSVersion": "15.5"
+        },
+        {
+          "version": "1.6.4",
+          "date": "2026-03-20T17:10:00Z",
+          "localizedDescription": "• 请尽可能提供截图和反馈。\n• 请留下电子邮箱，以便后续联系。\n• 你也可以发送邮件至 info@keka.io，或前往 https://issues.keka.io 反馈。",
+          "downloadURL": "https://cdn.yemoja.xyz/Keka/v1.6.4/com.aone.Keka-iOS_1.6.4.ipa",
+          "size": 25200000,
+          "minOSVersion": "15.5"
+        },
+        {
+          "version": "1.6.0",
+          "date": "2025-10-06T23:35:00Z",
+          "localizedDescription": "• 在 macOS 26 及更高版本中使用 Liquid 图标（感谢 @vslavik、@avidrissman 和 @siracusa）\n• 在可行时使用 liblzma 进行 XZ 压缩（感谢 @kytta）#1654\n• 改进 XAR 解压功能\n• 新增 4GB FAT32 分卷选项（感谢 @jezcaudle）#1662\n• 修复若干小问题\n• 将 UNRAR 从 7.11 更新至 7.13（感谢 rarlab）\n• 更新丹麦语翻译（感谢 @jacobpalm）#1650\n• 更新意大利语翻译（感谢来自 https://vinboisoft.altervista.org 的 @VinBoiSoft）#1663\n• 更新法语翻译（感谢 @Marc66）#1664\n• 更新俄语翻译（感谢 @nitrodox）#1665",
+          "downloadURL": "https://cdn.yemoja.xyz/Keka/v1.6.0/Keka_1.6.0.ipa",
+          "size": 26100000,
+          "minOSVersion": "15.5"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    }
+  ],
+  "news": [
+    {
+      "title": "The Infinity Blade series!",
+      "identifier": "news_m9nh92pzl7",
+      "caption": "The Infinity Blade saga begins once again!",
+      "date": "2025-11-09T09:25:00Z",
+      "tintColor": "#cd0b0b",
+      "imageURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/UN/1400x800-96570af251fc03ab352769bb819aaf1b62a3863e.png",
+      "notify": true,
+      "url": "https://store.yemoja.xyz/"
+    }
+  ]
+}

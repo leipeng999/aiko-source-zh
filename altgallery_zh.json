@@ -1,0 +1,1573 @@
+{
+  "name": "AltGallery",
+  "subtitle": "精选 GitHub 上 IPA 项目的 AltStore 源",
+  "description": "由 AltGallery 根据 GitHub Releases 生成的 AltStore 源",
+  "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
+  "website": "https://github.com/bebound/AltGallery",
+  "tintColor": "#3B82F6",
+  "apps": [
+    {
+      "name": "Aidoku",
+      "bundleIdentifier": "app.aidoku.Aidoku",
+      "developerName": "Skitty",
+      "subtitle": "适用于 iOS 和 iPadOS 的免费开源漫画阅读器",
+      "localizedDescription": "适用于 iOS 和 iPadOS 的免费开源漫画阅读应用。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/library.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/source.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/reader.png"
+      ],
+      "tintColor": "#FF375F",
+      "versions": [
+        {
+          "version": "0.9-4",
+          "date": "2026-10-16",
+          "localizedDescription": "0.9 的小幅更新，修复了若干问题。\r\n\r\n- 修复条漫阅读器中部分页面无法加载的问题\r\n- 优化条漫阅读器的内存使用（希望能解决阅读多章后发生的崩溃）\r\n- 修复在 macOS 应用中进行任意搜索时发生的崩溃\r\n- 其他多项问题修复",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9-4/Aidoku.ipa",
+          "size": 14753154,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "AirCard-iOS",
+      "bundleIdentifier": "com.mak5er.aircard",
+      "developerName": "Mak5er",
+      "subtitle": "Apple Wallet 卡片皮肤、密码主题和壁纸",
+      "localizedDescription": "无需越狱，直接在设备上自定义 Apple Wallet 卡片图案、锁屏密码拨盘和 PosterBoard 壁纸。需要 iOS 27 或更高版本、以环回模式运行的 LocalDevVPN，以及开发者模式配对。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AirCard/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AirCard/images/wallet.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AirCard/images/pairing.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AirCard/images/wallpapers.png"
+      ],
+      "tintColor": "#5020E0",
+      "versions": [
+        {
+          "version": "1.3.2",
+          "date": "2026-10-04",
+          "localizedDescription": "## v1.3.2 更新内容 🚀\n\n本次更新带来与 AirCard macOS v1.2.6 完整对齐的功能、恢复了对所有 iOS 版本的稳定卡片发现功能、新增自动银行/卡组织识别和自定义卡片昵称、实现超快隧道缓存（0.02 秒连接），并彻底解决了 Collections 和 Mercury 壁纸闪烁问题。\n\n### 💳 钱包卡片发现与银行识别\n• **通用钱包日志解析器**：移植了 AirCard macOS 中经过验证的 `WalletScanParser`。可从 `Dashboard loading (...): for SOO+`、`passIDs[InSession]`、`passIDs[global]` 和新版 JSON NFC 激活记录（`\"identifier\": \"HEX\"`）中捕获卡片。\n• **自动识别银行与卡组织**：在选择卡片时，通过小程序 AID 识别 Visa、Mastercard、American Express、UnionPay、Discover 和 JCB。\n• **卡片昵称（重命名）**：新增直接的 **重命名** 按钮（✏️），可为卡片设置便于识别的名称，例如 *“Monobank”*、*“Salary Card”* 或 *“Revolut”*，并安全保存在应用设置中。\n• **28 字符回退令牌匹配器**：在标准日志模式被隐藏的设备上恢复可靠的卡片发现功能。\n\n### ⚡ 超快隧道路由（从 10 秒缩短至 0.02 秒！）\n• **有效路由缓存**：`rust-core` 现在会缓存当前有效的 RSD 连接路由（`LAST_WORKING_ROUTE`），无需重复扫描端口和网络接口。\n• **优先使用 RSD**：通过 49152 端口上的 RemoteXPC 直接连接，绕过耗时的 Lockdown 重试和 iOS 18+ 上的管道错误。\n• **消除回环策略丢弃**：移除了会导致控制通道出现 `policy drop` 错误的本地回环尝试。\n\n### 🖼 壁纸（.tendies）——修复 Collections 与 Mercury 问题\n• **iOS 18+ 双重注入**：现在会将壁纸注入其主 bundle（`com.apple.WallpaperKit.CollectionsPoster` 或 `com.apple.MercuryPoster`），以及 iOS 18+ 新版应用容器（`com.apple.Posters.CollectionsPosterApp` / `com.apple.Posters.MercuryPosterApp`）。\n• **元数据同步**：修复了一个严重问题：`Wallpaper.plist` 的数字标识符会随机变化，导致其与 `suggestionMetadata.plist`（`7400.DYNAMIC`）不同步，使 Windows 11 等壁纸无法显示在锁屏图库中。\n• **Mercury 壁纸支持**：新增对 `mercury-descriptors` 容器文件夹的识别，并将 `com.apple.Posters.MercuryPosterApp` 注册到 `PersistedPosterContainerBundleIdentifiers`。\n• **NeoSpring 重载 SpringBoard**：立即重新加载 SpringBoard，让壁纸偏好设置马上生效。\n\n### 🧪 质量与测试\n• 24 项单元测试全部通过（`TendiesEngineTests`、`WalletScanParserTests`、`CardPhotoCropTests`、`CardPhotoPickerTests`）。\n\n**完整更新日志**：https://github.com/Mak5er/AirCard-iOS/compare/v1.3.1...v1.3.2",
+          "downloadURL": "https://github.com/Mak5er/AirCard-iOS/releases/download/v1.3.2/AirCard-iOS.ipa",
+          "size": 4638147,
+          "minOSVersion": "27.0"
+        }
+      ]
+    },
+    {
+      "name": "AniBaka",
+      "bundleIdentifier": "ani.baka",
+      "developerName": "AniBakaBaka",
+      "subtitle": "跨平台番剧聚合、媒体播放与弹幕客户端",
+      "localizedDescription": "AniBaka 是一款基于 Flutter 的跨平台番剧聚合与媒体播放客户端，支持多个番剧源、弹幕、字幕、离线缓存和本地媒体库，并提供动漫实时超分辨率画质增强。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/images/detail.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/images/player.png"
+      ],
+      "tintColor": "#0077B6",
+      "versions": [
+        {
+          "version": "5.2.2",
+          "buildVersion": "1017",
+          "date": "2026-10-18",
+          "localizedDescription": "### 新增\r\n\r\n- 新增网络设置，可分别启用 DoH（DNS over HTTPS）和 ECH（Encrypted Client Hello），并自定义 DoH / ECH 配置查询服务地址。\r\n- 片头和片尾标注现可分别一键“应用到全集”，并在同一番剧、同一片源线路和时间轴中复用。已有的单集校准优先；登录后可共享全集标注。\r\n- 新增“隐藏 NSFW 内容”开关，可在设置中控制相关内容的显示。\r\n\r\n### 优化\r\n\r\n- 重整设置页面和播放器设置面板，统一分组与控件样式，优化字体、弹幕、字幕和播放参数的调整体验。\r\n- 优化视频源的 JSON、HTML 和种子资源解析，完善资源筛选、去重和备用结果处理；MiFun 内置规则现已启用 HLS 广告过滤。\r\n- 优化种子下载的分片调度、数据校验和超时处理，提升边下边播的稳定性。\r\n- 优化网络异常和图片加载失败提示，减少重复提醒；弹幕服务请求失败时不再重复尝试其他标题，避免等待时间不断累积。\r\n- 加强 Windows DLSS 帧生成运行库的完整性检查和取消处理。\r\n\r\n### 修复\r\n\r\n- 修复播放页初始追番状态未正确加载、快速重复操作，以及异步请求覆盖较新状态的问题。\r\n- 改进 Bangumi 授权登录对临时网络错误的重试处理，避免短暂网络波动导致登录中断。\r\n- 修复 Windows 窗口初始化或销毁期间访问尚未就绪的 Flutter 引擎的风险，并补充启动失败诊断日志。\r\n\r\n### 使用说明\r\n\r\n- DoH 和 ECH 默认关闭，保存后需重启应用才能生效。ECH 需要目标站点支持；仅启用 ECH 时，IP 地址仍由系统 DNS 解析。未发布 ECH 配置的站点仍使用普通 HTTPS。\r\n**完整更新日志**：https://github.com/AniBakaBaka/AniBaka/compare/5.2.1+1007...5.2.2+1017",
+          "downloadURL": "https://github.com/AniBakaBaka/AniBaka/releases/download/5.2.2%2B1017/baka-5.2.2%2B1017-ios-unsigned.ipa",
+          "size": 23777025,
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "AnimeFlow",
+      "bundleIdentifier": "com.ligg.anime_flow",
+      "developerName": "openAnimeFlow",
+      "subtitle": "跨平台动漫视频播放器，支持多数据源、实时 4K 超分辨率与弹幕",
+      "localizedDescription": "AnimeFlow 是一款跨平台动漫视频播放器，支持 Android、iOS、Windows、macOS 和 Linux。内置多个数据源和自定义 XPath 爬虫配置，支持基于 Anime4K 的实时视频 4K 超分辨率；可连接 Bangumi 同步收藏与追番数据，并支持多平台弹幕源和丰富的弹幕设置。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/images/detail.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/images/comment.png"
+      ],
+      "tintColor": "#124EB3",
+      "versions": [
+        {
+          "version": "2.6.4",
+          "date": "2026-10-18",
+          "localizedDescription": "### 🔄 更新内容\r\n\r\n## 2.6.4 更新\r\n\r\n## 新增\r\n\r\n- 推荐页和番剧详情页新增缓存，加快加载速度\r\n- 通用设置页面新增更完善的缓存管理功能\r\n- 番剧详情页在宽屏模式下显示评分柱状图\r\n- 关于页面新增项目官网预览\r\n\r\n## 优化\r\n \r\n- 通过优选 IP 优化网络延迟\r\n- 优化番剧详情页和用户收藏页面在调整窗口宽度时的性能\r\n- 更多 UI 优化\r\n\r\n## 修复\r\n\r\n- 修复使用 MDK 内核时移动设备会自动熄屏的问题\r\n- 修复 iOS 端在更新信息页面复制文本时出现白屏的问题\r\n- 修复版本更新弹窗中部分更新说明文字未适配深浅色主题的问题\r\n\r\n---\r\n\r\n### 📦 下载\r\n- 各设备安装包的文件后缀：``苹果手机(.ipa)、安卓手机(.apk)、Windows 电脑(.zip 或 .exe)、Mac 电脑(.dmg)、Linux 电脑(.tar.gz 或 .deb)``\r\n- Android 提供多个版本：``v7a（32 位架构，适用于旧款手机或电视）、arm64（适用于新款手机，推荐）、x86（适用于模拟器）``\r\n- Windows 提供多个版本：``.zip（解压后即可使用）、.exe（安装后使用，推荐）``",
+          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.4/AnimeFlow-ios-2.6.4.ipa",
+          "size": 29497158,
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "Animeko",
+      "bundleIdentifier": "org.animeko.animeko",
+      "developerName": "open-ani",
+      "subtitle": "一站式弹幕追番平台",
+      "localizedDescription": "Animeko 是一个 Kotlin/Compose Multiplatform 打造的一站式弹幕追番平台，集找番、追番、看番于一体，支持 Bangumi 云同步观看记录、多视频数据源聚合（含 BitTorrent、Jellyfin、Emby）、离线缓存与弹幕云过滤。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/subject-details.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/episode.png"
+      ],
+      "tintColor": "#0050A0",
+      "versions": [
+        {
+          "version": "6.3.0",
+          "date": "2026-10-13",
+          "localizedDescription": "- 数据源选择支持手动查找模式，支持直接浏览数据源剧集并记住选择，方便后续切集，同时优化 BT 资源搜索、筛选和列表展示\r\n- 新增热度排行页，可浏览完整的 Bangumi 动画热度榜\r\n- 大幅提升分季拆分放送的动画的选集准确性\r\n- Android 和 iOS 支持系统画中画播放 (#3466 by @GeneralK1ng)\r\n- 优化播放器截图体验，新增角落预览，支持查看、复制与系统分享\r\n- 观看进度支持离线处理, 上线后自动同步\r\n- 剧集列表按正片、特别篇等类型分组，上一集、下一集与自动连播只在同类型剧集之间切换\r\n- 优化 Windows 平台的兼容性和性能\r\n\r\n----\r\n\r\n新功能: \r\n- 改进在线视频插播广告过滤并默认开启，优化起播和续播速度，修复桌面端播放进度跳动，并在 iOS 提供广告过滤开关 (#3471 by @NihilDigit)\r\n- 支持折叠屏的半折叠模式，可在设置关闭 (#3446 by @U29kaXVt)\r\n- PikPak 失败时自动回退 BT 引擎 (#3444 by @NihilDigit)\r\n- Windows 支持多点触控与触控笔输入，图片查看器可双指缩放，改善触摸拖动的响应 (#3461 by @NihilDigit)\r\n- 播放器弹幕设置支持来源管理与时间校准 (#3480 by @Tsukumi233)\r\n- 重新设计数据源设置页，按订阅和自定义分组，订阅支持名称、描述、图标与详情页，可批量启用或禁用数据源，订阅内数据源改名后保留启用状态\r\n- 缓存选源支持手动查找，选定一集后可沿同一线路批量下载其他剧集\r\n- 资源自动匹配支持在主名称搜索失败时尝试季度别名和系列名，并优先使用此前搜索成功的关键词\r\n- 自动匹配与手动选集支持分段放送番剧的整季合并页及连续编号，改善后半部分的剧集对应关系\r\n- 电视版支持 Android 8.0\r\n- 电视版支持启动时自动检查更新，也可在设置中手动检查、下载并安装更新\r\n- 账号设置新增注销账号功能，确认后可永久删除账号及其数据\r\n- 收藏或评分后，条目详情页立即更新全站收藏数与评分统计\r\n- 搜索补全支持排除已看过和已抛弃的条目，最高排名筛选仅展示有 Bangumi 排名的条目\r\n- 加快应用更新的下载速度\r\n- 提升资源较多时的列表筛选速度\r\n- 自定义数据源编辑器分组展示列表规则与自动匹配设置，支持单独开关自动匹配、设置数据源等级，并精简导出配置\r\n- 自定义数据源支持通过 url template 生成详情地址，兼容搜索结果仅返回条目编号的网站 (#3574 by @wdw89)\r\n\r\n问题修复:\r\n- 网页数据源支持统一设置浏览器 UA，覆盖搜索、验证码验证、播放页解析与视频播放，并修复桌面验证码页面偶尔无法打开的问题\r\n- 移除 Selector 与 RSS 数据源中无实际作用的「使用条目名称过滤」开关\r\n- 修复存在未完成下载时，已缓存剧集无法被找到并离线播放的问题 (#3495 by @lmikey9550)\r\n- 修复 Android 切换全屏、画中画、窗口布局或切到后台后黑屏、播放中断的问题\r\n- 修复 Android 复制日志时崩溃，以及开启画质增强后切换全屏可能卡死的问题\r\n- 修复桌面端网页解析初始化较慢时网页源无法播放的问题，网页引擎不可用时提示重启应用，避免反复自动换源\r\n- 修复桌面端最小化到托盘时崩溃的问题\r\n- 修复弹弹 play 在分段放送番剧中匹配错集，以及匹配请求失败时弹幕获取异常的问题\r\n- 修复搜索结果被过滤后分页提前结束、遗漏后续结果的问题 (#3514 by @BagunoMushi)\r\n- 修复隐藏 NSFW 时仍可通过分级筛选搜出相关条目的问题，隐藏时不显示分级筛选\r\n- 修复動漫花園搜索含冒号的番剧名时结果异常和长时间翻页的问题\r\n- 修复电视版播放时屏幕自动熄灭的问题 (#3563 by @nekomoyi)\r\n- 画中画模式下隐藏一起看悬浮窗，退出后保留原来的位置 (#3567 by @GeneralK1ng)\r\n- 修复从选集对话框进入播放页后，侧滑返回手势被取消的问题\r\n- 修复桌面端全屏侧边栏开关异常，全屏默认隐藏侧边栏，并分别记住窗口与全屏模式的开关状态\r\n- 修复横屏播放时画面受屏幕挖孔影响而偏离中心的问题\r\n- 修复 iOS 退出全屏后状态栏间距消失的问题\r\n- 修复播放页手动选择的资源匹配状态显示不准确的问题\r\n- 修复探索页热度轮播在窗口变宽后出现空白且无法点击的问题\r\n- 修复下载选集页快捷选择按钮在窄屏下被挤压或遮挡的问题\r\n- 改善电视版列表刷新后的焦点恢复，当前卡片被移除时将焦点恢复到相邻项\r\n- 改善电视版探索页的无障碍朗读，避免朗读滚动进度\r\n- 修复部分界面文案显示多余反斜杠的问题\r\n- 修复sync时全部模块 androidDeviceTest 无法解析 kotlin-test (#3500 by @GeneralK1ng)\r\n\r\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v6.2.0...v6.3.0\r\n\r\n[//]: # (ANI-SERVER-MAGIC-SEPARATOR)\r\n\r\n[//]: # (注意: api server 依赖这个特殊分隔符)\r\n\r\n[//]: # (对于所有可用的变量列表, 参考 CI release.yml 的 step release-notes)\r\n\r\n[github-win-x64]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-6.3.0-windows-x86_64.zip\r\n\r\n[github-win-aarch64]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-6.3.0-windows-aarch64.zip\r\n\r\n[github-mac-x64]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-6.3.0-macos-x86_64.dmg\r\n\r\n[github-mac-aarch64]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-6.3.0-macos-aarch64.dmg\r\n\r\n[github-android]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-6.3.0-universal.apk\r\n\r\n[github-android-arm64-v8a]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-6.3.0-arm64-v8a.apk\r\n\r\n[github-android-armeabi-v7a]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-6.3.0-armeabi-v7a.apk\r\n\r\n[github-android-x86_64]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-6.3.0-x86_64.apk\r\n\r\n[cf-win-x64]: https://d.myani.org/v6.3.0/ani-6.3.0-windows-x86_64.zip\r\n\r\n[cf-win-aarch64]: https://d.myani.org/v6.3.0/ani-6.3.0-windows-aarch64.zip\r\n\r\n[cf-linux-x64]: https://d.myani.org/v6.3.0/ani-6.3.0-linux-x86_64.appimage\r\n\r\n[cf-mac-x64]: https://d.myani.org/v6.3.0/ani-6.3.0-macos-x86_64.zip\r\n\r\n[cf-mac-aarch64]: https://d.myani.org/v6.3.0/ani-6.3.0-macos-aarch64.dmg\r\n\r\n[cf-ios]: https://d.myani.org/v6.3.0/ani-6.3.0.ipa\r\n\r\n[cf-android]: https://d.myani.org/v6.3.0/ani-6.3.0-universal.apk\r\n\r\n[cf-android-arm64-v8a]: https://d.myani.org/v6.3.0/ani-6.3.0-arm64-v8a.apk\r\n\r\n[cf-android-armeabi-v7a]: https://d.myani.org/v6.3.0/ani-6.3.0-armeabi-v7a.apk\r\n\r\n[cf-android-x86_64]: https://d.myani.org/v6.3.0/ani-6.3.0-x86_64.apk\r\n\r\n[ghproxy-win-x64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-6.3.0-windows-x86_64.zip\r\n\r\n[ghproxy-win-aarch64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-6.3.0-windows-aarch64.zip\r\n\r\n[ghproxy-mac-x64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-6.3.0-macos-x86_64.zip\r\n\r\n[ghproxy-linux-x64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-6.3.0-linux-x86_64.appimage\r\n\r\n[ghproxy-mac-aarch64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-6.3.0-macos-aarch64.dmg\r\n\r\n[ghproxy-ios]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-6.3.0.ios\r\n\r\n[ghproxy-android]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-6.3.0-universal.apk\r\n\r\n[ghproxy-android-arm64-v8a]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-6.3.0-arm64-v8a.apk\r\n\r\n[ghproxy-android-armeabi-v7a]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-6.3.0-armeabi-v7a.apk\r\n\r\n[ghproxy-android-x86_64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-6.3.0-x86_64.apk\r\n\r\n[github-android-tv]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-tv-6.3.0-universal.apk\r\n\r\n[github-android-tv-arm64-v8a]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-tv-6.3.0-arm64-v8a.apk\r\n\r\n[github-android-tv-armeabi-v7a]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-tv-6.3.0-armeabi-v7a.apk\r\n\r\n[github-android-tv-x86_64]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-tv-6.3.0-x86_64.apk\r\n\r\n[cf-android-tv]: https://d.myani.org/v6.3.0/ani-tv-6.3.0-universal.apk\r\n\r\n[cf-android-tv-arm64-v8a]: https://d.myani.org/v6.3.0/ani-tv-6.3.0-arm64-v8a.apk\r\n\r\n[cf-android-tv-armeabi-v7a]: https://d.myani.org/v6.3.0/ani-tv-6.3.0-armeabi-v7a.apk\r\n\r\n[cf-android-tv-x86_64]: https://d.myani.org/v6.3.0/ani-tv-6.3.0-x86_64.apk\r\n\r\n[ghproxy-android-tv]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-tv-6.3.0-universal.apk\r\n\r\n[ghproxy-android-tv-arm64-v8a]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-tv-6.3.0-arm64-v8a.apk\r\n\r\n[ghproxy-android-tv-armeabi-v7a]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-tv-6.3.0-armeabi-v7a.apk\r\n\r\n[ghproxy-android-tv-x86_64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.3.0%2Fani-tv-6.3.0-x86_64.apk\r\n\r\n[macOS 无法打开解决方案]: https://myani.org/wiki/macos-unable-to-open\r\n\r\n[Windows下字体与背景颜色异常解决方案]: https://myani.org/wiki/windows-font-bg-color-issue\r\n\r\n[Linux 安装说明]: https://myani.org/wiki/linux-install\r\n\r\n[macOS Intel芯片版本安装教程]: https://myani.org/wiki/macos-intel-install\r\n\r\n[macos-intel-issue]: https://github.com/open-ani/animeko/issues/1345\r\n\r\n[linux-issue]: https://github.com/open-ani/animeko/issues/944\r\n\r\n[iOS 自签]: https://myani.org/wiki/ios-install\r\n\r\n|                  | 下载                                               | 常见问题                                        |\r\n|------------------|--------------------------------------------------|---------------------------------------------|\r\n| 安卓 手机/平板         | [主线][cf-android] / [备线][ghproxy-android]         |                                             |\r\n| 安卓 电视            | [主线][cf-android-tv] / [备线][ghproxy-android-tv]   |                                             |\r\n| iOS              | [主线][cf-ios] / [备线][ghproxy-ios]                 | 需要[自签][iOS 自签]                                  |\r\n| Windows          | [主线][cf-win-x64] / [备线][ghproxy-win-x64]         | 1. 目录不要有中文或者空格 <br/> 2. [显示异常][Windows下字体与背景颜色异常解决方案] |\r\n| Windows (ARM64)  | [主线][cf-win-aarch64] / [备线][ghproxy-win-aarch64] | 同 Windows                                                             |\r\n| macOS (M 系列芯片)   | [主线][cf-mac-aarch64] / [备线][ghproxy-mac-aarch64] | ⚠️ [安装后打不开][macOS 无法打开解决方案]                      |\r\n| macOS (Intel 芯片) | [主线][cf-mac-x64] / [备线][ghproxy-mac-x64]         | ⚠️ [安装教程][macOS Intel芯片版本安装教程]                    |\r\n| Linux AppImage   | [主线][cf-linux-x64] / [备线][ghproxy-linux-x64]     | ⚠️ [安装教程][Linux 安装说明]                        |\r\n\r\n[github-android-qr]: https://github.com/open-ani/ani/releases/download/v6.3.0/ani-6.3.0-universal.apk.github.qrcode.png\r\n\r\n[cf-android-qr]: https://d.myani.org/v6.3.0/ani-6.3.0-universal.apk.cloudflare.qrcode.png\r\n\r\n[cf-ios-qr]: https://d.myani.org/v6.3.0/ani-6.3.0.ipa.cloudflare.qrcode.png\r\n\r\n| 安卓 手机/平板                     | iOS IPA (需要[自签][iOS 自签])     | \r\n|------------------------------|--------------------------|\r\n| ![Cloudflare][cf-android-qr] | ![Cloudflare][cf-ios-qr] |\r\n\r\n\r\n<details>\r\n<summary> Android 细分架构下载 </summary>\r\n\r\n[//]: # (@formatter:off  因为\"版本\"前面不能换行)\r\n\r\n如果不知道自己是什么架构，建议下载 `universal` 版本。\r\n\r\n[//]: # (@formatter:on)\r\n\r\n| 处理器架构              | 适用于             | 下载                                                                                                      |\r\n|--------------------|-----------------|---------------------------------------------------------------------------------------------------------|\r\n| universal (推荐)     | 所有设备            | [主线][cf-android] / [备线][ghproxy-android] / [GitHub][github-android]                                     |\r\n| arm64-v8a (64 位)   | 几乎所有手机和平板       | [主线][cf-android-arm64-v8a] / [备线][ghproxy-android-arm64-v8a] / [GitHub][github-android-arm64-v8a]       |\r\n| armeabi-v7a (32 位) | 旧手机             | [主线][cf-android-armeabi-v7a] / [备线][ghproxy-android-armeabi-v7a] / [GitHub][github-android-armeabi-v7a] |\r\n| x86_64             | Chromebook 及模拟器 | [主线][cf-android-x86_64] / [备线][ghproxy-android-x86_64] / [GitHub][github-android-x86_64]                |\r\n\r\n电视版:\r\n\r\n| 处理器架构              | 适用于             | 下载                                                                                                                  |\r\n|--------------------|-----------------|---------------------------------------------------------------------------------------------------------------------|\r\n| universal (推荐)     | 所有电视和电视盒子       | [主线][cf-android-tv] / [备线][ghproxy-android-tv] / [GitHub][github-android-tv]                                        |\r\n| arm64-v8a (64 位)   | 大多数电视和电视盒子      | [主线][cf-android-tv-arm64-v8a] / [备线][ghproxy-android-tv-arm64-v8a] / [GitHub][github-android-tv-arm64-v8a]          |\r\n| armeabi-v7a (32 位) | 旧电视盒子           | [主线][cf-android-tv-armeabi-v7a] / [备线][ghproxy-android-tv-armeabi-v7a] / [GitHub][github-android-tv-armeabi-v7a]    |\r\n| x86_64             | 模拟器             | [主线][cf-android-tv-x86_64] / [备线][ghproxy-android-tv-x86_64] / [GitHub][github-android-tv-x86_64]                   |\r\n\r\n</details>",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.3.0/ani-6.3.0.ipa",
+          "size": 46485035,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Apollo for Reddit - GLASS",
+      "bundleIdentifier": "com.christianselig.Apollo",
+      "developerName": "Christian Selig (& Apollo-Reborn contributors)",
+      "subtitle": "添加 Liquid Glass 补丁的 Apollo-Reborn 构建版",
+      "localizedDescription": "Apollo-Reborn 是由社区维护的 Apollo 侧载版本，由 Apollo-Reborn tweak 提供支持。\n\n它恢复了自定义 API 支持、媒体修复、上传、内嵌媒体、翻译、已保存分类、主屏幕和锁定屏幕小组件、iOS 26 及更高版本的 Liquid Glass 支持，以及项目持续提供的其他修复和改进。\n\n这些源适用于 AltStore Classic、SideStore 和 Feather。Apollo-Reborn 与 AltStore PAL 不兼容。\n\n请选择与侧载方式相匹配的源版本：\n\n• Standard：完整应用包，包含可用的 Apollo 扩展和 Apollo-Reborn 小组件\n• No Extensions：移除应用扩展（包括小组件），减少免费 Apple ID 的 App ID 使用量\n• GLASS：添加 Liquid Glass iOS 26 补丁和随附的 Liquid Glass 图标目录\n• No Extensions + GLASS：结合以上两种选项\n\n包含扩展的版本（Standard 和 GLASS）会注册约 7 个 App ID，每个随附的应用扩展占用一个。免费 Apple ID 每 7 天可注册 10 个 App ID，因此全新安装一个版本不会超出限制；但如果使用多个 bundle ID 安装、同一周内重新安装，或侧载其他包含扩展的应用，就很容易超限。如果安装时出现 App ID 错误，请使用 No Extensions 版本（1 个 App ID），或等待较早注册的 App ID 过期。付费 Apple Developer 账号的限额高得多。\n\n本项目与 Apollo 或 Christian Selig 无关。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/avatar-profile.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/settings.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/custom.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/recents.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/lg-icons.jpg"
+      ],
+      "tintColor": "#6050F0",
+      "versions": [
+        {
+          "version": "3.9.0",
+          "date": "2026-10-09",
+          "localizedDescription": "### 功能\n\n- 新增**应用内更新提示**：从下一个版本开始，Apollo Reborn 每天检查一次更新；有新版本时，可将其发送到 AltStore、SideStore、Feather 或 FlareStore，也可下载 IPA，轻点即可查看更新说明 (#1343: @IllIIllIllIllII)\n  - 轻点 **稍后** 或 **跳过此版本** 可暂不更新；随时可在 **检查更新**（关于）中检查，也可关闭 **自动检查更新**（隐私，默认开启）；越狱安装不会检查更新\n  - “更新内容”现在会显示你选择的应用图标，而非默认图标\n- 轻点动态标题时，以原生弹出面板打开**子版块切换器**，提供搜索、收藏和实时结果，不再显示小型浮动下拉菜单；输入 apple+iphone 这样的多版块名称仍然有效 (#1313, #1387: @IllIIllIllIllII)\n  - 动态打开时，长按 **帖子** 标签页也可打开切换器；现在 Liquid Glass 版本也支持此操作，且滚动面板时搜索栏会固定在原位\n- 新增 **Liquid Glass** 开关（界面 → 外观，默认开启），让 Liquid Glass 版本无需安装其他 IPA 即可使用 Apollo 经典外观；更改后需退出并重新打开 Apollo 才会生效 (#1384: @IllIIllIllIllII)\n  - 仅在 iOS 26 及更高版本的 Liquid Glass 版本中显示，LiveContainer 内除外；关闭后，Liquid Glass 专属选项将隐藏\n- 为 **滚动时隐藏栏**（界面 → 标签栏，Liquid Glass）新增 **最小化**隐藏样式：滚动时标签栏会缩成显示当前标签的小型玻璃胶囊，类似 Safari；轻点胶囊或向上滚动即可恢复完整标签栏 (#1349, #1384: @IllIIllIllIllII)\n  - 在 Liquid Glass 中使用任何隐藏样式时，因滚动而隐藏的标签栏或标题栏会在打开页面、返回或前进时重新滑入；标签栏也不再于 30 秒后自动恢复\n- 新增 **减少速率限制**（账号与 API 密钥 → 实验性，默认关闭），让**无 API 密钥**账号更少触及 Reddit 的请求限制：分批加载个人头像且不显示收藏头像框；社区精选每 30 分钟而非每 2 分钟刷新；减少检查登录状态的频率 (#1369: @icpryde)\n  - Apollo 只会提示一次：无 API 密钥登录时，或已登录用户首次触及请求限制时\n  - 即使关闭此选项，无 API 密钥账号在启动和返回应用时也不会重复请求账号信息；社区精选会等待速率限制解除；限流期间自己的个人资料也不会再显示“已被封禁”\n- 为搜索标签页的 **搜索方式**菜单新增 **Kagi**，供 Kagi 订阅用户使用：粘贴一次 Kagi Session Link，即可通过 Kagi 搜索 Reddit；结果卡片、阅读更多和筛选器与 Google 搜索一致，并立即显示每篇帖子的得分、评论数和发布时长 (#1305: @nickclyde)\n  - 每页结果计为 Kagi 套餐中的一次搜索；可在账号与 API 密钥 → Kagi 搜索中更改或移除链接\n- 新增 **通过 Nitter 打开**（在应用中打开 → X / Twitter，默认关闭），可从实时列表中选择或自行输入 Nitter 实例来打开 X 和 Twitter 链接，无需 X 账号即可查看帖子和个人资料 (#1334: @nickclyde)\n  - 分享和复制的链接仍使用 x.com\n- 在 iOS 16 及更高版本中，可在 Apollo 内打开**编辑个人资料**（个人资料中的 ••• 菜单），使用当前账号登录并套用你的主题，而不再跳转到 Safari（Safari 通常未登录）(#1367: @icpryde)\n  - 未进行 **Reddit 网页登录**的 API 密钥账号需要先登录一次\n- 新增 **纯黑键盘**（界面 → 显示与导航，默认关闭），为 OLED 屏幕将键盘背景设为纯黑，可在深色模式、浅色模式或始终启用 (#1316: @IllIIllIllIllII)\n- 新增 **设置图标主题**（设置 → 外观 → 其他，默认浅色），让设置图标显示为深色底上的彩色符号，类似 iOS 深色模式下的“设置”应用；可选择始终启用（深色）或仅在深色模式下启用（系统）(#1377: @IllIIllIllIllII)\n  - Pixel Pals 现在会显示带有当前宠物的圆角方形图标；主设置列表也移除了重复的 Apollo Ultra 项（仍可在关于中找到）\n- 新增**用户资料**设置页，集中管理资料布局、**显示用户头像**和**头像形状**，并提供实时示例评论以预览头像效果 (#1352: @IllIIllIllIllII)\n  - “显示用户头像”和“头像形状”从界面 → 显示与导航移至此处\n- 将**子版块**设置重新整理为子版块列表、子版块外观和搜索标签页来源，并重新设计**子版块列表分区**（原“子版块分区”），新增与实际子版块列表一致的预览 (#1350, #1351: @IllIIllIllIllII)\n  - **显示子版块图标**从 Apollo 的外观设置移至此处；分区顺序行现在可通过拖动手柄调整\n  - 同时修复关闭**子版块列表增强**后，子版块列表行仍沿用上一种浅色或深色模式配色的问题\n- 重新设计**自定义操作菜单**（界面 → 菜单，原“操作菜单”），提供更清晰的说明；摘要仅显示在已更改的菜单上；**所有菜单**会标示各操作被隐藏的位置；新增 **重置菜单…**，可仅重置顺序 (#1282, #1323, #1368: @AcornElf, @icpryde)\n  - 现在，长按帖子和评论打开的菜单也会遵循你的布局；隐藏的操作会保持隐藏，顺序也与 ••• 菜单一致\n  - 在 Liquid Glass 中，恢复帖子和评论 ••• 菜单里的 **提醒我…**，并允许隐藏或移动该选项\n- 为**分享为图片**新增**评论链接**选项：分享评论时，“包含链接”会变为“链接”菜单，可选择不添加链接、帖子链接或评论链接；评论 GIF 以视频分享时也会携带所选链接 (#1278: @Thetromboneman1)\n  - 如果之前启用了“包含链接”，会沿用为“帖子链接”\n- 为**图库视图**新增缩略图尺寸按钮（顶部的 − 和 + 放大镜），可在四种尺寸间切换，从更密集的网格到单列显示；应用会记住你的选择 (#1357: @jordanearle)\n- 新增 **语言**设置（Apollo AI → 摘要，默认使用设备语言），让 **Apollo AI** 即使在帖子、文章或评论使用其他语言时，也能用你的语言撰写摘要 (#1362: @icpryde)\n  - 更新前保存的摘要会在下次打开对应帖子时重新生成\n- 为 Apollo AI 的自定义服务商新增**自定义请求头**，支持需要额外请求头的服务，例如 OpenCode Go 现在要求的 `x-opencode-session` 请求头 (#1286: @icpryde)\n- 创建**交叉发布**时，标题默认使用原帖标题，与 reddit.com 一致，并提供 (x) 可清除标题；较长标题现在最多换行显示五行，不再被截断 (#1290: @icpryde)\n- 启用**显示用户头像**时，在关注帖子**实时活动**中，最新评论者的姓名旁会显示其**头像** (#1296: @icpryde)\n  - 需要支持头像的自托管通知后端\n- 为 Helios 图标包新增两款万圣节图标：**Witching Hour** 和 **Count Helios** (#1378: @IllIIllIllIllII)\n\n### 性能\n\n- **图库视图**、Image Chest 相册和聊天中的超大图片现在会按显示尺寸加载，而非以完整分辨率加载，从而减少内存占用 (#1320: @ryannair05)\n\n### 修复\n\n- 修复在子版块列表中添加或移除**收藏**、撰写**媒体**帖子（例如更改 flair 后）以及在全屏**媒体查看器**中左右滑动切换页面时发生的崩溃 (#1336: @icpryde)\n- 修复打开**收件箱**时切换账号导致 Apollo 崩溃，以及收件箱打开后立即关闭时偶尔发生的崩溃 (#1284, #1379: @icpryde)\n- 修复超长**文本帖子**在最大字号下或 Apollo 开启一段时间后正文显示为空白的问题 (#1381: @icpryde)\n- 修复 Reddit 登录页上的 **使用 Google 继续**无响应，以及**使用 Apple 继续**显示错误的问题；现在无论是否使用 API 密钥，都会在弹出面板中打开 Google 或 Apple 登录 (#1372: @icpryde)\n- 修复**无 API 密钥**版主的版主工具显示为空、持续转圈或无提示失败的问题 (#1298, #1304, #1311: @icpryde)\n  - **移除原因**、**封禁用户**、**禁言用户**、**获准投稿者**以及 Apollo 自带的**版主邮件**（关闭“使用新版版主邮件”时）现在都能正常加载；移除帖子时也会提供**添加移除原因**选项\n  - 封禁、版主邀请以及接受或拒绝邀请现在都能成功提交到 Reddit\n- 修复**无 API 密钥**账号使用**设置帖子 flair**时显示“Flair 已设置！”，但帖子仍保留旧 flair 的问题；并修复 **AutoModerator** 设置无法保存到 Reddit 的问题 (#1309: @icpryde)\n- 修复**无 API 密钥**账号的子版块**侧边栏**大部分为空，以及**设置用户 flair**时当前 flair 显示为空白或过期的问题 (#1312, #1327: @IllIIllIllIllII, @nickclyde)\n  - 动态中的图片帖子和当前 flair 不再依赖 Reddit 正在开始限制的 Old Reddit\n- 修复在 Liquid Glass 菜单中举报帖子或评论、设置帖子 flair，或以版主身份移除帖子时，菜单之间会停顿一秒或更久的问题；现在会立即打开下一个菜单 (#1382: @icpryde)\n  - 移除、批准和标记为垃圾信息等版主操作也会立即执行，打开“封禁用户”也不再需要等待\n- 修复开启**停用导航手势**（设置 → 手势）后，从屏幕左边缘滑动仍会返回的问题；在 Liquid Glass 中，也修复了在评论上向右滑动会离开帖子而非执行评论滑动操作的问题 (#1370: @icpryde)\n- 修复 iOS 27 上的 **YouTube** 视频总是显示无法关闭的字幕的问题；只有在 iOS 设置中启用“隐藏式字幕 + SDH”，或在播放器中开启字幕后，才会显示字幕 (#1371: @icpryde)\n- 修复 **标题栏样式**设为“硬朗”时（Liquid Glass 上 iOS 27 的默认设置），动态或帖子打开时标题栏下方的搜索栏会闪烁的问题 (#1373: @icpryde)\n- 当个人资料的**评论**或**帖子**为空（例如用户隐藏了历史记录），或动态、列表加载失败时，现在会显示提示信息，不再无限转圈 (#1341: @icpryde)\n- 关闭**统计卡片**后（用户资料 → 资料布局），现在会完全隐藏个人资料统计数据，而非回退显示 Apollo 的 karma 和账号年龄行 (#1348: @IllIIllIllIllII)\n- 修复首页、热门、全部和多版块动态中，同一子版块首条帖子之后的帖子以空心圆而非**子版块图标**显示的问题 (#1363: @icpryde)\n- 修复轻点**帖子**标签页有时无法滚动到长动态顶部的问题；现在会像轻点状态栏一样滚到最上方，且**返回按钮**可以带你回到原处 (#1360: @IllIIllIllIllII)\n- 从动态标题切换子版块后，**子版块标题栏**和**社区精选**现在会随之更新，不再保留上一子版块的内容 (#1287: @icpryde)\n- **更多回复**现在可流畅加载：转圈指示器会持续显示，直到回复淡入；在已翻译的帖子中，回复会直接以译文显示，不再先切换语言并导致下方评论移位 (#1358: @icpryde)\n- 修复**批量翻译**跳过以引文、列表或链接开头的评论的问题；翻译后的引文、列表、粗体和斜体现在会像 Apollo 显示原文那样正确呈现 (#1294: @icpryde)\n- 修复**翻译**标签显示错误语言或出现在未翻译文本上的问题：“翻译自…”、动态的 🌐 标记和“翻译”按钮现在会显示翻译服务实际翻译的源语言，并跳过服务返回原文的评论和帖子 (#1380: @icpryde)\n  - 之前翻译后未显示标签的短评论现在也会显示标签\n- 修复投票时评论的**富链接卡片**图片会闪烁的问题 (#1356: @icpryde)\n- 无法加载 **RedGIFs** 帖子时，现在会说明原因，而非显示“RedGIFs error :(”；例如内容已移除、未找到、所在地区不可用或无法连接 RedGIFs (#1359: @icpryde)\n- 使用**向上滑动查看评论**打开评论面板时，全屏播放的 **GIF 或视频**会继续在其后播放，不再停止或导致屏幕变黑 (#1277: @Thetromboneman1)\n- 将全屏图片或视频向侧面或斜向拖动关闭时，背景现在也会淡出，不再仅在向上或向下拖动时淡出 (#1320: @ryannair05)\n- 修复在 Liquid Glass 中长按**版主邮件**或私信没有反应，以及长消息末尾出现空白区域的问题 (#1307, #1308: @icpryde)\n- 在 iOS 16 及更早版本中保留 **Google** 搜索的 Cookie，避免 Google 每次都要求登录或完成验证 (#1315: @icpryde)\n- 修复 Liquid Glass 中 **GIF 选择器**搜索栏呈现双层的问题 (#1283: @icpryde)\n- 在非 Liquid Glass 版本中，使用**自定义主题**的“栏与界面元素”颜色为导航栏和标签栏着色；子版块和帖子中的下拉搜索栏现在会融入顶部栏，而非看起来像独立的色带 (#1280: @Thetromboneman1)\n- 修复在 Rounded、Serif 和 Monospaced 主题字体下，**Apollo Reborn 设置**页脚和副标题变为正文大小，以及在**主题管理器**中更改主题后页眉和页脚仍沿用旧主题的问题 (#1293, #1297, #1322: @icpryde)\n- 修复滚动 **Apollo AI** 设置列表、取消侧滑返回后以及重新返回该页面时，列表会跳动的问题 (#1288, #1291: @icpryde)\n- 添加或移除快捷方式时，**设置快捷方式**中的分区标题不再移动；在非 Liquid Glass 版本中，长按“设置”标签打开菜单时，也会直接在当前页面上显示，而不再先切换到“设置” (#1355, #1384: @icpryde, @IllIIllIllIllII)\n- 修复 Liquid Glass 中 **iPad** 标签栏遮挡页面标题和搜索标签页搜索栏的问题；标题和搜索栏现在会显示在标签栏下方的独立行中 (#1314: @IllIIllIllIllII)\n  - **将标签栏移至底部**现更名为**标签栏位置**（界面 → 标签栏，默认顶部）；无论标签栏位于顶部还是底部，标签都会保留文字标签\n- 减少在 **Mac** 上切换到 Apollo 或从 Apollo 切出时，帖子和评论文本及图标变为空白的情况 (#1301: @Thetromboneman1)",
+          "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.9.0/Apollo-Reborn-3.9.0-GLASS.ipa",
+          "size": 128560322
+        }
+      ]
+    },
+    {
+      "name": "ARMSX2",
+      "bundleIdentifier": "com.armsx2.ios",
+      "developerName": "ARMSX2",
+      "subtitle": "适用于 ARM64 的 PlayStation 2 模拟器",
+      "localizedDescription": "一款免费开源的 PlayStation 2 (PS2) 模拟器，基于 PCSX2 构建，内置原生 ARM64 JIT 重编译器。可在手机、电脑或掌机上畅玩 PS2 游戏。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/game.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/list.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/settings.png"
+      ],
+      "tintColor": "#3CAEFF",
+      "versions": [
+        {
+          "version": "2.6.0-nightly.20261019.1539",
+          "date": "2026-10-19",
+          "localizedDescription": "供社区测试的自动每夜构建版（未签名）。\n\n每个下载文件都命名为 `ARMSX2-nightly-DATE-COMMIT-PLATFORM`，这样下载后也能区分不同日期的构建版本。\n\n- macOS arm64：macOS-arm64.tar.xz\n- Linux arm64：大多数发行版使用 Linux-arm64-4K-pages.AppImage；Asahi Linux 和其他 Apple Silicon 内核使用 16K 版本（不确定时运行 getconf PAGESIZE）\n- Windows arm64：Windows-arm64.zip\n- Linux arm64 上的 RetroArch：Linux-arm64-libretro-core.tar.zst，4K 页构建版\n- 裸屏 kmsdrm 掌机：Linux-arm64-SDL-handheld.tar.zst，4K 页构建版（Rocknix 和 Batocera 运行合成器，请改用 Qt AppImage）\n- Android：Android-arm64.apk（安装为 ARMSX2 Nightly，与稳定版并存）\n- iOS：iOS-arm64.ipa，未签名，请自行侧载（安装为 ARMSX2 Nightly，与稳定版并存）\n\n从旧版每夜构建升级？每夜构建版现在是独立应用 ARMSX2 Nightly，与稳定版并列。\n\n- Android：稳定版无法覆盖安装在旧版每夜构建版上。请先备份存档和记忆卡，卸载旧版每夜构建版，再安装稳定版 APK。\n- iOS：旧版每夜构建版就是 ARMSX2 iOS 应用，存档仍在其中。请使用“文件”应用将存档复制到 ARMSX2 Nightly。\n\n## 更新内容\n- IOP 线程：默认延迟上限从 6144 提高到 24576 EE 周期\n- Android：重置时，如果设置文件中已没有玩家保留的键值，则恢复该键值的玩家设置\n- Android：应用下次保存时，保留已应用的分辨率自动调优结果\n- AutoTune：测试未保留的试调结果不会写入游戏文件或主机\n- AutoTune：只有速度提升时才保留设置，不会仅因成本降低而保留\n- Android：重置时恢复玩家在应用中设置的值，而非全局值\n- AutoTune：EE 调速器提示信息会说明模拟 CPU 正在降频\n- AutoTune：每个会话只提示一次“没有可尝试的选项”，不受类别影响\n- AutoTune：应用设置时，不显示游戏数据库提示和不安全设置警告\n- AutoTune：轻量调整后等待 1.5 秒，而非 3 秒\n- AutoTune：向正在运行的 GS 设备查询是否使用 Vulkan，而非读取配置\n- AutoTune：如果 GS 后台线程会与繁忙核心共用核心，则不提供该选项\n- AutoTune：针对 GPU 瓶颈时，先尝试下载模式，再尝试 GS 后台线程\n- AutoTune：仅当 CPU 瓶颈由 GS 导致时，才尝试将混合模式从 Basic 调为 Minimum\n- AutoTune：仅在确实有效时，才优先尝试成本较低的选项，而非分辨率调整\n- AutoTune：已保留选项旁显示的百分比为实测速度变化\n- AutoTune：如果损失可由游戏自身的改动解释，则不记录为拒绝项\n- AutoTune：明显导致性能变差的试调结果会记录为拒绝项\n- AutoTune：仅当速度未下降时，才保留对目标成本有效的设置\n- AutoTune：通过函数指针而非弱符号，将已提交的值通知 Android 应用\n- AutoTune：根据中位数、目标成本以及试调前刚采集的基准值评估试调结果\n- AutoTune：根据 EE 的等待时间而非 IOP 线程的 CPU 占用率，判断瓶颈在 IOP 还是 EE\n- Qt：游戏属性窗口切至前台时，重新读取其设置文件\n- iOS：在模拟器设置中添加“自动性能调优”开关\n- Android：在设置页面询问是否启用“自动性能调优”\n- Android：添加“自动性能调优”开关、单游戏列表和重置功能\n- Android：保留自动调优保存的值，并允许应用读取和重置相关记录\n- Host：将默认的 Host::OnAutoTuneCommitted 设为弱符号\n- AutoTune：将 EE 调速器作为可调选项\n- AutoTune：如果 EE 阻塞在 IOP 线程上，则归类为 IOP 瓶颈，而非 EE 瓶颈\n- AutoTune：从限速器和等待位置统计中读取 EE 等待情况与丢帧数\n- EE 周期速率采样器：提供其他使用方可查询的统计数据，以及统一的延迟判定结果\n- Big Picture：在设置步骤中询问是否启用“自动性能调优”\n- Big Picture：添加单游戏“重置自动调优”功能，并列出自动调优所做的更改\n- Big Picture：在“模拟”设置中添加“自动性能调优”开关\n- Qt：在设置向导中添加“自动性能调优”页面\n- Qt：添加单游戏“重置自动调优”按钮，并列出自动调优所做的更改\n- Qt：在“模拟”设置页面添加“自动性能调优”开关\n- AutoTune：整理瓶颈报告格式，并说明“恢复”的作用\n- AutoTune：繁忙的 GPU 优先级高于繁忙的 GS 线程；为游戏文件重置功能添加测试\n- AutoTune：实现应用器及从 VM 调用它的钩子\n- AutoTune：实现将指标窗口转换为控制器窗口的采样器\n- EE 周期速率：在 Windows 项目中添加新文件名称\n- AutoTune：添加单游戏设置记录及重置功能\n- EE 周期速率：提供读取调速器状态及其最新窗口数据的 API\n- EE 周期速率：在 Darwin 上不读取 CTR_EL0\n- EE 周期速率：明确单游戏启用选项必须写入的内容\n- EE 周期速率：块入口处的计费操作可修改，并非无法挽回\n- EE 周期速率：让运行器说明转换经过的路径\n- EE 周期速率：通过重写计费值完成转换，而非重置\n- EE 周期速率：为多个补丁执行缓存维护，并使用单个屏障\n- EE 周期速率：记录每个计费立即数的实际位置\n- EE 周期速率：在生成时对每个计费位置的编码形式进行分类\n- EE 周期速率：统计转换实际丢弃的内容\n- EE 周期速率：分别测量转换两个阶段的耗时\n- EE 周期速率：避免控制器访问会话转换计数\n- EE 周期速率：仅在限速器发生实际变化时重置\n- EE 周期速率：按窗口实际运行的速率计算其耗时\n- EE 周期速率：确保每帧路径保持为叶函数，并修复跟踪记录自相矛盾的问题\n- EE 周期速率：在影子模式下，必须通知控制器开关已启用\n- EE 周期速率：即使跟踪记录中没有窗口，也必须说明记录内容\n- eerunner：添加 --ee-rate-trace，以便脚本运行时测试跟踪记录写入器\n- EE 周期速率：为叠加层提供一个唯一可读取的字段\n- EE 周期速率：记录每个窗口，并添加用于记录的影子模式\n- EE 周期速率：在帧边界结束窗口并据此执行操作\n- EE 周期速率：测量 EE 线程等待 GS 和 VU1 线程的时间\n- EE 周期速率：提供纯函数，计算窗口内各帧的总和\n- 性能指标：统一使用帧工作时钟，而非仅限 Android\n- EE 周期速率：明确优先级规则，尤其是数值相同的情况\n- EE 周期速率：判断调速器是否可以运行，并说明原因\n- EE 周期速率：记录配置的选择器来源\n- EE 周期速率：添加动态开关，以及缓存会忽略的跟踪路径\n- eerunner：通过脚本模拟 EE 周期速率转换，并测量其耗时\n- EE 周期速率：返回失败的步进，而非已成功的步进\n- EE rec：明确七种周期速率选择器，以及代码生成使用的选择器\n- microVU：EE 周期速率仅作为 VU0 的代码生成输入\n- EE 周期速率：将窗口采样转换为单个步进，不依赖时钟或 VM\n- EE 周期速率：区分配置的选择器与实际运行时使用的选择器\n- AutoTune：实现决策控制器，并通过重放脚本窗口进行测试\n- PerformanceMetrics：一致地复制最近窗口数据，并添加 GPU 计时器标记\n- Settings：在游戏设置层之上添加自动调优层和 AutoTune 开关\n- GS：24 位图像写入器每像素读取 3 字节，而非 4 字节\n- Controls：所有控制器均设为玩家 1，并在游戏内菜单中添加配置文件\n- Setup：启动器已准备好的安装将跳过向导（#847）\n\n完整更新日志：https://github.com/ARMSX2/ARMSX2/compare/nightly-20261018...83fe4e293f71ab5587ef81b06143725bf8c6a30b",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261019/ARMSX2-nightly-20261019-83fe4e293f-iOS-arm64.ipa",
+          "size": 40356686,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Doer",
+      "bundleIdentifier": "com.naine.doer",
+      "developerName": "moliango",
+      "subtitle": "Linux.do 原生 iOS 客户端",
+      "localizedDescription": "Linux.do 原生 iOS 客户端——使用 UIKit 和 Swift 编写，主应用未使用 SwiftUI。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/images/detail.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/images/me.png"
+      ],
+      "tintColor": "#4080E0",
+      "versions": [
+        {
+          "version": "1.8.6",
+          "date": "2026-10-10",
+          "localizedDescription": "**完整更新日志**：https://github.com/moliango/doer/compare/v1.8.5.3...v1.8.6",
+          "downloadURL": "https://github.com/moliango/doer/releases/download/v1.8.6/doer-unsigned.ipa",
+          "size": 28095758,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "DolphiniOS",
+      "bundleIdentifier": "me.oatmealdome.DolphiniOS-njb-patreon-beta",
+      "developerName": "OatmealDome",
+      "subtitle": "适用于 iOS/iPadOS 的 GameCube 和 Wii 模拟器",
+      "localizedDescription": "焕然新生的 iOS 版 Dolphin。适用于 iPhone 和 iPad 的 GameCube 和 Wii 模拟器。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/images/game.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/images/settings.png"
+      ],
+      "tintColor": "#E0B030",
+      "versions": [
+        {
+          "version": "5.0.0b6",
+          "date": "2026-06-20",
+          "localizedDescription": "* 修复运行 iOS 27 beta 的 A13/A14/M1 设备上的 JIT 支持。（@CelloSerenity）\r\n* 修复 5.0.0b5 中引入的错误应用版本号。（@CelloSerenity）\r\n\r\n下次更新将在 Dolphin 下一个官方版本发布后推出，并包含核心更新。\r\n\r\n**完整更新日志**：https://github.com/OatmealDome/dolphin-ios/compare/v5.0.0b5...v5.0.0b6",
+          "downloadURL": "https://github.com/OatmealDome/dolphin-ios/releases/download/v5.0.0b6/Non-Jailbroken.ipa",
+          "size": 17963367,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "DukeX",
+      "bundleIdentifier": "com.mafty.dukex",
+      "developerName": "Manic EMU Development Team",
+      "subtitle": "iOS 上的原版 Xbox 模拟器",
+      "localizedDescription": "DukeX 是一款面向 iOS 的实验性 xemu 前端。它将 xemu 核心嵌入原生 Swift 外壳，并通过 MoltenVK 和原生 Metal 呈现 Vulkan 渲染画面。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/images/library.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/images/activity.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/images/game.png"
+      ],
+      "tintColor": "#8FCA39",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2026-06-30",
+          "localizedDescription": "# DukeX v1.0.2 - 拓展 Xbox 体验\n\nDukeX v1.0.2 是我们迄今为止在还原完整原版 Xbox 体验（而不只是游戏）方面迈出的最大一步。本次更新推出首个原生 macOS 版本，扩展 XB.Live 集成，并为 iOS 和 macOS 带来更丰富的社区功能。\n\n## 新内容\n\n- 原生 macOS 版本：DukeX 现已推出 Mac Catalyst 桌面版本，内置打包的 Xemu 分支，将桌面版 Xemu 兼容性与 DukeX 界面相结合。\n- XB.Live 实时状态和游戏时长追踪：好友可以看到你正在玩的游戏，DukeX 也会追踪受支持的游戏时长。\n- XB.Live 消息：DukeX 现已支持主题对话、好友消息、未读提示、受支持的游戏邀请，以及现有的 Xbox 收件箱功能。\n- XB.Live 社交功能扩展：可在个人资料页面中使用好友请求、好友管理、在线状态及更深入的社区集成功能。\n- 动态：XB.Live 新闻、好友上线状态、好友解锁成就和社区动态现已显示在持续刷新的时间线中。\n- 手柄横屏模式：在 iOS 上，兼容的手柄可将 DukeX 切换为以手柄操作为主的浏览和启动体验。\n- 扩展 AirPlay 和外接显示器支持：在受支持的显示配置下，大屏游玩更加稳定。\n\n## 改进\n\n- 改进成就功能，新增游戏、应用和核心分组，并更新 XB.Live Core、DukeX Core 及特殊测试作品的美术资源处理方式。\n- 改进 iOS 和 macOS 上的游戏磁贴间距及封面显示。\n- 改进 XB.Live 云存档同步元数据，加入主机标识 v2、基于内容哈希的去重，以及服务器辅助的跨主机恢复处理。\n- 修复成就进度取整问题，避免基于时间的成就在实际完成前显示 100%。\n\n## 获取方式\n\n- iOS：通过 StikStore、SideStore 或其他受支持的侧载方式安装 `DukeX.v1.0.2.ipa`。\n- macOS：将 DukeX 拖入“应用程序”文件夹，以安装 `DukeX.macOS.v1.0.2.dmg`。\n- iOS 硬件要求仍为 Apple A14 Bionic 或 Apple M1 及更新型号。\n- 支持 iOS 16.0 或更高版本；对 iOS 16 的支持仍属实验性。\n\n## 重要说明\n\nDukeX 不包含 Xbox 系统文件、游戏镜像、BIOS 文件、受版权保护的内容、签名证书或用户游戏。用户必须自行提供合法获取的文件。DukeX 仅供合法模拟、保存、测试及个人游戏库使用。",
+          "downloadURL": "https://github.com/MaftyManicEMU/DukeX/releases/download/v1.0.2/DukeX.v1.0.2.ipa",
+          "size": 20345841,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "EhPanda",
+      "bundleIdentifier": "app.ehpanda",
+      "developerName": "EhPanda-Team",
+      "subtitle": "使用 SwiftUI 和 TCA 构建的非官方 iOS E-Hentai 应用",
+      "localizedDescription": "EhPanda 是一款使用 SwiftUI 和 TCA 构建的非官方 E-Hentai iOS 和 iPadOS 应用。它支持几乎所有 E-Hentai 画廊分类、带筛选条件的画廊浏览、包含标签和相关画廊的详情页面、发表评论／编辑评论／回复评论、H@H 存档、种子列表、E-Hentai 设置，以及受限网络下的 SNI 绕过（域名前置）。应用内置本地化支持，应用图标和强调色也可自定义。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/images/detail.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/images/comment.png"
+      ],
+      "tintColor": "#0f766e",
+      "versions": [
+        {
+          "version": "2.8.1",
+          "date": "2026-07-20",
+          "localizedDescription": "1. feat：适配全新的 Liquid Glass 设计。\r\n3. fix：修复阅读页面的手势问题。\r\n4. fix：修复 eh 设置页面的崩溃问题。\r\n5. fix：修复搜索页面的一处小问题。",
+          "downloadURL": "https://github.com/EhPanda-Team/EhPanda/releases/download/v2.8.1/EhPanda.ipa",
+          "size": 7352364,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "Fathom",
+      "bundleIdentifier": "app.fathom.emulator",
+      "developerName": "Leviidev",
+      "subtitle": "iOS x86-64 PC 模拟器",
+      "localizedDescription": "一款适用于 iOS 的 x86-64 PC 模拟器。Fathom 使用 FEXCore（FEX-Emu 背后的动态重编译器）在程序运行时将 x86-64 Linux 程序转换为 ARM64，并配有原生 SwiftUI 前端，让你能在 iPhone 或 iPad 上运行这些程序。\n\n导入一个静态链接的 x86-64 Linux 可执行文件，打开它，然后按下“运行”。Fathom 会将其映射到客户机地址空间，将指令交给 FEXCore 的 JIT 处理，响应其 Linux 系统调用，并显示输出结果。\n\nJIT 需要通过 StikDebug 附加到进程并处理可执行内存陷阱；如果缺少 StikDebug，Fathom 会在启动时自动请求。\n\n请注意：目前仅支持运行静态链接、位置无关的可执行文件（-static-pie）。暂不支持动态链接二进制文件和 32 位 x86，也尚未实现线程，因此客户机只能以单线程运行。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Fathom/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Fathom/images/library.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Fathom/images/settings.png"
+      ],
+      "tintColor": "#68D8D8",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-09-14",
+          "localizedDescription": "适用于 iOS 的 x86-64 PC 模拟器，使用 FEXCore 运行来宾代码。\n\n2048 和井字棋都可以运行。从“资料库”标签页添加游戏，然后使用屏幕上的方向键游玩。\n\n**下载内容**\n- `Fathom.ipa` - 应用本体，未签名，可用于侧载。需要连接 StikDebug 才能启用 JIT。\n- `tictactoe` - 使用方向键移动，按 Enter 落子，对战无法击败的 minimax 机器人。\n- `play2048` - 使用方向键滑动方块。\n\n将两个游戏二进制文件复制到 Fathom 的 Programs 文件夹，或从“资料库”标签页导入。",
+          "downloadURL": "https://github.com/Leviidev/Fathom/releases/download/v1.0.0/Fathom.ipa",
+          "size": 1175175,
+          "minOSVersion": "18.0"
+        }
+      ]
+    },
+    {
+      "name": "Husk",
+      "bundleIdentifier": "com.husk.app",
+      "developerName": "Leviidev",
+      "subtitle": "适用于 iOS 的 Android 应用启动器",
+      "localizedDescription": "在 iOS 上运行 Android 应用：导入 APK，轻点即可在 QEMU 来宾系统中全屏打开 Android 应用，并使用硬件加速显示和音频。需要 JIT，并且运行时必须连接调试器，因此需要能够提供 get-task-allow 的侧载方案，普通的重新签名方式无法满足要求。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Husk/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Husk/images/main.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Husk/images/settings.png"
+      ],
+      "tintColor": "#5949E5",
+      "versions": [
+        {
+          "version": "3.0",
+          "date": "2026-10-17",
+          "localizedDescription": "## Husk 3.0\r\nHusk 有史以来最酷、规模最大的版本。新增数百款 Android 游戏、支持 PS4 等。\r\n\r\n## 更新内容\r\n- 主机风格的主屏幕\r\n- 全新的资料库界面\r\n- 完善的首次运行体验\r\n    - 包含完整设置指南和可选引导\r\n### PS4 游戏\r\n- 点击 + 按钮添加游戏。可添加 PKG 文件、包含多个 PKG 的文件夹，或已解压的游戏文件夹。游戏更新会与游戏一同安装。\r\n- 已测试：Bloodborne、Minecraft: PlayStation 4 Edition、Sonic Mania\r\n- Shader Cache 会在多次启动间保留着色器\r\n- 如果游戏需要键盘输入，将打开 iOS 键盘\r\n### Android\r\n- 新增 366 款可运行游戏 - 请查看兼容性列表\r\n- 非官方移植版：Sonic Robo Blast 2、Nethack、PokeWilds 等\r\n- GoDot 4\r\n- 从商店下载的内容包含 OBB 文件\r\n- 所有游戏均支持输入文字\r\n- 可选语言字体（中文、日文等）\r\n### 其他\r\n- 修复了大量问题\r\n- 完整支持 TrollStore JIT\r\n- 支持 iOS 15.5\r\n## 已知问题\r\n- Bloodborne 可以运行，但运行效果很差。\r\n- 部分 Unity 6 游戏的渲染速度较慢\r\n## 最后说明\r\n感谢大家，祝游玩愉快 ❤️ \r\n\r\nDiscord 服务器：https://discord.gg/xApMHWAzkh",
+          "downloadURL": "https://github.com/Leviidev/Husk/releases/download/3.0/Husk.ipa",
+          "size": 140126095,
+          "minOSVersion": "16.4"
+        }
+      ]
+    },
+    {
+      "name": "Iridium",
+      "bundleIdentifier": "software.iridium",
+      "developerName": "intraducine",
+      "subtitle": "适用于 iPhone 和 iPad 的实验性 Windows 游戏运行环境",
+      "localizedDescription": "适用于 iPhone 和 iPad 的实验性 Windows 游戏运行环境，内置原生游戏库，并集成触控、键盘、鼠标和控制器操作。需要 iOS 18+ 和 JIT，并且需要你自备游戏文件；兼容性因游戏和设备而异。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Iridium/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Iridium/images/all-games.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Iridium/images/settings.png"
+      ],
+      "tintColor": "#1C1C1E",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "date": "2026-10-04",
+          "localizedDescription": "# Iridium 0.2.0\n\n可直接在 Iridium 中下载 Steam 游戏、管理修复和更新，并体验更新后的 Windows 运行环境。游戏支持仍处于实验阶段。\n\n## 下载\n\n**[下载 Iridium (.ipa)](https://github.com/intraducine/iridium/releases/download/v0.2.0/Iridium-unsigned.ipa)**\n\n需要 **iOS 或 iPadOS 18+**、JIT，以及你拥有的游戏。安装只需 IPA；你可以提供自己的游戏文件，也可以从 Steam 下载已拥有的游戏。\n\n## 安装\n\n1. 使用兼容的侧载工具为 IPA 和辅助程序签名并安装，或通过受支持的 JIT 设置将其导入 LiveContainer。\n2. 打开 Iridium，在 **Launch Support** 中配置 JIT。\n3. 打开 **Downloads → Steam** 登录并将游戏加入下载队列，或使用 **Add Game** 导入游戏文件夹。选择可执行文件，将游戏加入资料库，然后按 **Play**。\n\n独立安装时，请确保 Iridium 最终应用签名和描述文件中都保留 `com.apple.developer.kernel.increased-memory-limit=true`。匿名 ad-hoc 载体本身不会授予安装或内存权限。在 LiveContainer 中，有效权限取决于容器进程的签名、描述文件和 JIT 设置；导入来宾 IPA 不会授予这些权限。两种方式都仍需通过设备验证。\n\n更新前请备份存档。更新现有应用或 LiveContainer 条目时，请勿删除其数据。Steam 修复和更新会保留旧版本安装；存储在旧游戏文件夹中的存档可能需要手动复制到新文件夹。确认存档无误前，请保留旧文件夹。\n\n## 更新内容\n\n- **在应用内下载 Steam 游戏。** 使用密码或二维码登录，并支持 Steam Guard；浏览资料库，并选择下载语言、无保护分支、32/64 位文件以及已拥有的 DLC。\n- **带验证和修复功能的下载队列。** 可暂停、继续、重试和调整下载优先级。检查更新或修复已下载文件时会保留先前的安装版本。\n- **更清晰的存储空间警告。** 下载检查会根据 Iridium 可用空间进行，并计入已验证的部分文件。**Download Anyway** 可在单次尝试中忽略预估空间警告；文件验证和实际空间不足错误仍会生效。\n- **更新 Windows 运行环境。** 支持 32 位 WoW64，并更新 D3D9/D3D12。支持情况仍因游戏和设备而异。\n- **游戏先决条件安装程序。** 运行游戏自带的受支持安装步骤，或选择 **Game Options → Run Installer** 来运行你提供的 EXE 或 MSI 安装程序。部分安装程序需要交互操作。关闭播放器会请求取消；Iridium 会继续监测运行环境是否退出，并在需要重启时通知你。\n- **减少重复的运行环境数据。** 相同的 Windows 运行环境文件只打包一份。主应用的匿名 ad-hoc 签名仅包含增加内存上限的请求；辅助程序在签名之前保持未签名状态。\n\n## 已知问题\n\n- 尚未确认这些更改在实体设备上的兼容性。部分游戏可能无法启动，或出现图像、视频、音频、输入、存档或退出问题。Skyrim 的语音和鼠标攻击问题仍未验证。\n- 下载时请保持 Iridium 在前台。应用切至后台后，下载会暂停，需要手动继续。真实账户下载以及 Wi-Fi 或网络中断后的恢复仍需在设备上测试。\n- 不支持 Steam Cloud、创意工坊、Steam 家庭库发现、受密码保护的分支和桌面版 Steam 服务。需要 Steamworks/DRM、反作弊或其他不受支持的运行环境功能的游戏，下载后可能无法启动。\n- 更新会保留旧版游戏文件，因此需要额外存储空间。**Download Anyway** 不会腾出空间；设备存储耗尽还可能导致其他应用无法保存数据。\n- JIT 和可用内存取决于设备和签名方案；LiveContainer 与独立安装的结果可能不同。内置 JIT 需要独立安装 Iridium、调试权限、有效的配对文件和 LocalDevVPN。托管版 Iridium 使用外部 JIT。接收方签名、LiveContainer 托管和游戏先决条件能否成功仍需在设备上测试。\n\n<details>\n<summary>源代码、许可证和构建详情</summary>\n\n## 源代码和许可证\n\n其他发布文件用于访问源代码、重新构建和验证下载文件：\n\n- 下载 `Iridium-corresponding-source.tar.gz.part01` 和 `.part02`，以获取完整且对应的源代码包。\n- `Iridium-source-guide.zip` 包含许可证声明、源代码记录以及构建/重新链接说明。\n- `SHA256SUMS` 用于验证 IPA、两个源代码分卷和源代码指南。\n\n将全部五个发布文件下载到同一文件夹，然后运行：\n\n```sh\nshasum -a 256 -c SHA256SUMS\ncat Iridium-corresponding-source.tar.gz.part01 Iridium-corresponding-source.tar.gz.part02 > Iridium-corresponding-source.tar.gz\nunzip Iridium-source-guide.zip\nshasum -a 256 -c Iridium-source-guide/ASSEMBLED-SHA256SUMS\n```\n\n源代码指南包含合并后压缩包的校验和以及重新构建说明。请在此版本发布 URL 下，将对应的源代码和指南与 IPA 一同保留。GitHub 自动生成的仓库 ZIP 不包含所有必需的依赖源代码。\n\n源代码提交：b7e24f9fb4dd17f5d940c4763123f2b00d0e121f\n构建运行：https://github.com/intraducine/iridium/actions/runs/37142663989\n\n应用和辅助程序版本：**0.2.0 (115.1)**，最低 iOS 版本 **18.0**，已在实际交付的 Info.plist 文件中确认。IPA 大小为 **399,916,792 bytes**；SHA-256 `1934922a1fcf1509e305a29d6f0d26579a4318ba95dfcf5b406d5e38f88c9763`。\n\n源代码检查、Steam 原生版本/模拟器检查、完整应用构建以及最终二进制文件/软件包检查均已通过。独立 IPA 检查确认了准确的匿名 XML/DER 权限载体（不含 CMS 载荷或团队身份）、八个未签名的非主程序原生二进制文件、严格的 Bundle 验证、运行环境哈希值，以及 ZIP 文件权限和符号链接。通过来源验证后，复用了未更改的运行环境组件输出。这些检查不能证明真实账户登录、已拥有游戏的下载、游戏兼容性、接收方签名或实体设备运行情况。\n\nApple 编译器运行时声明存在不确定性，未签名 IPA 的合同授权也仍是记录在案的风险。请保留 `Iridium-source-guide.zip` 中的许可证指南。\n\n</details>",
+          "downloadURL": "https://github.com/intraducine/iridium/releases/download/v0.2.0/Iridium-unsigned.ipa",
+          "size": 399916792,
+          "minOSVersion": "18.0"
+        }
+      ]
+    },
+    {
+      "name": "iTorrent",
+      "bundleIdentifier": "com.xitrix.iTorrent2",
+      "developerName": "XITRIX",
+      "subtitle": "适用于 iOS 的 Torrent 客户端",
+      "localizedDescription": "iTorrent 是一款普通的 iOS Torrent 客户端，支持“文件”App 等更多功能。\n\n此 App 的功能：\n\n• 后台下载\n• 实时活动和灵动岛进度条\n• 下载到外置硬盘\n• 顺序下载（加载时可使用 VLC 观看影片）\n• 通过共享菜单添加 Torrent 文件（Safari 和其他 App）\n• 直接从 Safari 添加磁力链接\n• 将文件存储在“文件”App 中\n• 直接通过 App 共享文件\n• 通过 URL 下载 Torrent\n• 通过磁力链接下载 Torrent\n• Torrent 下载完成时发送通知\n• Web/WebDav 服务器\n• 选择文件下载优先级\n• 切换为深色主题\n• 自定义颜色\n• RSS Feed",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/images/detail.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/images/player.png"
+      ],
+      "tintColor": "#F19E69",
+      "versions": [
+        {
+          "version": "2.2.0-1",
+          "date": "2026-07-19",
+          "localizedDescription": "## 新功能：\r\n* 认识全新的内置 VLC 播放器。可直接在 iTorrent 中播放兼容的视频和音频文件，即使文件仍在下载也没问题。\r\n* 支持画中画、0.5x 至 2x 播放速度、音轨和字幕选择、精准拖动播放，以及系统媒体控制。\r\n* 使用 AirPlay 或在本地网络中发现的兼容播放器，将内容投放到更大的屏幕上。\r\n* 可通过“顺序”和“首尾优先”模式选择分块下载方式，让你更快开始观看。\r\n* 一次选择并共享多个已完成的文件或整个文件夹。\r\n\r\n## 改进：\r\n* 为 iOS 26 焕新界面，采用 Liquid Glass 风格，并优化了对话框和导航体验。\r\n* 优化 Torrent 详情页面，使其操作更流畅、更易用，并让下载优先级控件和私有 Torrent 信息更加清晰。\r\n* 改进媒体预览，让 iTorrent 能为每个文件提供最佳可用播放器。\r\n* 更新 Torrent 和媒体引擎，提升兼容性、稳定性以及意外错误后的恢复能力。\r\n* 扩展并完善所有支持语言的翻译。\r\n\r\n## 修复：\r\n* 修复磁力链接可能保存错误的问题。\r\n* 修复启动竞态问题，该问题可能会影响 App 启动或初始设置完成。\r\n* 修复 iPad 分屏模式下工具栏和导航显示异常的问题。\r\n* 修复 RSS 下载后返回错误页面的问题。\r\n* 修复 Torrent 详情有时会陷入持续更新循环的问题。\r\n* 修复若干播放、AirPlay 和本地设备连接问题。\r\n\r\n**完整更新日志**：https://github.com/XITRIX/iTorrent/compare/v2.1.1-1...v2.2.0-1",
+          "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.2.0-1/iTorrent.ipa",
+          "size": 24288935,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "Kazumi",
+      "bundleIdentifier": "com.example.kazumi",
+      "developerName": "Predidit",
+      "subtitle": "基于自定义规则的番剧采集 App，支持在线观看流媒体、弹幕和实时超分辨率。",
+      "localizedDescription": "使用 Flutter 开发的基于自定义规则的番剧采集与在线观看程序。使用最多五行基于 Xpath 语法的选择器构建自己的规则，支持导入和分享规则，并支持基于 Anime4K 的实时超分辨率。\n\n其他特性：番剧目录与搜索、分集播放、番剧弹幕、追番列表、历史记录、倍速播放、多视频源支持、配色方案等。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/home.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/timetable.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/details.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/selection.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/rules.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/rules_edit.jpg"
+      ],
+      "tintColor": "#4CAF50",
+      "versions": [
+        {
+          "version": "2.3.9",
+          "date": "2026-10-14",
+          "localizedDescription": "- 修复 Windows 偶发的闪退问题 (#2668) (@Predidit)\r\n- 修复 Android 平台播放内容开头数秒可能被跳过的问题 (#2687) (@Predidit)\r\n- 现在可以选择 GitHub 或镜像源进行应用更新 (@liangyuR)\r\n- Android 平台现在支持自定义视频下载目录 (#2464 #2632) (@LiggMax)\r\n- 截图挑选面板新增全选功能 (#2603) (@rinnki-L)\r\n- 规则 API 检索模式支持通过模板将 ID 拼接为详情页链接 (@JesseLee-CN)\r\n- 修复 iOS 平台应用更新后离线缓存失效的问题 (#2611 #2243) (@liangyuR)\r\n- 修复横屏时播放页侧边面板左侧出现多余空白的问题 (@LiggMax)\r\n- 其他 UI 改进 (@Predidit)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.9/Kazumi_ios_2.3.9_no_sign.ipa",
+          "size": 30477942,
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "KMusic",
+      "bundleIdentifier": "com.macxk.KMusic",
+      "developerName": "Mac-XK",
+      "subtitle": "基于 SwiftUI 的多源音乐聚合播放器",
+      "localizedDescription": "基于 SwiftUI 开发的多源音乐聚合播放器，支持 iOS/macOS。内置酷我、酷狗、QQ 音乐、网易云、咪咕等多平台音源，支持 LRC 歌词同步、全局搜索、后台播放与深色主题，并可通过 JS 脚本导入自定义音源。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/KMusic/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/KMusic/images/recommendation.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/KMusic/images/playlist.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/KMusic/images/play.png"
+      ],
+      "tintColor": "#F03050",
+      "versions": [
+        {
+          "version": "2.3.0",
+          "date": "2026-03-12",
+          "localizedDescription": "- 优化并修复各种问题",
+          "downloadURL": "https://github.com/Mac-XK/KMusic/releases/download/%E6%AD%8C%E4%B8%80%E5%88%802.3.0/_2.3.0_22.2.ipa",
+          "size": 3836900,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Kumone",
+      "bundleIdentifier": "sb.moe.kumone",
+      "developerName": "missuo",
+      "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）",
+      "localizedDescription": "Kumone（雲の音）——适用于 iOS 的原生 NetEase Cloud Music 客户端。直接连接网易云音乐官方 API，无需第三方服务器：支持二维码登录、解除灰色歌曲限制、同步歌词及翻译、沉浸式专辑封面主题的播放界面，以及歌单管理。\n\n支持英文和简体中文。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/images/search.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/images/featured.png"
+      ],
+      "tintColor": "#F0D060",
+      "versions": [
+        {
+          "version": "0.3.21",
+          "date": "2026-10-19",
+          "localizedDescription": "### 新增\n\n- **iOS + macOS**：离线下载——可下载单曲和整个歌单以供离线收听；新增「已下载」曲库和存储空间页面，可查看用量并管理空间。感谢 @xyspg（#111）。\n- **macOS**：可自定义播放等操作的键盘快捷键，并支持可选的全局（系统级）快捷键——在「设置」→「快捷键」中设置。全局快捷键默认关闭。感谢 @WillowBranch127（#125，关闭 #122）。\n- **iOS + macOS**：iCloud 同步（默认关闭）——可接续另一台设备上的播放进度、同步设置，也可选择通过 iCloud 云盘或指定文件夹在设备间共享登录状态。共享的登录信息会使用你设置的同步密码加密；退出登录时，如果没有其他设备正在使用该会话，系统会撤销该会话。感谢 @yamakze（#138）。\n\n### 修复\n\n- **iOS + macOS**：当某个 CDN 主机无法连接时，网易云音频现在会自动尝试其备用主机，修复了网络状况不佳时播放偶尔会在队列中途卡住（进度仍继续前进），或刚播放过的歌曲无法重新播放的问题。感谢 @xyspg（#115，关闭 #106）。\n- **macOS**：暂停后恢复播放时，AutoMix 不再让播放头向后跳，导致进度条和歌词错位。感谢 @WillowBranch127（#126）。\n- **macOS**：暂停后恢复播放时，AutoMix 不再短暂中断。感谢 @XerWandeRer（#140，关闭 #136）。\n- **macOS**：使用触控板或鼠标滚轮滚动歌词时，不再跳回当前行；滚动期间歌词也不会模糊。感谢 @xyspg（#139）。\n- **macOS**：沉浸式播放页面上的窗口按钮不再移位。感谢 @yxxbc（#130，关闭 #128）。\n- **macOS**：设置子页面（存储空间、快捷键）的返回按钮不再与窗口控件重叠；重新打开设置时会回到主页面。感谢 @yamakze（#135）。\n\n### 改进\n\n- **iOS + macOS**：播放页面的 CPU 占用大幅降低——macOS 上播放时约占用一个核心的 5%，此前约为 50%——窗口最小化时也会释放内存。感谢 @yxxbc（#129，关闭 #131）。\n- **macOS**：大型歌单（如「我喜欢的音乐」，超过 1,000 首）加载和滚动更加流畅；专辑封面会按实际显示尺寸解码，侧边栏动画的资源开销也更低。更新后，每首已缓存歌曲会在下次播放时重新下载一次。感谢 @morefreefg（#127）。\n- **macOS**：设置界面更加简洁——AutoMix 仅在启用时显示相关选项；键盘快捷键可通过分段控件在应用内和全局模式间切换；清除歌曲缓存现在会立即执行，无需确认。感谢 @yamakze（#135）。\n- **macOS**：在 macOS 26 及更高版本中，应用现在采用当前的系统窗口样式。感谢 @yxxbc（#130）。\n\n---\n\n### 新增\n\n- **iOS + macOS**：离线下载——可下载单曲和整个歌单离线收听，新增「已下载」库和存储用量 / 管理页面。感谢 @xyspg（#111）。\n- **macOS**：可自定义播放等操作的键盘快捷键，并支持可选的全局（系统级）快捷键——在「设置」→「快捷键」中设置。全局快捷键默认关闭。感谢 @WillowBranch127（#125，关闭 #122）。\n- **iOS + macOS**：iCloud 同步（默认关闭）——可接续另一台设备上的播放进度、同步设置，也可选择通过 iCloud 云盘或指定文件夹在设备间共享登录状态。共享的登录信息会使用你设置的同步密码加密；退出登录时，如果没有其他设备正在使用该会话，系统会撤销该会话。感谢 @yamakze（#138）。\n\n### 修复\n\n- **iOS + macOS**：当某个 CDN 主机无法连接时，网易云音频现在会自动尝试其备用主机，修复了网络状况不佳时播放偶尔会在队列中途卡住（进度仍继续前进），或刚播放过的歌曲无法重新播放的问题。感谢 @xyspg（#115，关闭 #106）。\n- **macOS**：暂停后恢复播放时，AutoMix 不再让播放头向后跳，导致进度条和歌词错位。感谢 @WillowBranch127（#126）。\n- **macOS**：暂停后恢复播放时，AutoMix 不再短暂中断。感谢 @XerWandeRer（#140，关闭 #136）。\n- **macOS**：使用触控板或鼠标滚轮滚动歌词时，不再跳回当前行；滚动期间歌词也不会模糊。感谢 @xyspg（#139）。\n- **macOS**：沉浸式播放页面上的窗口按钮不再移位。感谢 @yxxbc（#130，关闭 #128）。\n- **macOS**：设置子页面（存储空间、快捷键）的返回按钮不再与窗口控件重叠；重新打开设置时会回到主页面。感谢 @yamakze（#135）。\n\n### 改进\n\n- **iOS + macOS**：播放页面的 CPU 占用大幅降低——macOS 上播放时约占用一个核心的 5%，此前约为 50%——窗口最小化时也会释放内存。感谢 @yxxbc（#129，关闭 #131）。\n- **macOS**：大型歌单（如「我喜欢的音乐」，超过 1,000 首）加载和滚动更加流畅；专辑封面会按实际显示尺寸解码，侧边栏动画的资源开销也更低。更新后，每首已缓存歌曲会在下次播放时重新下载一次。感谢 @morefreefg（#127）。\n- **macOS**：设置界面更加简洁——AutoMix 仅在启用时显示相关选项；键盘快捷键可通过分段控件在应用内和全局模式间切换；清除歌曲缓存现在会立即执行，无需确认。感谢 @yamakze（#135）。\n- **macOS**：在 macOS 26 及更高版本中，应用现在采用当前的系统窗口样式。感谢 @yxxbc（#130）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.21/Kumone-iOS-0.3.21.ipa",
+          "size": 8725929,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "LiveContainer+SideStore",
+      "bundleIdentifier": "com.kdt.livecontainer",
+      "developerName": "LiveContainer Team",
+      "subtitle": "无需实际安装即可运行 iOS 应用！",
+      "localizedDescription": "一款无需实际安装即可运行 iOS 应用的启动器。此版本的 LiveContainer 内置 SideStore，可用于刷新应用。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/images/apps.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/images/sources.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/images/settings.png"
+      ],
+      "tintColor": "#0784FC",
+      "versions": [
+        {
+          "version": "3.8.11",
+          "date": "2026-10-17",
+          "localizedDescription": "**提交：** [9108ae624ea001f7d7696d48407f890b48fa2653](https://github.com/LiveContainer/LiveContainer/commit/9108ae624ea001f7d7696d48407f890b48fa2653)\n**说明：** 修复 #1644、#1655、#1666，更新版本\n\n这是一个 nightly 版本，[由 GitHub Actions 工作流自动构建](https://github.com/LiveContainer/LiveContainer/actions/runs/39017541871/attempts/1)。",
+          "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/LiveContainer%2BSideStore.ipa",
+          "size": 24155286,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "3.8.0",
+          "date": "2026-07-17",
+          "localizedDescription": "# LiveContainer 3.8.0\r\n\r\n> [!Warning]\r\n> 安装独立版本需要 **SideStore 0.6.2+** 或 **AltStore 2.2.1+**。\r\n> 如需安装内置 SideStore 的 LiveContainer（`LiveContainer+SideStore.ipa`），请使用 [Impactor](https://github.com/khcrysalis/Impactor) 或 [iloader](https://github.com/nab138/iloader)。详情请参阅[安装指南](https://livecontainer.github.io/docs/installation/lc_sidestore)。\r\n\r\n# 新功能\r\n\r\n## 存储管理\r\n\r\n- 新增存储管理页面，可分类查看应用包、容器、临时文件、应用组数据、插件及其他文件的占用空间。（隐藏应用的大小在解锁前计入「其他」）\r\n- 新增单个应用的存储详情，包括应用包大小、容器大小和上次使用日期。\r\n- 新增清理临时文件和缓存的操作，包括访客应用缓存和 LiveContainer 自身缓存。\r\n\r\n## 多个 LiveContainer 实例\r\n- 新增多个 LiveContainer 实例的启动优先级设置，共享应用的快捷方式会按你设定的顺序选择可用实例。（#1367）\r\n\r\n## 分享到 LiveContainer 中的应用\r\nLiveContainer 新增了分享扩展。从 iOS 分享菜单分享 URL 或文件时，LiveContainer 会询问你要用哪个应用打开该内容，因此不再需要旧的「分享到 LiveContainer」快捷指令方式。以此方式分享 IPA 文件时，LiveContainer 会询问你要将其安装到 LiveContainer，还是内置的 SideStore（如已安装）中。（#1357）\r\n\r\n## 多任务\r\n\r\n- 新增单个应用的多任务偏好设置。每个应用现在可以遵循全局设置、始终以多任务模式启动，或不使用多任务模式。（#1208）\r\n- 改进多任务程序坞的行为：可缩小程序坞、更干净地隐藏程序坞，并优化内边距。（#1228、#1250）\r\n- 新增更多多任务窗口动画，并改进原生窗口场景处理。\r\n- URL 方案和 `open-url` 负载现在可以传递给正在运行的多任务应用和原生窗口。\r\n\r\n## JIT\r\n- 新增 StosDebug 支持，可用作 JIT 启用工具。\r\n\r\n## TweakLoader\r\n现在可以在 LiveContainer 界面的「Tweaks」页面中停用插件。by @SAOMDVN\r\n\r\n# 改进\r\n- 新增手动设置容器 IDFV 的支持。（#1194）\r\n- 即使未加载 Tweakloader，IDFV 欺骗功能也能正常工作。\r\n- 重构插件签名和应用安装的签名逻辑，并支持多线程签名。\r\n- 下载过程中，下载提示现在会阻止切换标签页。\r\n- 在较新版本的 iOS 上，崩溃报告现在以弹出面板显示，而非占用空间较大的警告框，性能更佳。\r\n- 新增「清除通知」按钮。（#1388）\r\n- 新增一些常用的 NSBonjourServices 键，以便应用在本地网络中发现 AirPlay 设备和可配对的远程配对主机。（#1417）\r\n\r\n# 错误修复\r\n\r\n- 修复冷启动应用时，`livecontainer://open-url` 丢失深层链接的问题。（#1339）\r\n- 替换 SwiftUI 上下文菜单实现，修复「添加到主屏幕」菜单失效或行为异常的问题。（#1209）\r\n- 修复打开容器偏好设置时，如果应用不包含 `en.lproj` 路径就会崩溃的问题。（#1239）\r\n- 修复某些情况下无法搜索应用和 AltStore 源的问题。（#1365、#1368）\r\n- 修复取消安装后，将共享应用改回私有应用时，如果应用包标识符相同，可能遗留过时容器状态的问题。（#1347）\r\n- 修复快捷指令和 JIT 流程卡在繁忙的 LiveContainer 实例上，而没有改用其他可用实例的问题。（#1386）\r\n- 修复启用「从 dyld API 中隐藏 LiveContainer」后，因未加载 Tweakloader 而导致某些应用无法使用文件选择器的问题。（#1430）\r\n- 修复 iOS 26.5 beta 上的若干应用启动兼容性问题，以及部分多任务 / JIT 应用启动问题。（#1300、#1310、#1329）\r\n- 修复 iOS 17.4 及更高版本上的多任务键盘焦点问题，包括键盘无法显示、「密码」应用立即关闭，或视频在多任务模式下播放冻结等情况。（#1402、#844、#870）\r\n- 新增对 iOS 27 开发者测试版的支持。（#1394、#1417、#1416）\r\n- 修复多任务应用的后台下载问题（需要选择「保留 App 扩展（为每个扩展注册 App ID）」）。（#1415）\r\n\r\n# 本地化\r\n\r\n- 更新翻译。新增由 @Deci8BelioS 提供的西班牙语翻译。\r\n\r\n# 致谢\r\n\r\n感谢所有为此版本贡献代码、修复问题、参与测试和提交报告的人，包括 @boa-z、@ruri1208、@Project516、@yazdipour、@stossy11 和 @SAOMDVN。\r\n\r\n特别感谢所有帮助翻译 LiveContainer 的人。",
+          "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/3.8.0/LiveContainer%2BSideStore.ipa",
+          "size": 35403538,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Madeira",
+      "bundleIdentifier": "com.willfaust.madeora",
+      "developerName": "Will Faust",
+      "subtitle": "在 iPhone 上畅玩 Windows PC 游戏",
+      "localizedDescription": "Madeira 可在单个受限 iOS 应用中运行未经修改的 x86-64 Windows PC 游戏：FEX-Emu 会在运行时将游戏的 x86 代码转换为 ARM64；为 ARM64EC 构建的 Wine 11.4 提供 Windows 环境；DXMT 与 Madeira 自带的 Direct3D 12 运行时则通过 Metal 渲染 Direct3D 9、10、11 和 12。游戏支持游戏库、Steam 登录与安装、手柄和触控操作，以及键盘、鼠标和触控板输入。需要运行 iOS 26 或更高版本且通过 StikDebug 启用 JIT 的 iPhone。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Madeira/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Madeira/images/introduction.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Madeira/images/main.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Madeira/images/settings.png"
+      ],
+      "tintColor": "#7B68EE",
+      "versions": [
+        {
+          "version": "0.1.3",
+          "date": "2026-10-03",
+          "localizedDescription": "### 新功能\n- **应用内 JIT：无需 StikDebug。** Madeira 可通过基于 StikJIT 构建的内置辅助工具自行启用 JIT。在 iOS 27 上，它会与运行 Madeira 的 iPhone 配对：前往“设置”›“隐私与安全性”›“开发者模式”，轻点**与 Madeira 配对**，然后输入 Madeira 显示的 PIN。无需电脑。在 iOS 26 上，请改为导入配对文件。配对信息会保存在钥匙串中。StikDebug 仍可使用。（#127）\n- **轻点“游玩”即可自动开启 JIT。** 如果 JIT 已关闭，“游玩”会先启用 JIT，再启动游戏。期间按钮会显示**正在启动 JIT**。\n- **Madeira JIT 快捷指令（iOS 27，可选）。** LocalDevVPN 的环回连接无法通过蜂窝数据工作。此快捷指令会连接 LocalDevVPN；无 Wi‑Fi 时会关闭蜂窝数据；游戏启动后再恢复这些设置，并恢复你之前使用的 VPN。可在设置期间或前往“设置”›“JIT”添加。\n- **已安装 Steam 游戏支持 Steam 云存档**，默认开启。游戏前后都会同步存档，替换云端副本前也会先备份。（#130）\n- **将手柄用作键盘和鼠标**，可为每款游戏单独选择，并提供“手柄按键绑定”页面。DirectInput 现在也可按游戏单独选择。（#128）\n- **设置流程**会在尚未安装 LocalDevVPN 时先安装它。本次更新后设置流程会再次打开，方便你选择新增的 JIT 选项。\n\n### 修复\n- 游戏启动更快：Wine 会在 wineserver 就绪后立即启动，不再固定等待 2 秒。（#125）\n- Cuphead（#107）、Nine Sols（#108）和 Hades II（#119、#120）现已可以运行；Steam 应用信息中的转义引号也能正确读取。（#118）\n- JIT 错误现在会说明问题并提供解决方法：**重新配对**或**连接 LocalDevVPN**。错误信息也会显示在“设置”标签页中。\n\n### 已知问题\n- Wi‑Fi 和蜂窝数据都关闭时，LocalDevVPN 无法连接，因此无法启用 JIT，即使使用快捷指令也不行。请在网络可用时连接 LocalDevVPN。\n\n### 安装\n- 需要 **iOS 26 或更高版本**。应用内配对和 Madeira JIT 快捷指令需要 iOS 27。\n- 如果侧载工具询问是否保留应用扩展，请选择保留：Madeira 的应用内 JIT 需要在其中运行。\n- IPA 使用临时签名（无证书），并包含应用所需的权限，包括提升后的内存限制。请使用你自己的 Apple ID 通过侧载工具安装（SideStore、AltStore、Sideloadly、Plume 或类似工具），工具会为你的设备签名。\n- 首次运行时，设置流程会引导你启用 JIT。“设置”中 JIT 和 Memory+ 旁会显示绿色勾号，并提示**已准备就绪，可以游玩**。\n\n### 未包含内容\n此应用不会重新分发 Microsoft Visual C++ 运行时 DLL（参见 `legal/THIRD-PARTY-NOTICES.md`）。从源代码构建：`tools/fetch-vcruntime.md`。\n\n感谢 Dan Perks（[@danperks](https://github.com/danperks)）提供应用内 JIT 和配对功能，感谢 Jesse（[@JesseLovelace](https://github.com/JesseLovelace)）提供 Steam 云存档、更快的启动体验和游戏修复，感谢 Nick（[@125hz](https://github.com/125hz)）提供键盘鼠标手柄功能。",
+          "downloadURL": "https://github.com/willfaust/Madeira/releases/download/v0.1.3/Madeira-0.1.3.ipa",
+          "size": 145554426,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Mangayomi",
+      "bundleIdentifier": "com.kodjodevf.mangayomi",
+      "developerName": "Moustapha Kodjo Amadou",
+      "subtitle": "阅读漫画、小说，观看动漫",
+      "localizedDescription": "Mangayomi 是一款开源 Flutter 应用，支持在多个平台上阅读漫画、小说和观看动漫。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot1.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot2.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot3.jpg"
+      ],
+      "tintColor": "#EF4444",
+      "versions": [
+        {
+          "version": "0.9.9",
+          "date": "2026-10-12",
+          "localizedDescription": "## 更新内容\n* 修复（扩展）：启用移动端代码复制功能，作者 @mrandhawa14，https://github.com/kodjodevf/mangayomi/pull/1039\n* 修复（阅读器）：恢复双击缩放切换功能，作者 @mrandhawa14，https://github.com/kodjodevf/mangayomi/pull/1037\n* 新功能（播放器）：添加按住并滑动的播放速度选择器，作者 @mrandhawa14，https://github.com/kodjodevf/mangayomi/pull/1038\n* 修复（HTTP）：移除 Linux 为已保存的 user agent 添加的引号，作者 @matsukiender-star，https://github.com/kodjodevf/mangayomi/pull/1036\n* 修复（安全）：显示深层链接将安装的内容，并避免令牌泄露……作者 @kodjodevf，https://github.com/kodjodevf/mangayomi/pull/1041\n* 维护：等待写入完成、添加防护 lint 检查，并本地化硬编码字符串，作者 @kodjodevf，https://github.com/kodjodevf/mangayomi/pull/1042\n* 重构：将追踪器库缓存从 Hive 迁移到 Isar，作者 @kodjodevf，https://github.com/kodjodevf/mangayomi/pull/1043\n* 重构：拆分大型 widget 文件并移除重复代码，作者 @kodjodevf，https://github.com/kodjodevf/mangayomi/pull/1044\n* 尝试修复章节排序，作者 @NBA2K1，https://github.com/kodjodevf/mangayomi/pull/1035\n* 为扩展播放添加受保护的 HLS 代理，作者 @mrandhawa14，https://github.com/kodjodevf/mangayomi/pull/1040\n* 修复阅读器，作者 @kodjodevf，https://github.com/kodjodevf/mangayomi/pull/1051\n* 修复（移动端）：改进播放器控件和错误处理，作者 @mrandhawa14，https://github.com/kodjodevf/mangayomi/pull/1047\n* 修复（恢复）：改进恢复操作期间的错误处理和报告……作者 @kodjodevf，https://github.com/kodjodevf/mangayomi/pull/1052\n* 修复（阅读器）：缩放后的 Webtoon 页面可平移，且不会影响双击操作，作者 @kodjodevf，https://github.com/kodjodevf/mangayomi/pull/1054\n* CI：在拉取请求和 main 分支上运行测试套件，作者 @kodjodevf，https://github.com/kodjodevf/mangayomi/pull/1056\n* 为扩展仓库使用中性图标，作者 @mrandhawa14，https://github.com/kodjodevf/mangayomi/pull/1045\n* 添加西方作品推荐和可靠的观看顺序，作者 @mrandhawa14，https://github.com/kodjodevf/mangayomi/pull/1050\n* 优化竖屏播放器控件，作者 @mrandhawa14，https://github.com/kodjodevf/mangayomi/pull/1058\n* 修复：识别“T1”季和“Episodio”剧集，作者 @matsukiender-star，https://github.com/kodjodevf/mangayomi/pull/1060\n* 隐藏用户已禁用的设置，作者 @NBA2K1，https://github.com/kodjodevf/mangayomi/pull/1059\n* 修复（电视端）：让“浏览”页面适配过扫描区域，并确保焦点可达，作者 @mrandhawa14，https://github.com/kodjodevf/mangayomi/pull/1061\n* 为扩展模板添加实用注释，作者 @NBA2K1，https://github.com/kodjodevf/mangayomi/pull/1057\n\n\n**完整更新日志**：https://github.com/kodjodevf/mangayomi/compare/v0.9.8...v0.9.9",
+          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.9/Mangayomi-v0.9.9-ios.ipa",
+          "size": 114603425
+        }
+      ]
+    },
+    {
+      "name": "ManicEMU",
+      "bundleIdentifier": "com.aoshuang.manicemu",
+      "developerName": "Manic EMU Development Team",
+      "subtitle": "适用于 iOS 的全能复古游戏模拟器",
+      "localizedDescription": "一体化复古游戏模拟器，汇集主机、街机、电脑和 Java 手机游戏系统，提供简洁易用的体验，以及存档、作弊、自定义皮肤、RetroAchievements 等功能。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ManicEMU/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ManicEMU/images/library.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ManicEMU/images/landscape.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ManicEMU/images/achievements.jpg"
+      ],
+      "tintColor": "#F02040",
+      "versions": [
+        {
+          "version": "2.0.1",
+          "date": "2026-09-18",
+          "localizedDescription": "- 新增 WonderSwan 支持\r\n- 新增 NAOMI、Atomiswave 和 System SP 街机支持\r\n- 新增 Flash 支持\r\n  · 皮肤按钮绑定\r\n  · 硬件键盘输入\r\n  · 软件键盘输入\r\n  · 触控输入\r\n- 内置独立 JIT，无需外部调试器\r\n- 新增慢动作\r\n- 提升 GameCube 和 Wii 性能\r\n- GameCube 现已支持多光盘游戏\r\n- 改进 Wii 体感控制\r\n- 通过触控模拟 Wii 红外指针\r\n- 可通过链接从其他模拟器添加游戏\r\n- 修复部分街机系统无法运行的问题\r\n- 修复 Dreamcast 游戏运行过快的问题\r\n- 修复 PSP 闪退问题\r\n- 新增 NDS 上下盖开合功能\r\n- 改进屏幕旋转：在控制中心开启方向锁定后，应用不再自动转回竖屏\r\n- 现在可以关闭游戏内快捷操作提示\r\n- 横屏游戏库可关闭轮播样式\r\n- 横屏轮播滚动更流畅\r\n- MultiDisc Helper 支持更多格式\r\n- 为 Symbian、Amiga 和 C64 添加硬件键盘输入\r\n- 新增 RomM 支持\r\n  · 仅支持局域网自托管服务器\r\n  · 仅同步从 RomM 导入的游戏\r\n  · 仅支持手动同步，可在服务卡片的长按菜单中操作\r\n  · 可获取 ROM、封面、元数据、说明书和游戏存档\r\n- 修复旧设备上可能因启动超时而退出应用的问题\r\n- N64 现已支持大于 64 MB 的 ROM",
+          "downloadURL": "https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa",
+          "size": 288525117,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "MiniWatts",
+      "bundleIdentifier": "org.zhaohe.MiniWatts",
+      "developerName": "ResistanceTo",
+      "subtitle": "电池、充电与温度监测仪",
+      "localizedDescription": "基于 Apple 私有 API 的 iPhone 电池与充电监测工具：查看充电器的实际功率、电池芯实际接收的功率、转化为热量的部分，以及手机中的每个温度传感器。应用不含网络代码，读取的任何数据都不会离开手机。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/images/power.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/images/thermal.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/images/adapter.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/images/history.jpg"
+      ],
+      "tintColor": "#30E0F0",
+      "versions": [
+        {
+          "version": "1.5.1",
+          "date": "2026-10-13",
+          "localizedDescription": "未签名版本——安装前请使用自己的 Apple ID 签名。\nhttps://github.com/ResistanceTo/MiniWatts#install\n\n## 改进\n\n- **输入读数不完整时，不再当作输入功率显示。** 在 iPad Pro 和 iPhone 18 Pro Max 上，输入传感器只测到了一部分功率（比如实际 43.5 W 只显示 21.8 W）。现在当进入电芯的功率比输入读数还大时，表盘改为显示\"进入电池\"的功率，不再计算效率和适配器利用率，并在功率页和适配器页说明原因。\n- **电池温度改用中位数。** 部分机型有四个同名的电池温度传感器，其中一个明显偏高。\"电池\"读数、热力图上的电池标记和分区标题现在都用中位数，四个读数仍然逐个列出。\n- **异常温度不再参与计算。** 以下读数不再计入热力图和最高温度，但仍保留在\"原始数据\"里，并注明原因：低于 −10 °C 的 PMU 传感器、高于 85 °C 而结温对不上的充电芯片温度、恰好为 0.0 °C 的传感器。\n- **支持 iPad。** 支持横竖屏，内容不再横向拉满。iPad 的传感器对应关系还没有验证，数据仅供参考。\n- **文案更准确。** \"来自充电器\"改为\"手机接口处 / 充电线圈处\"；适配器页注明额定功率是协商出的上限，不是功率计读数。\n- **原始数据更便于反馈。** 每个传感器带上服务编号，并列出被排除的读数。\n\n## 修复\n\n- 适配器：供电规格列表里不再出现\"65.5 V × 65.53 A\"这样的无效档位。\n- 实时活动：App 在前台时，读数变化 0.05 就会更新，不再等到变化 0.2 W 或 0.5 °C。\n\n## 注意\n\n- 这些修复是根据用户反馈的数据做的，没有在对应机型的真机上验证过。如果你的机型上读数仍然不对，请在 设置 → 原始数据 里复制导出并反馈。\n- iPhone 18 Pro Max 高功率充电时的完整输入功率仍然读不到，需要该机型在 45 W 状态下的原始数据导出。\n- App 退到后台后，灵动岛上的读数会停住，这是系统限制；想持续看实时读数请使用悬浮表。\n\n---\n\n## 改进\n\n- **输入读数不完整时，不再将其显示为输入功率。** 在 iPad Pro 和 iPhone 18 Pro Max 上，输入传感器只能检测到部分功率（例如实际功率为 43.5 W，却只显示 21.8 W）。当进入电芯的功率超过输入读数时，表盘现在显示\"进入电池\"的功率，不再计算效率和适配器利用率，并在功率和适配器页面说明原因。\n- **电池温度采用中位数。** 部分机型有四个同名的电池温度传感器，其中一个读数明显偏高。现在\"电池\"读数、热力图上的电池标记和分区标题均采用中位数；四个传感器读数仍会逐一列出。\n- **排除不合理的温度。** 以下读数不再计入热力图或最高温度，并会在原始数据中保留并注明原因：低于 −10 °C 的 PMU 传感器读数；高于 85 °C、但与结温传感器读数不符的充电芯片温度；以及恰好为 0.0 °C 的传感器读数。\n- **支持 iPad。** 支持所有屏幕方向，内容不再铺满整个屏幕。iPad 的传感器对应关系尚未验证，请谨慎看待读数。\n- **文案更准确。** 将\"来自充电器\"改为\"手机接口处\" / \"充电线圈处\"；适配器页面注明额定功率是协商出的上限，并非墙插功率计的读数。\n- **原始数据更便于反馈。** 每个传感器都标注了服务编号，并列出被排除的读数。\n\n## 修复\n\n- 适配器：规格列表不再显示\"65.5 V × 65.53 A\"这样的无效档位。\n- 实时活动：应用处于前台时，读数变化 0.05 即会更新，不再等到变化 0.2 W 或 0.5 °C。\n\n## 注意\n\n- 这些修复是根据用户反馈的数据完成的，尚未在对应设备上验证。如果你的机型读数仍然不准确，请从 设置 → 原始数据 复制数据并反馈。\n- iPhone 18 Pro Max 高功率充电时仍无法读取完整输入功率；需要该机型在 45 W 充电时导出的原始数据。\n- 应用进入后台后，灵动岛读数会停止更新，这是系统限制；如需实时读数，请使用悬浮表。\n\n**完整更新日志**：https://github.com/ResistanceTo/MiniWatts/compare/v1.5.0...v1.5.1",
+          "downloadURL": "https://github.com/ResistanceTo/MiniWatts/releases/download/v1.5.1/MiniWatts-unsigned.ipa",
+          "size": 3305290,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "MoviePilotLite",
+      "bundleIdentifier": "com.altman.moviepilot",
+      "developerName": "singleton-altman",
+      "subtitle": "MoviePilot 移动端，基于 Flutter 实现",
+      "localizedDescription": "基于 MoviePilot 的 Flutter 跨端客户端，对接 MoviePilot v2 API，在手机上完成订阅、搜索、下载、整理与系统运维等常用操作。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilotLite/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilotLite/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilotLite/images/recommend.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilotLite/images/explorer.png"
+      ],
+      "tintColor": "#8050F0",
+      "versions": [
+        {
+          "version": "1.2.5",
+          "date": "2026-10-16",
+          "localizedDescription": "MoviePilot Release\n\n- 版本：1.2.5\n- 构建日期：2026-10-16\n- Android：已签名通用 APK\n- Android：已签名 arm64-v8a APK\n- iOS：未签名 IPA\n\niOS 安装说明：\n- IPA 为未签名包\n- 请使用自己的 Apple Developer 账号，通过 AltStore、Sideloadly 或 Xcode 签名安装\n\n\n## 更新内容\n* 修复（搜索）：修复 v3 契约服务器上「搜索资源」返回 422 的问题，并显示失败原因。by @anlan-home in https://github.com/singleton-altman/MoviePilotLite/pull/109\n* 新增（播放器）：集成内嵌播放器（Exo + 原生内核）、媒体库浏览和详情页直连播放。by @anlan-home in https://github.com/singleton-altman/MoviePilotLite/pull/108\n\n## 新贡献者\n* @anlan-home 在 https://github.com/singleton-altman/MoviePilotLite/pull/109 中首次贡献\n\n**完整更新日志**：https://github.com/singleton-altman/MoviePilotLite/compare/release-v1.2.5-2026-09-25...release-v1.2.5-2026-10-16",
+          "downloadURL": "https://github.com/singleton-altman/MoviePilotLite/releases/download/release-v1.2.5-2026-10-16/ios-v1.2.5-2026-10-16.ipa",
+          "size": 37045200,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Musly",
+      "bundleIdentifier": "com.dddevid.musly",
+      "developerName": "dddevid",
+      "subtitle": "免费的 Navidrome 客户端和 Subsonic 音乐播放器",
+      "localizedDescription": "Musly 是一款免费的 Navidrome 客户端和 Subsonic 音乐播放器，采用 Apple Music 风格的界面。你可以在 iOS、Android、桌面设备等平台上，通过 Navidrome、Subsonic 或 Airsonic 服务器串流播放自托管音乐库。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/detail.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/player.png"
+      ],
+      "tintColor": "#FA243C",
+      "versions": [
+        {
+          "version": "2.0.3",
+          "date": "2026-10-18",
+          "localizedDescription": "## 🎉 Musly v2.0.3\n\n### 📦 下载\n\n**Android：**\n- `app-release.apk`（适用于所有设备的通用 APK）\n\n**iOS：**\n- `musly-ios.ipa`（使用 AltStore、Sideloadly 或类似工具侧载 — 未签名，需 iOS 15.0+）\n\n**Windows：**\n- `musly-setup.exe`（安装程序，运行即可安装 Musly）\n- `musly-windows.zip`（便携版，解压后运行）\n\n**macOS：**\n- `musly-macos.dmg`（将 Musly.app 拖到“应用程序”文件夹 — 未经公证）\n\n**Linux：**\n- `*.deb`（Debian、Ubuntu、Linux Mint）\n- `*.rpm`（Fedora、RHEL、openSUSE）\n- `*.pkg.tar.zst`（Arch Linux、Manjaro）\n- `*.AppImage`（适用于任意发行版的通用 AppImage）\n- `*.flatpak`（Flatpak 独立软件包）\n- `*.snap`（Snap 软件包）\n- `*.tar.gz`（便携式独立 tarball）\n\n**Tizen 智能电视：**\n- `*.tpk`（适用于 Tizen 4.0+ / 2018 年或更新款电视的原生版本）\n\n### 📝 更新日志\n参见 [CHANGELOG.md](https://github.com/dddevid/Musly/blob/master/CHANGELOG.md)\n\n### 🌍 翻译\n前往 [Crowdin](https://crowdin.com/project/musly) 参与翻译",
+          "downloadURL": "https://github.com/dddevid/Musly/releases/download/v2.0.3/musly-ios.ipa",
+          "size": 14317899,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "NeoStation iOS",
+      "bundleIdentifier": "com.neogamelab.neostation",
+      "developerName": "TarbleFR",
+      "subtitle": "适用于 iPhone 和 iPad 的模拟器前端",
+      "localizedDescription": "由社区独立维护的 NeoStation iOS/iPadOS 分支，内置 Dolphin、ARMSX2、RPCS3、Dusklight 和 KartPad 运行时，并集成 RetroArch 和 MeloNX，支持 JIT 工作流，以及适合移动设备的游戏和会话管理。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/NeoStation/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/NeoStation/images/intro.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/NeoStation/images/library.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/NeoStation/images/settings.png"
+      ],
+      "tintColor": "#01E989",
+      "versions": [
+        {
+          "version": "0.0.8",
+          "date": "2026-10-18",
+          "localizedDescription": "# NeoStation iOS 0.0.8 🎮\n\n本次更新扩展了金手指支持，带来更沉浸的触控操作，并修复了多项稳定性问题。\n\n- **扩展统一金手指目录：** 为 RetroArch 核心、街机游戏、PS2、PS3、GameCube 和 Wii 增加更多来源，可通过单次目录下载获取。\n- **简化金手指管理：** 自动显示与检测到的游戏兼容的金手指，并支持单独开关及导入自有文件。匹配时会考虑可用的地区和版本标识。\n- **加快金手指搜索：** 改进索引和重复项处理。PS2 游戏金手指与图形补丁分开显示。\n- **更沉浸的触控操作：** 兼容的皮肤会显示按键触控状态，同时改进触控处理和控制布局。\n- **修复抓取游戏信息时崩溃：** 处理大型游戏文件时减少内存占用，解决了 iPhone 15 Pro Max 上报告的崩溃问题。\n- **提升稳定性：** 修复游戏启动、皮肤、着色器和关闭游戏相关问题。\n- **首次启动更轻松：** 可跳过首次选择游戏文件夹，稍后再添加游戏。\n\n金手指是否可用取决于游戏、地区和修订版本。本次更新还包含更新后的致谢信息和第三方声明。\n\n📦 下载下方的 **NeoStation-0.0.8.ipa**，并使用常用的侧载工具安装。\n\n[来源致谢](https://github.com/TarbleFR/neostation-ios/blob/0.0.8/docs/CHEAT_CATALOG_SOURCES.md) · [许可证和声明](https://github.com/TarbleFR/neostation-ios/releases/download/0.0.8/NeoStation-0.0.8-Licenses-and-Notices.zip) · [源代码和打包详情](https://github.com/TarbleFR/neostation-ios/blob/0.0.8/docs/RELEASE_0.0.8_SOURCE_MANIFEST.md)",
+          "downloadURL": "https://github.com/TarbleFR/neostation-ios/releases/download/0.0.8/NeoStation-0.0.8.ipa",
+          "size": 226570105,
+          "minOSVersion": "18.0"
+        }
+      ]
+    },
+    {
+      "name": "Novella",
+      "bundleIdentifier": "sh.celia.novella",
+      "developerName": "CELIA",
+      "subtitle": "轻书架第三方客户端",
+      "localizedDescription": "使用 React Native 构建的轻书架第三方客户端，面向 iOS、iPadOS。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Novella/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Novella/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Novella/images/shelf.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Novella/images/detail.png"
+      ],
+      "tintColor": "#2E2E2E",
+      "versions": [
+        {
+          "version": "2.6.0",
+          "date": "2026-10-20",
+          "localizedDescription": "<img width=\"800\" alt=\"Banner\" src=\"https://github.com/user-attachments/assets/f4b680a1-ec67-4478-99b8-f31bf9b513b1\" />\r\n\r\n## **What's Changed 🧐**\r\n\r\n本次更新主要带来了 **iPhone Duo 适配** 和 **私信功能**，并重新设计了 **社区、公告与书籍详情**。\r\n**仅支持 iOS / iPadOS**。\r\n\r\n### **⚡️ 内容概要**\r\n\r\n* **平板与可折叠设备**\r\n  大屏与横屏下自动切换为双栏版面。\r\n  页面内容和阅读器会避开可折叠设备的侧边栏。\r\n  窗口尺寸变化时显示过渡效果。\r\n  书籍详情新增横屏版面，完整显示封面。\r\n  统一页面边距、书籍网格间距与标题样式。\r\n\r\n* **私信**\r\n  新增私信，支持一对一交流。\r\n  会话列表显示未读数，并实时更新。\r\n  横屏下以左右分栏显示会话与聊天，临时会话同样显示在侧栏。\r\n\r\n* **社区与公告**\r\n  重新设计社区与公告页面，适配手机与横屏。\r\n  帖子支持显示图片，点击后可全屏浏览。\r\n  分类标签在滚动边缘渐隐。\r\n  个人资料卡片更加紧凑。\r\n\r\n* **阅读器**\r\n  小说分页模式显示准确页码，进度条反映实际分页进度。\r\n  加载过程中锁定阅读进度。\r\n  漫画新增多种显示方式。\r\n  在可折叠设备上，书名与进度显示在侧边栏，以提升内容紧凑性。\r\n  图片预览改为直接打开，并改进对异常章节资源的处理。\r\n\r\n* **界面与体验**\r\n  更新后首次启动时展示本版本亮点，也可在 **设置 › 关于** 中再次查看。\r\n  骨架屏动画同步，并与实际内容对齐。\r\n  圆角统一使用连续曲率。\r\n  使简介预览正确截断，修复长按书籍详情误触快速搜索。\r\n\r\n* **项目整理**\r\n  升级至 Expo SDK 58 与 React Native 0.88，使用 Xcode 27 构建。\r\n  移除对 react-native-paper 的依赖。\r\n  许可证新增附加条款：衍生作品须注明来源，且素材不在 AGPL 授权范围内。\r\n  详见 [ADDITIONAL-TERMS.md](https://github.com/celia-sh/Novella/blob/main/ADDITIONAL-TERMS.md) 与 [BRAND-ASSETS.md](https://github.com/celia-sh/Novella/blob/main/BRAND-ASSETS.md)。\r\n\r\n网页重新设计：[**添加到侧载工具**](https://sideload.celia.sh) ↗️\r\n了解其它项目：[**celia-sh/Hana**](https://github.com/celia-sh/Hana) 🌸\r\n闲聊吹水 / 反馈问题：[**点此加入**](https://t.me/+xNDJEfc_naRlMGEx) ✈️\r\n\r\n> [!CAUTION]\r\n> **本应用与网站没有直接关系**，所以**不要在**社区发布和**本软件**相关的帖子。\r\n> 正确反馈渠道：在仓库开 Issues，或者加入交流群。\r\n> 记得**看完公告和发帖前提示**，以免被网站封禁；如果不看，我只能说：非我封禁，无能为力。\r\n> 请记清楚，这不是官方软件。\r\n\r\n<img width=\"800\" alt=\"Banner\" src=\"https://github.com/user-attachments/assets/239bca0f-8da5-4448-b714-90ecb94cf240\" />",
+          "downloadURL": "https://github.com/celia-sh/Novella/releases/download/v2.6.0/Novella-2.6.0-release.ipa",
+          "size": 29979710,
+          "minOSVersion": "16.4"
+        }
+      ]
+    },
+    {
+      "name": "Opaline",
+      "bundleIdentifier": "com.verback.YTLite",
+      "developerName": "verback2308",
+      "subtitle": "适用于 iOS 12 及更高版本的 YouTube 客户端",
+      "localizedDescription": "轻量级 YouTube 客户端，支持 SponsorBlock、Return YouTube Dislike 和最高 1080p 播放。无广告、无跟踪、无依赖项。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Opaline/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Opaline/images/home.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Opaline/images/player.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Opaline/images/channel.jpg"
+      ],
+      "tintColor": "#FF0000",
+      "versions": [
+        {
+          "version": "1.12.0",
+          "date": "2026-09-10",
+          "localizedDescription": "**新增**\n\n- 按住视频任意位置即可定位播放（[#116](https://github.com/verback2308/Opaline/issues/116)）。按住画面并向侧边拖动，进度条会跟随手指移动；松开后视频会跳转到对应位置，无需再精准点击底部那条细细的进度条。原有的点按操作仍然有效：点两侧可定位，点中间可暂停。\n- 搜索频道内的内容（[#117](https://github.com/verback2308/Opaline/issues/117)）。频道页面现在有放大镜按钮，输入的内容只会搜索该频道。YouTube 不提供此类搜索的筛选条件，因此应用中也没有筛选选项。\n- 将已下载的视频导出应用（[#115](https://github.com/verback2308/Opaline/issues/115)）。已下载视频的菜单新增“存储到文件”选项，可通过常用的 iOS 分享菜单将文件发送到“文件”、照片、AirDrop 或其他应用。文件以视频名称命名，只有视频会被导出，字幕、评论和已保存的页面仍保留在原处。\n- 一次性清除全部搜索记录（[#121](https://github.com/verback2308/Opaline/issues/121)）。最近搜索列表底部新增清除选项，操作前会先请求确认。\n\n**修复**\n\n- 迷你播放器不再覆盖标签栏（[#118](https://github.com/verback2308/Opaline/issues/118)）。迷你播放器收起时，点按其后方的标签会切换到对应标签，而不是重新打开视频。\n- AirPods 不再将立体声空间化（[#119](https://github.com/verback2308/Opaline/issues/119)）。原本的双声道音频曾被处理成虚假的环绕声，并会随着转头而移动。真正的多声道视频仍会进行空间化处理。\n- “...”菜单不再自行关闭（[#128](https://github.com/verback2308/Opaline/issues/128)）。此前设备倾斜或放下时会触发关闭，因此手持手机时看起来像是随机关闭。\n\n**其他**\n\n- 如果你的设备比 Opaline 支持的机型更旧，README 现在会推荐另一位开发者制作的 [iOS 9 移植版](https://github.com/Joeviocoe/Opaline)，可在 iPad 2、iPad 3、iPad mini 和 iPhone 4S 上运行（[#125](https://github.com/verback2308/Opaline/issues/125)）。",
+          "downloadURL": "https://github.com/verback2308/Opaline/releases/download/1.12.0/Opaline_1.12.0.ipa",
+          "size": 6685919,
+          "minOSVersion": "12.0"
+        }
+      ]
+    },
+    {
+      "name": "Orchard",
+      "bundleIdentifier": "com.makr.orchard",
+      "developerName": "MakrSas",
+      "subtitle": "在 iPhone 应用中运行 Apple Silicon 版 macOS Ventura",
+      "localizedDescription": "通过 QEMU 的 apple-vm 虚拟机，使用 Apple 自身的启动链（AVPBooter、iBoot 和 XNU），在 iPhone 上启动真正的 arm64 macOS Ventura 虚拟机，并由 reims-vgpu 通过 Metal 渲染 GPU。需要 JIT、可添加增强内存限制的签名工具，以及自行创建的 macOS 虚拟机。运行速度较慢——轻量场景最高约为 30–40 fps。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Orchard/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Orchard/images/main.png"
+      ],
+      "tintColor": "#F0C060",
+      "versions": [
+        {
+          "version": "0.2",
+          "date": "2026-09-25",
+          "localizedDescription": "Orchard for iPhone 0.2：模拟器和 Metal 渲染路径速度更快，并修复了虚拟机进入恢复模式的问题。\n\n设置与配置：[README](https://github.com/MakrSas/orchard-ios#readme)。\n\n## 性能提升\n\n在 iPhone 15（A16）上，轻量场景现在可达到每秒 30–40 帧。拖动窗口时可达到每秒 10–15 帧（0.1 版中，Dock 和菜单栏显示后会降到约 7 帧）。\n\n- **CPU（QEMU TCG）**\n  - 增大并改进了跳转缓存的哈希方式，并在上下文切换时保留各进程的代码块。代码块查找未命中率从约 15% 降至约 3%。\n  - 更改 ASID 时只刷新 TLB 的用户空间部分。\n  - 关闭 PMU，并减少会导致翻译块结束或刷新 TLB 的系统寄存器写入操作。\n- **快速指针认证**（默认开启，位于“设置” → “机器” → “处理器”）。虚拟机仍能看到 PAC，但不会计算签名。此前这项操作占用模拟器 10–15% 的运行时间。如果 macOS 无法启动，请关闭此选项。\n- **Metal 渲染路径（reims-vgpu）**\n  - 虚拟机的渲染过程现在会作为单个 Metal pass 保留在 GPU 上，不再每次绘制都往返 GPU、回读整帧并重新上传。\n  - 绘制缓冲区使用共享环形缓冲区。\n  - 着色器键的哈希计算速度更快。\n  - 写回操作现在只处理绘制区域，并直接通过 NEON 在虚拟机页面中交换通道。\n- **提示：**960×540、30 Hz 是最佳设置。在虚拟机中，启用“降低透明度”有助于拖动窗口。\n\n## 修复\n\n- **虚拟机卡在恢复模式且没有磁盘。**这是因为 macOS 正在安装自动更新，而此更新无法在这台机器上完成。请第一时间关闭自动更新；README 中提供了相关设置和终端命令。\n- **磁盘安全性。**应用进入后台或执行关机时都会刷新磁盘；日志也会记录虚拟机刷新操作和 I/O 错误。\n\n## 0.1 版以来的其他更新\n\n- 声音（实验性功能，位于“设置” → “机器” → “声音”）。\n- 共享文件夹：“文件” → Orchard → Shared；在虚拟机中挂载于 `http://10.0.2.2:8080`。\n- 虚拟机可正常连接互联网。\n\n## 系统要求\n\n- iOS 16 或更高版本；已在搭载 iOS 27 的 iPhone 15 上测试。手机内存需至少为 6 GB。\n- 可添加增强内存限制功能的签名工具，以及 JIT（例如 StikDebug）。\n- 使用 Mac 上的 UTM 创建 macOS 13 虚拟机。\n\n本项目为非官方项目，与 Apple 或 ChefKiss 均无关联。未包含任何 Apple 软件。许可证信息请参见 LICENSE-NOTICE.md。",
+          "downloadURL": "https://github.com/MakrSas/orchard-ios/releases/download/v0.2/Orchard.ipa",
+          "size": 18477287,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "使用 Flutter 开发的 BiliBili 第三方客户端",
+      "localizedDescription": "使用 Flutter 开发的 BiliBili 第三方客户端",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/bangumi.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/dynamic.png"
+      ],
+      "tintColor": "#73b480",
+      "versions": [
+        {
+          "version": "2.1.6",
+          "buildVersion": "5472",
+          "date": "2026-10-10",
+          "localizedDescription": "专栏支持跳转至评论 #3213\r\n其他调整 #3208 by @My-Responsitories\r\n\r\n修复 bug\r\n修复搜索风控验证 #3106\r\n修复窗口大小变化时图片闪烁 #2685\r\n修复安卓视频暂停时画面裁切问题 #3034 by @Hdy08",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6.2/PiliPlus_ios_2.1.6%2B5472.ipa",
+          "size": 24353925,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Pixiv-SwiftUI",
+      "bundleIdentifier": "org.eu.eslzzyl.Pixiv-SwiftUI",
+      "developerName": "Eslzzyl",
+      "subtitle": "基于 SwiftUI 的 Pixiv 第三方客户端",
+      "localizedDescription": "基于 SwiftUI 开发的 Pixiv 第三方客户端，支持 iOS/iPadOS/macOS。提供插画、漫画与小说的推荐、排行榜、搜索与收藏，内置评论系统、批量下载、数据导入导出、深色模式与主题自定义。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/images/recommend.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/images/detail.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/images/search.png"
+      ],
+      "tintColor": "#13A1FD",
+      "versions": [
+        {
+          "version": "0.16.3",
+          "date": "2026-10-19",
+          "localizedDescription": "pixiv-tags-data commit: 541521c99539d08d1aec7a5e01dbf15068eadca0\r\n\r\n**完整更新日志**: https://github.com/Eslzzyl/Pixiv-SwiftUI/compare/v0.16.2...v0.16.3\r\n\r\n这是一个专为 iPad 优化的版本，iOS 和 macOS 用户可以直接跳过此版本。\r\n\r\n## 问题修复\r\n\r\n- 修复 iPad 竖屏插画详情页宽度未随布局更新的问题。\r\n- 修复 iPad 网格列数设置未生效的问题。\r\n- 优化 iPad 新手引导页面的底部安全区域适配。\r\n- 修复 iPad 新手引导底部背景宽度显示异常的问题。",
+          "downloadURL": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/download/v0.16.3/Pixiv-SwiftUI.ipa",
+          "size": 10379203,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Playport",
+      "bundleIdentifier": "dev.playport.app",
+      "developerName": "playportdev",
+      "subtitle": "在 iPhone 上玩 PC 游戏。本机运行，无需串流。",
+      "localizedDescription": "Playport 可在未越狱的原装 iPhone 上运行 64 位和 32 位 Windows 游戏：从游戏库将游戏安装到手机上，拿起控制器，按下“Play”即可。游戏直接使用手机自身的 CPU 和 GPU 运行——无需电脑、云端或串流。需要 iOS 26 或更高版本，并通过 LocalDevVPN 或 StikDebug 启用 JIT。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Playport/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Playport/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Playport/images/library.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Playport/images/game-page.png"
+      ],
+      "tintColor": "#F5B544",
+      "versions": [
+        {
+          "version": "0.4.0",
+          "date": "2026-10-08",
+          "localizedDescription": "# Playport 0.4.0：GOG、Epic Games 和你自己的游戏\r\n\r\n**Playport 不再只支持 Steam。** 登录 **GOG** 或 **Epic Games**，即可从中安装游戏；也可以从“文件”导入任意无 DRM 的 PC 游戏。现在，游戏会像在 PC 上一样登录对应商店。\r\n\r\n## 亮点\r\n\r\n### 🛒 GOG 和 Epic Games\r\n在 **设置 › 账号** 中，除了 Steam，现在也可以登录 **GOG** 和 **Epic Games**（初始设置清单的“账号”步骤提供这三种选项）。各商店中的 Windows 游戏都会显示在游戏库里，并带有专属筛选选项和商店封面。\r\n\r\n- **安装、更新、验证和修复**的操作与 Steam 相同，都会加入同一个下载队列。商店有较新版本时，游戏页面会显示 **更新**。\r\n- 如果 Epic 要求你先完成某项操作（例如接受更新后的隐私政策），登录面板会告诉你具体内容。请在 Epic 网站上完成操作，然后点按“重试”。\r\n- 对于使用反作弊或其他公司启动器的游戏，Playport 会在安装前拒绝安装，并在游戏页面说明原因。\r\n\r\n### 🔑 游戏可登录对应商店\r\n游戏现在会自动获得商店启动器提供的凭据，无需额外设置：\r\n\r\n- **Epic：**所有 Epic 游戏启动时都会登录你的 Epic 账号，包括会检查游戏所有权的游戏。使用 Epic Online Services 的游戏也会登录：Snakebird Complete 进入菜单时已处于登录状态。\r\n- **Steam：**游戏会获得 Steam 在 PC 上提供的票据，因此通过 Steam 登录在线服务也能正常工作。Valheim 就是通过这种方式登录其在线服务的。\r\n- **GOG：**使用 GOG Galaxy 构建的游戏会登录 GOG Galaxy。Moonscars 可以成功登录。\r\n- **登录页面以面板显示。**游戏打开网页时（例如在线游戏首次登录时出现的 Epic“允许”页面），网页会显示在游戏上方的面板中；关闭面板即可返回游戏。\r\n\r\n### 📁 从“文件”添加游戏\r\n已经有无 DRM 的 PC 游戏？在游戏库中按 **X**，或选择 **添加游戏**，然后从“文件”中选择游戏文件夹或 `.zip` 文件。Playport 会将游戏复制到自己的驱动器中，并将其添加到游戏库的 **本地** 分类。如果 Playport 没有找到游戏，请在游戏页面选择其 `.exe` 文件。\r\n\r\n不会运行安装程序（`setup.exe`）；请改为选择已安装游戏的文件夹。GOG 游戏请使用 GOG 账号，无需安装程序。\r\n\r\n### 🚪 Death's Door 可以运行了\r\nDeath's Door 等部分 Unity 游戏此前会在约 14 秒后退出，因为 Windows 没有足够的地址空间。现在，Playport 会将这些分配放到有足够空间的位置，Death's Door 可以正常进入游戏。\r\n\r\n## 其他新增内容\r\n- **修复 iOS 26.0 问题：**0.3.3 在 iOS 26.0.x 上会在启动时关闭，现在已恢复正常启动。\r\n- 游戏库现在会显示 **Steam 试玩版**。\r\n- **报告问题**会将游戏日志打包成一个 zip 文件分享。\r\n- 首次运行清单新增**内存**步骤，可查看侧载工具是否保留了提高后的内存限制。**如何修复**会说明哪些侧载工具会保留该限制。设置流程还会说明为何需要配对和 LocalDevVPN。\r\n- **在线游戏连接成功率更高：**网页连接会信任常用证书，游戏也能识别手机的网络，不再误以为处于离线状态。\r\n- **更快、更稳定：**线程同步和代码转换速度更快，Vulkan 运行路径更流畅，并修复了 Hollow Knight 菜单中偶发的卡死问题。\r\n- **组件更新：**Wine 11.19（包含 Valve 最新的 Proton Wine 改动），以及最新版 FEX、DXMT、DXVK、vkd3d-proton 和 Mesa。\r\n\r\n## 新指南\r\n[README](https://github.com/playportdev/playport#install) 和 [playport.dev](https://playport.dev/#start) 现已提供设置指南：\r\n\r\n- **按侧载工具分类的安装指南。**说明哪些侧载工具会保留提高后的内存限制（AltStore Classic 2.2 或更高版本、Impactor 和 Xcode 可以；使用免费 Apple ID 的 SideStore 不可以），以及这为何重要：如果没有该限制，Playport 在 8 GB 内存的 iPhone 上只能使用约 3.3 GB。\r\n- **SideStore：内存选项没有勾选标记时。**介绍如何通过 GetMoreRam 一次性修复，将内存限制添加到 Playport 的 App ID；之后 SideStore 每周刷新时会保留该限制。\r\n- **为什么需要配对、JIT 和 LocalDevVPN**，以及**我需要电脑吗？**（安装时需要一次；之后是否需要取决于所用的侧载工具）。\r\n- **你的第一款游戏：**登录、安装、连接控制器，然后开始游戏。\r\n- **报告问题：**在游戏页面点按“报告问题”，将 zip 文件保存到“文件”，然后附加到 [GitHub issue](https://github.com/playportdev/playport/issues/new/choose)。表单会询问设备、iOS 和 Playport 版本、侧载工具及 JIT 启用方式。\r\n- [playport.dev/compatibility](https://playport.dev/compatibility/) 上的**兼容性列表**会列出我们和玩家测试过的所有游戏及其状态。无论游戏是否正常运行，都欢迎报告，游戏会被加入列表。\r\n\r\n## 注意事项\r\n- **目前无法正常运行：**Among Us 会崩溃，Monster Train（GOG）会显示黑屏，Jurassic World Evolution（Epic）无法启动。\r\n- **Valheim：**请在游戏页面选择 **DXMT**。使用 Vulkan 时画面会黑屏。\r\n- **32 位游戏暂不支持登录面板**；64 位游戏不受影响。\r\n- **仅在一台手机（iOS 27.0）上完成测试：**测试游戏包括 Steam 上的 Hollow Knight 和 Valheim、GOG 上的 Moonscars 和 Shogun Showdown、Epic 上的 Death's Door 和 Snakebird，以及一个导入的游戏文件夹。如果 GOG 或 Epic 的游戏出现异常，请告诉我们具体是哪款游戏。\r\n- 此次更新不会影响你的 Steam 游戏、存档和登录信息。\r\n\r\n## 安装\r\n\r\n下载 `Playport-0.4.0.ipa`，并使用你自己的 Apple ID 进行侧载，同时保留提高后的内存限制和 JIT 助手扩展。如果你已安装较早版本，直接覆盖安装即可：游戏、存档和登录信息都会保留。游戏可从 Steam、GOG、Epic Games 或“文件”导入。\r\n\r\n此版本对应的完整源代码、声明文件和重新构建说明分别附在 `Playport-0.4.0-source.tar`、`NOTICES.tar` 和 `INSTALL-REBUILD.tar` 中。`SHA256SUMS` 包含所有文件的校验和。\r\n\r\nPlayport 使用 GPL-3.0-or-later 许可证；各组件仍遵循其各自的许可证。",
+          "downloadURL": "https://github.com/playportdev/playport/releases/download/v0.4.0/Playport-0.4.0.ipa",
+          "size": 672450129,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "PSX3IOS",
+      "bundleIdentifier": "com.miguel.psx3ios",
+      "developerName": "xmiguel911x",
+      "subtitle": "适用于 iPhone 和 iPad 的 PlayStation 3 模拟器",
+      "localizedDescription": "基于 RPCS3 构建的 iPhone 和 iPad 版 PlayStation 3 模拟器。可启动并游玩真实游戏，完整模拟器核心功能均可使用，并支持社区游戏补丁、奖杯、游戏时长、存档和 14 种语言。无论是否启用 JIT 均可运行。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PSX3IOS/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PSX3IOS/images/home.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PSX3IOS/images/install.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PSX3IOS/images/settings.jpg"
+      ],
+      "tintColor": "#5080D0",
+      "versions": [
+        {
+          "version": "0.2.7-beta",
+          "date": "2026-09-01",
+          "localizedDescription": "新增多项改进，修复 JIT。A15 设备、iOS 17.0、TrollStore：前往设置，确认已检测到 JIT 模式，并保持为“自动”。另修复了若干问题。",
+          "downloadURL": "https://github.com/xmiguel911x/PSX3IOS/releases/download/v0.2.7-beta/PSX3IOS-beta.0.2.7-unsigned.ipa",
+          "size": 67644766,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "PureLive",
+      "bundleIdentifier": "com.mystyle.purelive.liu",
+      "developerName": "liuchuancong",
+      "subtitle": "基于 Flutter 的开源多平台直播聚合播放器",
+      "localizedDescription": "纯粹直播（Pure Live）是一款基于 Flutter 的开源第三方多平台直播聚合播放器，支持 Bilibili、虎牙、斗鱼、快手、抖音、网易 CC、Twitch 等平台，以及自定义 M3U/M3U8 直播源。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PureLive/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PureLive/images/list.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PureLive/images/area.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PureLive/images/auth.jpg"
+      ],
+      "tintColor": "#50B0F0",
+      "versions": [
+        {
+          "version": "3.1.19",
+          "date": "2026-10-10",
+          "localizedDescription": "# 纯粹直播 v3.1.19\n|版本|下载地址|\n|---|---|\n|TV版|[pure_live_TV](https://github.com/liuchuancong/pure_live_TV/releases/latest)|\n|Windows/macOS/Android/iOS版|[pure_live](https://github.com/liuchuancong/pure_live/releases/latest)|\n### 🖥️ Windows 版\n- **Portable ZIP**：解压即用，无需安装\n- **EXE 安装包**：适合所有用户\n- **MSIX 包**：现代应用格式，支持干净卸载\n- 适配：Windows 10/11 x64\n### 🍎 macOS 版\n- macOS 桌面版\n- Universal：Apple Silicon + Intel\n- ZIP / DMG\n### 📱 Android 版\n- Android 8.0+（API 26，FFmpegKit 录制依赖要求）\n- ARM64-v8a\n- ARMv7\n- x86_64\n- 统一 SHA256 校验文件：[**ANDROID_SHA256SUM.txt**](https://github.com/liuchuancong/pure_live/releases/download/v3.1.19/ANDROID_SHA256SUM.txt)\n### 🐧 Linux 版\n- Linux x64\n- **DEB 安装包**：适合 Debian/Ubuntu 及其衍生发行版\n- **Portable ZIP / tar.gz**：解压即用，无需安装\n### 🍎 iOS 版\n- 未签名 iOS 设备应用\n- TrollStore / ad-hoc IPA\n- ARM64\n### 🔧 构建元数据\n[**BUILD_METADATA.json**](https://github.com/liuchuancong/pure_live/releases/download/v3.1.19/BUILD_METADATA.json)\n### 📝 本次更新\nversion: 3.1.19\n版本更新：\n- 修复部分bug",
+          "downloadURL": "https://github.com/liuchuancong/pure_live/releases/download/v3.1.19/PureLive-3.1.19-4108-ios-arm64-trollstore.ipa",
+          "size": 66858114,
+          "minOSVersion": "15.6"
+        }
+      ]
+    },
+    {
+      "name": "Roam Control",
+      "bundleIdentifier": "com.sean.roamcontrol",
+      "developerName": "seanhowarthdev",
+      "subtitle": "选择、测试并移动 iPhone 显示的位置",
+      "localizedDescription": "设置固定的显示位置，预览并模拟 Apple 地图中的步行路线，还可保存收藏地点和历史记录——所有操作都能在一张地图中完成。需要 iOS 27 或更高版本，并通过引导式流程使用兼容 LocalDevVPN 的 Wi-Fi 和移动数据连接。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Roam-Control/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Roam-Control/images/welcome.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Roam-Control/images/fixed-location.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Roam-Control/images/walking-preview.png"
+      ],
+      "tintColor": "#1090F0",
+      "versions": [
+        {
+          "version": "0.9.7",
+          "date": "2026-10-08",
+          "localizedDescription": "## 稳定性和可靠性改进\n\nRoam Control 0.9.7 是一个维护更新，主要提升后台位置会话的可靠性和移动数据连接能力。\n\n### 改进内容\n\n- 改进了 LocalDevVPN 的原生连接处理。\n- 修正了 LocalDevVPN 与独立的个人 VPN 同时启用时的网络接口选择问题。\n- 提升了经测试的后台运行和移动数据场景下的可靠性。\n- 已验证固定位置、步行、驾车、骑行、停止并恢复，以及 LocalDevVPN 重新连接功能。\n\n这些改进已在开发者的 iPhone 上通过验证。无法保证与所有 VPN 配置兼容。\n\n没有新增功能、界面调整或配对实现变更。\n\n### 安装\n\n需要 iOS 27 或更高版本、开发者模式和 LocalDevVPN。\n\n此 IPA 未签名，可使用 SideStore 签名。\n\n**要从 0.9.4 直接升级？** 安装前请备份收藏、历史记录和受支持的设置。应用标识符在 0.9.5 中发生了变化，因此现有数据不会自动转移。必须重新完成配对。",
+          "downloadURL": "https://github.com/seanhowarthdev/Roam-Control/releases/download/v0.9.7/RoamControl-0.9.7-Build96.ipa",
+          "size": 4111825,
+          "minOSVersion": "27.0"
+        }
+      ]
+    },
+    {
+      "name": "SceneBox",
+      "bundleIdentifier": "app.scenebox.SceneBox",
+      "developerName": "donbytyqi",
+      "subtitle": "种子流媒体客户端",
+      "localizedDescription": "适用于 iOS、iPadOS、tvOS 和 Mac（Catalyst）的种子流媒体客户端，使用 SwiftUI 编写。流媒体内容来自兼容 Stremio 的插件，并通过内置的 libtorrent 引擎传输至 VLC 播放。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SceneBox/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SceneBox/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SceneBox/images/search.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SceneBox/images/profile.png"
+      ],
+      "tintColor": "#E0E000",
+      "versions": [
+        {
+          "version": "1.0.4",
+          "date": "2026-09-23",
+          "localizedDescription": "重要提示：现在需要使用你自己的 Firebase 项目\n\nSceneBox 不再连接共享的 Firebase 项目。登录、个人资料和设备间同步现在通过你创建并拥有的免费 Firebase 项目运行。你的数据保存在你自己的账号中，而不是我的账号里。\n\n- 访客模式无需设置，仍可使用。所有内容都保存在设备上。\n- 如需登录，请在登录界面点按“连接 Firebase”，然后导入 Firebase 项目中的 GoogleService-Info.plist（在 Apple TV 上，请手动输入相关值）。分步指南和安全规则：https://github.com/donbytyqi/scenebox#firebase-setup\n- 在旧共享项目中创建的账号无法迁移。请在自己的项目中创建新账号。\n- 个人资料照片需要 Firebase Storage，这需要使用 Google 的 Blaze 方案（提供免费额度）。其他功能均可使用免费的 Spark 方案。\n\n新增\n\n- 设置中新增“支持 SceneBox”页面，供希望捐赠的用户使用。\n\n修复\n\n- 现在可以从整季资源包中下载第二集。此前，资源包中的每一集都会被视为同一个下载，因此必须先删除已完成的那一集，才能开始下载下一集。（#9）\n- Apple TV：点按 Trakt 列表即可打开。（#10）\n- Mac：未签名版本现在可以登录。macOS 不允许未签名应用使用钥匙串，因此应用会将登录会话和你输入的 API 密钥保存在其独立沙盒容器中的文件内（只有你的用户账号可以读取）。\n\n仍待解决的问题\n\n- 有少数用户反馈，iPhone 上的应用会在流开始缓冲后不久关闭。我无法在模拟器或 Mac 上复现此问题。如果你遇到此问题，请分享崩溃日志：前往“设置”>“隐私与安全性”>“分析与改进”>“分析数据”，找到名称以 SceneBox 开头的文件，并将其附加到问题反馈中。同时请注明 iPhone 型号和播放内容（种子或 debrid、分辨率）。如果需要备用版本，1.0.2 不存在此问题。\n- Apple TV 在 tvOS 26.6 上通过 Sideloadly 安装失败，并显示“ApplicationVerificationFailed / Invalid file”（#8）。tvOS 版本的打包方式与 1.0.2 完全相同，并且在此处通过了 Apple 的软件包验证，因此需要完整的 Sideloadly 日志：“Invalid file”那一行会指出导致错误的文件。请将该信息粘贴到问题反馈中。Sideloadly 在 tvOS 26.4 及更高版本上也存在已知问题（配对），请先尝试使用最新版 Sideloadly。\n\n重要提示：此版本**未签名**，需要你自行放行。\n\n此版本未使用 Apple 开发者账号签名，Mac 应用也未经公证。macOS 和 iOS 会拒绝打开它，直到你明确允许为止。这是正常现象，并非应用损坏。\n\nMac：\n\n1. 打开 dmg 文件，并将 SceneBox 拖到“应用程序”文件夹。\n2. 打开 SceneBox。macOS 会提示“无法验证”此应用，或提示它来自身份不明的开发者。点按“完成”（不要点按“移到废纸篓”）。\n3. 前往“系统设置”>“隐私与安全性”，向下滚动到“安全性”，点按 SceneBox 旁边的“仍要打开”，然后确认。\n4. 之后即可正常打开应用。\n\n如果想跳过提示框，可在将应用拷贝到“应用程序”文件夹后，在终端中运行：\n\n    xattr -dr com.apple.quarantine /Applications/SceneBox.app\n\n如果已安装较旧的签名版本，请先将其删除。\n\niPhone/iPad：此 ipa 未签名。你需要使用自己的 Apple ID，通过 Sideloadly、AltStore、SideStore、Feather 或 ESign 自行签名。免费 Apple ID 每 7 天需要重新签名一次（AltStore/SideStore 会自动处理）；付费开发者账号的签名有效期为一年。\n\nApple TV：可通过 Wi-Fi 使用 Sideloadly。在电视上前往“设置”>“遥控器与设备”>“遥控 App 与设备”，让设备显示出来，然后在 Sideloadly 中选择它。",
+          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.4/SceneBox-1.0.4.ipa",
+          "size": 30593765,
+          "minOSVersion": "18.0"
+        }
+      ]
+    },
+    {
+      "name": "SpotiFLAC",
+      "bundleIdentifier": "com.zarz.spotiflac",
+      "developerName": "zarzet",
+      "subtitle": "iOS FLAC 下载器",
+      "localizedDescription": "SpotiFLAC 是一款基于 Flutter 构建的音乐应用，采用可安装扩展的设计：每个扩展为一个服务提供商提供元数据和音频下载功能，因此无需更新应用即可添加或修复来源。下载的内容会保存到本地音乐库，并支持歌词、封面、音质标识和重复项检测。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/images/home.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/images/library.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/images/store.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/images/settings.jpg"
+      ],
+      "tintColor": "#1DB954",
+      "versions": [
+        {
+          "version": "5.2.1",
+          "date": "2026-10-20",
+          "localizedDescription": "### 新功能\n\n- **onboarding**：将 5.2 版引导教程替换为品牌重塑介绍\n- **branding**：将 Mornye Ink 用于 iOS 启动屏幕\n- **branding**：在整个应用中采用 Mornye 标志\n- **branding**：将应用和原生后端更名为 Mornye\n- **player**：向上滑动迷你播放器即可打开“正在播放”界面\n- **playback**：新增响度标准化前置增益，以及曲目或专辑增益\n- **ui**：按照 M3 Expressive 指南调整 Material 界面\n\n### 问题修复\n\n- **crash**：减少重复通知并保留诊断信息\n- **player**：本地文件优先使用内嵌封面，而非在线封面\n- **startup**：等待 Activity 就绪后再调用后端启动接口\n- **library**：网络扫描缓存查询改用路径索引\n- **ui**：按照设计指南调整 Material 界面\n- **concerts**：为 Material 演唱会页面采用 Material 布局\n- **player**：无需重新打开播放器即可刷新延迟更新的时长\n- **home**：让“正在循环播放”的曲目与音乐库中的条目匹配\n- **home**：即使没有动态内容，也能在 Mornye 首页显示聆听内容区块\n- **lyrics**：通过弹簧式滚动让同步歌词行切换更平滑\n- **haptics**：在基础振动马达上呈现音乐脉冲，并添加调节滑块\n- **downloads**：在各种音频格式中嵌入增强后的封面\n- **artwork**：读取带填充数据的 ID3 封面并修复缓存预览图\n- **crash**：崩溃通知中排除系统因内存不足而终止进程的情况\n- **backup**：发布历史记录前校正恢复后的 iOS 路径\n- **library**：释放网络扫描占用的内存，并取消正在进行的元数据读取\n- **android**：在创建共享引擎前应用渲染器兼容性设置\n\n### 性能优化\n\n- **ui**：提升 Material 和 Mornye 播放器及音乐库界面的流畅度\n- **library**：缓存未变化的 SMB 和 WebDAV 扫描元数据\n\n### 文档\n\n- **readme**：移除“相关项目”章节\n- **readme**：移除功能卡片中的标题锚点\n\n### 杂项\n\n- 由 [@github-actions[bot]](https://github.com/github-actions[bot]) 将 AltStore 源更新至 v5.2.0\n- **branding**：移除剩余的 SpotiFLAC 字样\n- **release**：将应用更新至 5.2.1，构建号 163\n\n\n\n\n**完整更新日志**：[v5.2.0...v5.2.1](https://github.com/spotiflacapp/SpotiFLAC-Mobile/compare/v5.2.0...v5.2.1)\n\n---\n\n### 下载\n\n#### Android\n- **arm64**：`Mornye-v5.2.1-arm64.apk`（推荐用于较新的设备）\n- **arm32**：`Mornye-v5.2.1-arm32.apk`（适用于较旧的设备）\n- `*.apk.idsig`：仅供 `adb install --incremental` 使用的 V4 签名；普通安装无需此文件\n\n#### iOS\n- **iOS**：`Mornye-v5.2.1-ios-unsigned.ipa`（需要侧载）\n\n### 安装\n**Android**：启用“允许安装未知来源的应用”，然后安装 APK\n**iOS**：使用 AltStore、Sideloadly 或类似工具侧载 IPA",
+          "downloadURL": "https://github.com/mornyeapp/Mornye/releases/download/v5.2.1/Mornye-v5.2.1-ios-unsigned.ipa",
+          "size": 34515412,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "StikDebug",
+      "bundleIdentifier": "com.stik.stikdebug",
+      "developerName": "StikDebug",
+      "subtitle": "设备端 JIT 启用工具和设备工具箱。",
+      "localizedDescription": "适用于 iOS 17.4 及以上版本的设备端调试器和开发者工具箱，由 idevice 提供支持。注意：需要 LocalDevVPN，且不能在 LiveContainer 内使用它为同一个 LiveContainer 启用 JIT。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/StikDebug/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/StikDebug/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/StikDebug/images/scripts.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/StikDebug/images/settings.png"
+      ],
+      "tintColor": "#3B86F7",
+      "versions": [
+        {
+          "version": "3.1.15",
+          "date": "2026-10-15",
+          "localizedDescription": "**完整更新日志**：https://github.com/StikDebug/StikDebug/compare/3.1.14...3.1.15\r\n尝试修复 ServiceNotFound 错误并添加调试功能",
+          "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.1.15/StikDebug-3.1.15.ipa",
+          "size": 13543234,
+          "minOSVersion": "17.4"
+        }
+      ]
+    },
+    {
+      "name": "TiebaPure",
+      "bundleIdentifier": "dev.infinityf4p.tiebapure",
+      "developerName": "infinityf4p",
+      "subtitle": "基于 SwiftUI 的第三方百度贴吧客户端",
+      "localizedDescription": "基于原生 SwiftUI 构建的非官方贴吧 iOS 客户端。未登录访客即可浏览首页推荐、进吧与吧内列表、帖子详情与楼中楼、搜索、缩放图片及播放视频；登录后支持消息、关注与粉丝、收藏帖子（与官方客户端同步）、每日签到、点赞以及发帖和回复。另提供关键词/用户/贴吧屏蔽、浏览历史与阅读位置恢复、iPad 双栏布局，以及 `tiebapure://` 深链接。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/thread.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/search.png"
+      ],
+      "tintColor": "#708070",
+      "versions": [
+        {
+          "version": "1.4.15",
+          "date": "2026-10-10",
+          "localizedDescription": "## 更新内容\n\n- 优化滚动后重新选择“首页”标签时的状态和刷新行为。\n- 从帖子或搜索页面返回时，现在会先关闭当前页面；再次点按“首页”后即可刷新动态。\n- 刷新正在进行时点按“首页”，会返回顶部且不会重复发送请求。\n- 将应用和 Open In 扩展更新至版本 `1.4.15`（构建号 `59`）。\n\n## 下载\n\n`TiebaPure-v1.4.15-unsigned.ipa` 是专为本地安装/签名提供的未签名 arm64 IPA。\n\n- 最低 iOS 版本：`16.4`\n- Commit：`5a87225190d6a79b1e3ad3b7d846edd407d416c7`\n- SHA-256：`28fbe31e673b1f2769043456324521afd87d04ade8d92d33832e967c19c31123`\n\nCI `ci-ok` 已在 PR #86 上通过，包含单元测试、iOS 兼容性检查、UI 冒烟测试、iPad 布局测试和 Release 构建。",
+          "downloadURL": "https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.15/TiebaPure-v1.4.15-unsigned.ipa",
+          "size": 9347637,
+          "minOSVersion": "16.4"
+        }
+      ]
+    },
+    {
+      "name": "Tsumiru",
+      "bundleIdentifier": "com.suwayomi.tachideskSorayomi",
+      "developerName": "Suwayomi",
+      "subtitle": "Suwayomi-Server 原生漫画阅读器",
+      "localizedDescription": "Tsumiru 是一款原生客户端，可从 Suwayomi-Server 实例阅读漫画，专为长时间追看条漫而打造。支持离线下载和设备端目录、重新打造的连续滚动条漫阅读器、无痕模式，以及 13 款内置主题。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/list.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/update.jpg"
+      ],
+      "tintColor": "#7c7bff",
+      "versions": [
+        {
+          "version": "1.4.0",
+          "date": "2026-10-13",
+          "localizedDescription": "适用于 [Suwayomi](https://suwayomi.org/) 服务器的漫画和条漫阅读器。\n\n### ✨ 新功能\n\n- 新增 **SyncYomi** 设置；开启 **与 SyncYomi 同步**后，书库和更新页面会显示同步按钮 (@aaronbamblett)\n- 新增 **KOReader 同步**设置 (@aaronbamblett)\n- 在章节列表中新增缺失章节提示；跳过缺失或已筛选章节前，阅读器也会发出警告 (@theolm)\n- 新增单部作品的章节排序设置；除按字母排序外，其他排序方式会与 Suwayomi 网页界面同步 (@yohanim)\n- 通过未加密的 HTTP 登录远程服务器时，**连接**页面会显示警告 (@yohanim)\n\n### ⚙️ 变更\n\n- 调整离线保留的待读章节，使其遵循各作品所选的章节排序方式 (@yohanim)\n- 新安装时默认启用 **深色**模式 (@aaronbamblett)\n- 已选章节行和标签改用主题配色 (@aaronbamblett)\n- 恢复 Android 安装后，需重新登录 (@yohanim)\n\n### 🚀 改进\n\n- 在书库选择中加入作品下载选项，包括 **下一章**和**未读章节**，并应用于每部已选作品 (@aaronbamblett)\n- 开启 Android 的 **移除动画**后，屏幕切换、对话框、翻页和双击缩放均可即时响应 (@aaronbamblett)\n- 为所有主题新增浅色配色，让文字、标签页和徽标更清晰 (@aaronbamblett)\n- 在设置过程中新增 **跟随系统**、**浅色**和**深色**选项 (@aaronbamblett)\n- 在设置过程中和外观设置中新增主题切换箭头 (@aaronbamblett)\n- 桌面端新安装时使用更大的窗口，无需滚动即可完成设置 (@aaronbamblett)\n- **测试连接**现在会建议登录方式，但不会更改你已选择的方式 (@aaronbamblett)\n- 将 **搜索我的网络**的端口范围扩展至 4567–4570；找到多台服务器时可供选择 (@aaronbamblett)\n- 补全德语、中文、日语、葡萄牙语等语言的翻译 (@aaronbamblett)\n- 使用 **复制调试日志**复制的日志现会包含应用和服务器版本及平台信息 (@aaronbamblett)\n- 缩短书库和**历史记录**的加载时间，并减少启动时的重复检查 (@yohanim)\n- 离开作品且未进行更改时，不再重新加载书库 (@yohanim)\n- 减少更新页面、书库更新进度以及关闭**继续阅读按钮**的书库所消耗的数据 (@yohanim)\n- 在 iOS 权限提示中说明 Tsumiru 需要访问本地网络的原因 (@Kisnov)\n- 将连接和登录错误加入调试日志 (@yohanim)\n- 加密保存的登录信息，供后台下载和通知使用；不再保存登录密码 (@yohanim)\n- 从移动端和桌面端应用中的封面及页面地址移除登录令牌 (@yohanim)\n- 移除未使用的图片和字体，缩小应用体积 (@yohanim)\n\n### 🧩 修复\n\n- 修复离线浏览期间离线横幅消失的问题，确保**联网**按钮始终可用 (@yohanim)\n- 修复长条漫画的最后一页被阅读器菜单遮挡的问题；最后一张卡片会显示**没有下一章** (@aaronbamblett)\n- 修复长条漫画章节有时读到末尾后仍未标记为已读的问题 (@aaronbamblett)\n- 修复以长条模式打开的作品，其阅读器设置仍显示分页控制选项的问题 (@aaronbamblett)\n- 修复网页端有时无法启动迁移的问题 (@aaronbamblett)\n- 修复 Android 上新章节通知使用启动器图标的问题 (@aaronbamblett)\n- 修复 Android 后台下载通知中的白色方块图标问题 (@yohanim)\n- 修复重新安装或重新启用通知后，旧的未读章节触发通知或后台下载的问题 (@yohanim)\n- 修复下载和书库设置加载时短暂闪现虚假的账户设置错误 (@yohanim)\n- 修复从“更多”访问**历史记录**后，在书库页面按返回键无法关闭应用的问题 (@yohanim)\n- 修复应用启动时，封面、页面和后台下载未使用已保存的 Basic auth 登录信息的问题 (@yohanim)\n- 修复不受支持的设备语言导致应用以阿拉伯语而非英语启动的问题 (@Kisnov)\n- 修复 iOS 和 macOS 的应用语言列表，加入挪威博克马尔语、巴西葡萄牙语、泰米尔语和繁体中文 (@Kisnov)\n- 修复关闭**忽略安全区域**时，阅读器上方和下方出现多余空隙的问题 (@Kisnov)\n- 修复文件扩展名为大写时无法恢复备份的问题 (@Kisnov)\n- 修复源搜索和筛选条件更改时混入上次搜索结果的问题 (@yohanim)\n- 修复在本地地址和远程服务器地址之间切换后，浏览和更新页面无法加载更多内容的问题 (@yohanim)\n- 修复浏览和更新页面隐藏加载错误或加载指示器持续转动的问题 (@yohanim)\n- 修复代理后的服务器要求 Basic auth 时，设置流程跳过登录的问题 (@aaronbamblett)\n- 修复连接变更后，阅读器丢失阅读位置或无法加载下一章的问题 (@yohanim)\n- 修复源替换章节后，离线保留下载卡住的问题 (@yohanim)\n- 修复后台离线保留下载忽略章节编号的问题 (@yohanim)\n- 修复离线书库中部分作品显示未读章节数为零的问题 (@yohanim)\n- 修复 Android 12 及更新版本上，浏览页面因 AVIF 封面而卡死或崩溃的问题 (@ArcoLuck)\n- 修复应用上次在家中使用后，离开家时后台下载和新章节检查超时的问题 (@yohanim)\n- 修复离线状态下切换服务器地址后，已下载作品消失的问题；现已恢复**查看离线内容**功能 (@aaronbamblett)\n- 修复登录过期后重新打开应用时，必须手动刷新书库才能看到新章节的问题 (@yohanim)\n- 修复会话过期时，应用启动、后台下载和新章节检查期间出现登录错误的问题 (@yohanim)\n- 修复关闭**翻页动画**后，点击长条漫画仍会以动画方式滚动的问题 (@aaronbamblett)\n\n## 安装\n\n你需要运行中的 Suwayomi 服务器。请参阅[入门指南](https://tsumiru.app/docs/guides/getting-started)。\n\n### 移动设备\n\n**Android：**下载下方的通用 APK 并打开安装。附件中也提供适用于特定芯片类型的较小 APK。\n\n**iOS：**下方的 `…-ios.ipa` 未签名，需通过侧载安装。在 [SideStore](https://sidestore.io/) 或 [AltStore](https://altstore.io/) 中添加源 `https://tsumiru.app/apps.json`，即可安装并在后续版本发布时获取更新。\n\n<details>\n<summary>我该使用哪种侧载工具？</summary>\n\n- **[SideStore](https://sidestore.io/)** 可直接在设备上为应用签名并续签；完成设置后无需电脑。适合大多数用户。\n- **[AltStore](https://altstore.io/)** 每 7 天过期一次，只有在运行 AltServer 的电脑开机且与手机连接同一 Wi-Fi 时才能续签。\n- **[TrollStore](https://ios.cfw.guide/installing-trollstore/)** 可永久安装，无需担心过期，但仅适用于存在所需漏洞的旧款 iPhone 和 iOS 版本。\n\n使用 SideStore 或 AltStore 时，应用需要定期重新签名，这些工具可以自动完成。此应用没有 App Store 版本。\n</details>\n\n### 桌面端\n\n**Windows：**下载 `…-windows-x64.zip`，解压到任意位置，然后运行 `tsumiru.exe`。\n\n**macOS：**下载 `…-macos-x64.zip`，解压后将应用移至“应用程序”。如果 macOS 阻止首次启动，请前往“系统设置”→“隐私与安全性”批准运行。\n\n**Linux：**推荐使用 Flatpak，支持自动更新。\n\n```sh\nflatpak remote-add --if-not-exists tsumiru https://suwayomi.github.io/Suwayomi-Tsumiru/index.flatpakrepo\nflatpak install tsumiru io.github.aaronbamblett.tsumiru\n```\n\n如需便携版本，请下载 `…-linux-x86_64.AppImage`，使用 `chmod +x` 将其设为可执行文件，然后运行。\n\n### 网页版\n\n下载 `…-web.zip`，并使用任意静态 Web 服务器托管其中的文件。\n\n[完整文档](https://tsumiru.app/)",
+          "downloadURL": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/download/v1.4.0/tsumiru-v1.4.0-ios.ipa",
+          "size": 16222984,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "UTM",
+      "bundleIdentifier": "com.utmapp.UTM",
+      "developerName": "osy",
+      "subtitle": "适用于 iOS 的虚拟机",
+      "localizedDescription": "UTM 是一款功能齐全的 iOS 虚拟机托管应用。简而言之，它可以让你在 iPhone 和 iPad 上运行 Windows、Android 等系统。\n\n此版本需要使用 AltJIT。若要在不使用 JIT 的情况下进行较慢的模拟，请安装 UTM SE。\n\n更多信息请访问 https://getutm.app/\n\n功能：\n\n• 模拟任意处理器\n支持 QEMU 提供的 30 多种处理器，包括 x86_64、ARM64 和 RISC-V\n• 运行任意操作系统\n可在 iOS 上通过应用原生、安全地运行 Windows、Linux 等系统\n• 高速模拟\n支持 SPICE 半虚拟化和 TCG JIT 编译\n• 高兼容性\niOS 14 及以上版本均受支持。可在 iPhone 和 iPad 上运行，无需越狱\n• 免费且开源\nUTM 及其依赖项均免费开源\n• 易于使用\n通过原生界面配置和自定义虚拟机",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/images/settings.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/images/display.png"
+      ],
+      "tintColor": "#1a2cc2",
+      "versions": [
+        {
+          "version": "5.0.8",
+          "date": "2026-10-17",
+          "localizedDescription": "## 重点内容\r\n* (macOS) **支持 Windows DirectX 图形**：UTM 首次支持 Windows 11 现代硬件加速图形。该驱动仍处于实验阶段，目前游戏兼容性有限。\r\n* **Linux 支持 Vulkan 1.3 图形**：Linux 客户机现可通过 Mesa 中的 VirtIO Venus 驱动使用 Vulkan 1.3。此外，借助全新的 Apple Core OpenGL 后端，现已支持 OpenGL 4.1（仅限 macOS）。\r\n* **快照**：可随时保存虚拟机状态，并通过新增的“快照”标签页恢复。适用于 macOS 和 iOS 26 上的 QEMU 虚拟机，以及 macOS 27 上的 Apple Virtualization 虚拟机。\r\n* (macOS) **macOS 27 上的 Apple Virtualization**：将 USB 设备直通到虚拟机、为 Linux 启用安全启动、运行不保存更改的虚拟机，并通过全新的网络模式让虚拟机彼此通信。\r\n* (iOS) **改进触控操作**：手势响应更迅速，新增鼠标中键单击和右键拖动操作，以及拖动滚动触控模式。\r\n* (iOS) **iPhone Duo**：将 iPhone Duo 折叠成笔记本电脑形态，下半屏即可作为虚拟机的键盘或触控板。\r\n\r\n## 说明\r\n* 更新后，已暂停的虚拟机可能无法正确恢复。建议更新 UTM 前关闭所有虚拟机。\r\n* 现在最低支持 macOS 12 和 iOS 15。\r\n* 我们现已推出[开发博客](https://blog.getutm.app)！欢迎关注，了解我们如何将 DirectX 引入 QEMU 等深入技术内容。\r\n* (macOS) 若要使用 Windows 11 的新图形驱动，我们建议全新安装，因为该驱动仍处于实验阶段，可能导致系统不稳定。安装客户机工具时，系统会提示你选择实验性图形驱动。若要在已安装旧版纯显示驱动的系统中安装新驱动，需先运行客户机工具安装 ISO 中提供的卸载脚本。\r\n* (macOS) Apple CoreGL 后端不支持 Vulkan 或 DirectX。\r\n* 由于缺少对几何着色器间接绘制的支持，Linux 桌面无法使用 Vulkan 渲染。请将客户机设置为使用旧版 VirGL Gallium 驱动。\r\n\r\n## 变更（v5.0.8）\r\n* 修复 v5.0.7 中列出的若干更改因疏忽未包含在该版本中的问题。\r\n* (macOS) 修复 Apple Silicon Mac 未安装 Rosetta 时 Windows 3D 加速无法使用的问题；现在会回退至 DXMT\r\n* (macOS) QEMU：修复 v5.0.7 中 Windows 安装程序从 USB CD 驱动器启动时反复卡住、导致安装速度大幅变慢的问题 (#7970)\r\n\r\n## 变更（v5.0.7）\r\n* 更新 virglrenderer、MoltenVK 和 DXMT 图形后端，修复 Windows 3D 加速问题\r\n* ~~QEMU：Windows 客户机现在会使用宿主显示器的刷新率，而非固定为 60 Hz；这也修复了刷新率高于 125 Hz 的显示器上 3D 加速失效的问题 (#7820)~~ 此项已取消，后续更新中加入。\r\n* QEMU：修复 VirtIO GPU 卡顿问题，该问题会导致 Windows 关机时挂起、Linux 3D 基准测试卡住，并可能使 Windows 3D 驱动失去显示输出\r\n* 快照：修复压缩磁盘虚拟机的状态保存和恢复问题 (#7916)\r\n* 本地化：更新简体中文（香港）（感谢 @changanmoon）\r\n* (iOS 27.1) 支持 iPhone Duo：虚拟机工具栏位于外屏摄像头区域；全新的笔记本电脑模式可将折叠屏幕的下半部分用作键盘或触控板\r\n* (macOS) 修复无头虚拟机暂停或停止后仍阻止 Mac 进入睡眠的问题\r\n* (macOS) 虚拟机运行时关闭窗口或退出 UTM，现在会显示“关闭”或“退出”确认，而非“好”\r\n* (macOS) 修复 Apple Core OpenGL 后端使用实例化或整数顶点属性的着色器绘制不正确的问题 (#7944)\r\n* (macOS) 更新 D3DMetal 图形后端，修复 DirectX 12 问题\r\n* (macOS) 显示：现在 macOS 12 及更新版本支持全屏时使用摄像头区域旁的空间 (#6183)\r\n* (macOS) 助理：修复摘要页面上“名称”字段的焦点环被裁切的问题（感谢 @dnicolson）\r\n* (macOS 15) QEMU：在 Apple Silicon 上使用 Hypervisor.framework 内置中断控制器，提升性能\r\n* (macOS) 脚本：现在允许强制停止已暂停的虚拟机\r\n* (macOS 27) AVF：当摄像头或手机等 USB 设备无法直通时，改为说明原因，而不再显示“VZErrorDomain error -6” (#7914)\r\n* (macOS) 客户机代理：修复 macOS 客户机挂起并恢复后剪贴板共享失效的问题（需重新安装最新版客户机工具）(#7717)\r\n\r\n## 变更（v5.0.6）\r\n* 将最低支持版本提升至 macOS 12 和 iOS 15 (#7758)\r\n* 更新 DXMT 和 MoltenVK 图形后端\r\n* 更新 KosmicKrisp Vulkan 驱动；现需 macOS 26 或 iOS 26\r\n* 主页：欢迎界面现在提供打开现有虚拟机的选项，而非跳转到图库\r\n* 快照：新增“快照”标签页，可保存、覆盖、恢复、重命名和删除 QEMU 与 Apple 虚拟机的快照。iOS 需 iOS 26；Apple 虚拟机需 macOS 27 (#5484)\r\n* 设置：自定义 QEMU 参数已移至单独页面；现在会以只读文本显示完整命令行，并可复制 (#489, #7604)\r\n* SPICE：修复麦克风音质问题 (#7751)\r\n* SPICE：修复内存压力下音频播放卡住时，显示和输入也随之冻结的问题（感谢 @evan314159）\r\n* CocoaSpice：修复内置串行终端无法输入的问题 (#7814)\r\n* 终端：更新 SwiftTerm，加入全新的 Metal 渲染器；现在只能打开客户机输出的网页链接\r\n* 本地化：更新简体中文（香港）（感谢 @changanmoon）\r\n* (iOS) 修复 iOS 26 和 iOS 27 上的虚拟机工具栏和外接显示器问题\r\n* (iOS 26) iOS 现已支持释放空间、压缩、调整大小，以及将导入的驱动器转换为 qcow2 (#4774)\r\n* (iOS 27) 在 iPad 上关闭正在运行的虚拟机窗口前会请求确认\r\n* (iOS) 显示：长按和拖动手势响应更迅速；屏幕边缘的触控会传递给客户机；新增鼠标中键单击、右键/中键拖动操作，以及“触控模式（拖动滚动）”(#4738)\r\n* (iOS) 显示：重新设计键盘快捷栏，使其与 iOS 26 键盘风格一致\r\n* (iOS) 输入：现可映射游戏控制器的 Options 和 Home 按钮\r\n* (iOS) 设置：修复无法选择 KosmicKrisp Vulkan 驱动的问题\r\n* (macOS) VoiceOver 现在会按名称朗读文件浏览字段（感谢 @lprazdnik）\r\n* (macOS) 终端：新增查找栏 (Cmd-F)\r\n* (macOS 27) 显示：新增全屏时使用摄像头区域旁空间的选项 (#6183)\r\n* (macOS 27) 显示：虚拟机处于全屏时会关闭触发角\r\n* (macOS) 设置：改进备注字段\r\n* (macOS 26) 设置：“新建…”设备菜单现在与边栏样式一致\r\n* (macOS) AVF：现在可分别启用声音输入和输出，因此“仅输出”不会再让蓝牙耳机切换到耳麦模式 (#7875)\r\n* (macOS 26) AVF：新增“共享网络（虚拟机互通）”和“仅主机”网络模式 (#6975, #7480)（感谢 @lovon-spec）\r\n* (macOS 27) AVF：支持 USB 直通，也可通过脚本和 utmctl 使用 (#3778, #7777)\r\n* (macOS 27) AVF：支持运行时不保存更改 (#4201, #7326)\r\n* (macOS 27) AVF：为 UEFI 客户机新增安全启动选项 (#7874)\r\n* (macOS) 脚本：快照现为可编写脚本的对象；utmctl 新增 `snapshot` 和 `discard-state` 命令\r\n* (macOS) 脚本：可在 Apple 后端创建并安装 macOS 虚拟机 (#6092)（感谢 @meisenbarth）\r\n* (macOS 27) 脚本：首次启动时，可为新的 macOS 虚拟机设置用户账户、自动登录和远程登录 (#7757)\r\n* (macOS) 脚本：修复通过 `update registry` 设置的共享目录无法在 Apple 虚拟机中打开的问题（感谢 @atkinsam）\r\n* (macOS) 脚本：修复使用 `update configuration` 移除显示器后启动虚拟机时发生崩溃的问题 (#7882)\r\n\r\n## 变更（v5.0.5）\r\n* ~~撤销 v5.0.4 引入的最低版本要求：重新支持 macOS 11.3 和 iOS 14.0 及以上版本。不过，DirectX 仍仅支持 macOS 13.0 和 iOS 16.0 及以上版本。~~\r\n* 本地化：更新简体中文（香港）（感谢 @changanmoon）\r\n* 配置：ARM64 配置现在默认选择 GICv3。之前只有在 vCPU 数量大于 8 时才会如此。此更改可提升 vCPU 数量少于 8 时的性能。\r\n* 下载器：新增解压已下载 ZIP 文件时的路径遍历和符号链接检查\r\n* 助理：通过助理创建“经典”电脑模拟时，默认缩放方式现在为“最近邻”，其他情况则为“线性”。此前所有配置默认使用“最近邻”，导致高分辨率内容的缩放效果不佳。\r\n* (iOS) 使用 DXMT 支持 DirectX 11。由于 iOS 版本较旧（支持 TrollStore + Hypervisor），DirectX 游戏的兼容性不如 macOS。\r\n* (iOS) QEMU：修复导致大容量 hostmem 窗口无法运行的 MMIO BAR 错误\r\n* (iOS) 配置：改进 RAM 限制检测\r\n* (macOS) 现在可通过 D3DMetal 后端（如可用）支持 DirectX 12。你必须重新安装最新版 UTM 客户机工具中的实验性 3D 图形驱动。\r\n* (macOS) 启用输入捕获时支持按住 Caps Lock 键 (#7840)（感谢 @lprazdnik）\r\n* (macOS) 设置：新增退出时正常关闭所有运行中虚拟机的选项 (#7829)（感谢 @vectorseven）\r\n* (macOS) 设置：支持交换 Cmd 和 Opt 键 (#7837)（感谢 @lprazdnik）\r\n* (macOS) 脚本：向脚本接口添加快照命令 (#7832)（感谢 @naveenrajm7）\r\n* (macOS) AVF：macOS 客户机版本过高时显示更清晰的错误信息 (#7806)（感谢 @sigitkusuma）\r\n\r\n## 变更（v5.0.4）\r\n* (macOS) 为 virglrenderer 的 Neptune 后端添加支持，以支持 DirectX\r\n* 本地化：更新德语（感谢 @Benjamin123-tech）\r\n* 脚本：新增重新加载配置和 VLAN 命令 (#7710, #7711)（感谢 @GregOriol）\r\n* SPICE：修复渲染器中的多项错误，解决性能和画面撕裂问题\r\n* SPICE：修复可能导致 UTM 大量占用内存的内存泄漏问题\r\n* 更新 USB 图标 (#7718)（感谢 @tan9）\r\n* 修复 UTMRegistry 中的崩溃和 AVF 安装器中的内存泄漏 (#7701)（感谢 @Casey）\r\n\r\n## 变更（v5.0.3）\r\n* 修复新图形后端导致 GRUB 渲染时间退化的问题\r\n* 修复最新 Wayland 上的 Vulkan 问题\r\n* 本地化：更新简体中文（香港）（感谢 @changanmoon）\r\n* 主页：向左轻扫时确认是否删除 (#3086)\r\n* 主页：防止出现重复的虚拟机 (#7533)（感谢 @DevSecTim）\r\n* AVF：修复两个音频设备导致的 CPU 占用飙升和麦克风失效问题（感谢 @matapo）\r\n* 脚本：新增从 AVF 虚拟机获取 IP 地址的功能 (#7643)（感谢 @hellcastter）\r\n* 脚本：修复 AVM 后端中的“update registry”命令 (#7664)（感谢 @EkkoG）\r\n* 脚本：改进 USB 设备匹配逻辑（感谢 @TronickDev）\r\n\r\n## 变更（v5.0.2）\r\n* 启用调试日志后，现在会记录环境变量\r\n* 修复 GL 加速回退导致桌面可能无法正确渲染的问题 (#7626)\r\n* 为 MoltenVK 添加几何着色器支持，以启用 DXVK（感谢 @Anducalliew433）(#7575)\r\n* (iOS) 修复 EAGL 后端启动后显示黑屏的问题 (#7587)\r\n* (iOS) 修复 iOS 15 上因符号不兼容导致的崩溃 (#7593)\r\n* (iOS) 修复图形后端的详细日志记录问题\r\n* (iOS) 修复启用 GL 后因缺少 glDrawElementsInstancedBaseVertex 支持而崩溃的问题 (#7596)\r\n* (macOS) 修复调整窗口大小后，若客户机输出分辨率发生变化却仍使用错误的纹理分辨率，导致光标错位和图形变形的问题 (#5781)\r\n* (macOS) 修复启用原生缩放后窗口大小变为 0x0 的问题\r\n\r\n## 变更（v5.0.1）\r\n* CocoaSpice：重做 Metal 渲染器，使其速度更快、延迟更低\r\n* 修复文件名中包含逗号的 BIOS 文件无法加载的问题\r\n* macOS 和 iPadOS 上的默认 FPS 现在设为显示器的最高刷新率（支持 ProMotion 的 iPhone 仍默认使用 60Hz，但可在设置中改为 120Hz）\r\n* (macOS) 修复启用 Vulkan 后启动时出现 `HV_UNSUPPORTED` 的问题 (#7579)\r\n* (iOS) 修复外接显示器的分辨率问题 (#6040)\r\n* (iOS) 捏合缩放会自动停止从客户机更新缩放比例（可通过调整大小按钮重置）\r\n* (iOS) 修复外接显示器菜单未更新的问题\r\n* (iOS) 修复外接显示器上的缩放比例错误；连接外接显示器后现在会自动缩放以适应屏幕\r\n* (iOS) 修复关闭虚拟机后显示主屏幕，但 UTM 未在后台终止的问题\r\n\r\n## 变更（v5.0.0）\r\n* 添加 Venus Vulkan 支持 (#4551)\r\n* 添加 Apple Core OpenGL 支持，以支持 OpenGL 4.1 (#4285)（感谢 @startergo）\r\n\r\n## 问题反馈\r\n请查看 [Github](https://github.com/utmapp/UTM) 上的完整问题列表，并帮助报告尚未列出的错误。\r\n\r\n## 安装\r\n\r\n* [iOS](https://docs.getutm.app/installation/ios/)\r\n* [macOS](https://docs.getutm.app/installation/macos/)\r\n\r\n| 文件 | 说明 | 安装方式 | JIT | Hypervisor | USB |\r\n|------|------------|--------------|-----|-----------|-----|\r\n| UTM.deb | 越狱版 iOS | 在 Cydia、dpkg 或 Sileo 中打开 | 是 | 是(1) | 是 |\r\n| UTM.dmg | macOS 版 | 装载镜像并将 UTM.app 复制到 /Applications | 是 | 是 | 是 |\r\n| UTM.ipa | 非越狱版 iOS（侧载） | AltStore 等（参见指南） | 是(2) | 否 | 否 |\r\n| UTM-HV.ipa | 非越狱版 iOS（TrollStore） | TrollStore | 是 | 是(1) | 是 |\r\n| UTM-SE.ipa | 非越狱版 iOS（侧载） | AltStore、企业签名等 | 否 | 否 | 否 |\r\n| UTM-Remote.ipa | 远程客户端 | 任意方式 | 否 | 否 | 否 |\r\n\r\n1. iOS 上的 Hypervisor 需要 M1 iPad 或更新机型。\r\n2. 启用 JIT 可能需要额外的 JIT 启用工具，例如 [Jitterbug][2] 或 Jitstreamer。\r\n\r\n[1]: https://getutm.app/install/\r\n[2]: https://github.com/osy/Jitterbug",
+          "downloadURL": "https://github.com/utmapp/UTM/releases/download/v5.0.8/UTM.ipa",
+          "size": 150556413,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "VeneraNext",
+      "bundleIdentifier": "com.github.cyrilpeng.veneranext",
+      "developerName": "CyrilPeng",
+      "subtitle": "跨平台漫画阅读器",
+      "localizedDescription": "基于 Flutter 的跨平台漫画阅读器，支持本地漫画、WebDAV 漫画源与第三方网络漫画源，支持 Android、iOS、Windows、Linux、macOS 平台。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/images/home.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/images/explorer.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/images/search.jpg"
+      ],
+      "tintColor": "#2090E0",
+      "versions": [
+        {
+          "version": "1.18.0",
+          "buildVersion": "234",
+          "date": "2026-10-14",
+          "localizedDescription": "本次正式版在 v1.17.0 基础上完成大范围架构重构，收束阅读器、漫画源、同步与运行时的职责边界，并新增图片原始像素尺寸、章节阅读进度、自动阅读屏幕常亮与跳过不可用图片。同步修复 WebDAV 应用数据同步、日志持久化、AVIF 识别及图片去混淆性能问题，修复 Rust 依赖安全告警并更新相关依赖。经 v1.18.0-rc.1 至 rc.5 逐版验证，Windows 与 Android 的 WebDAV 手动上传、云端下载覆盖及自动同步已通过实机验收。\n\n### 新增\n\n- 阅读器可选显示图片原始像素尺寸，支持单页、多页、连续阅读及宽图拆分；缩小解码和缓存命中仍保留原始尺寸，开关支持全局／设备／单本设置（#95）。\n- 收藏、追更及漫画卡片显示章节和页码进度，阅读时持久化章节／分组名称，图源不可用后仍可查看；旧历史兼容序号回退，长标题支持省略、完整提示和读屏（#93）。\n- 自动阅读默认保持 Android／iOS 屏幕常亮，提供全局／设备／单本开关；停止自动阅读、切后台和退出时恢复系统休眠，旋转与迟到的原生回调不会遗留常亮状态（#96）。\n- 自动阅读新增默认关闭的「跳过不可用图片」选项：失败图片按正常节奏跳过，加载中的图片在 1–60 秒可调的前台等待后继续；覆盖单页、并排页及连续／瀑布流视图，保留操作暂停和章节加载保护，修复瀑布流短错误占位在末章提前可见时的停止定位（#98 后续建议）。\n\n### 修复\n\n- 应用数据同步恢复 v1.17.0 的 WebDAV SDK 上传、下载及旧备份清理流程，沿用日期与数据版本文件名，不再要求条件 PUT、强 ETag 或内容基线；修复候选版上传已返回 201、却因下载／CDN 的 ETag 无法授权清理而持续报错并阻断后续同步的问题。\n- 恢复 WebDAV 文件下载重定向兼容：仅允许 GET 受控跟随，跨源不传递 WebDAV 认证、Cookie、自定义请求头和默认查询参数，限制跳转次数并拒绝循环及 HTTPS 降级，恢复 123 云盘等服务的下载域名跳转。\n- 修复 Android 数据目录经过系统路径别名时，同步初始化误报 `Upload data path contains a link`，以及备份已下载成功却在覆盖导入 `history.db` 等文件时报 `Import filesystem entry is an alias` 的问题；统一使用解析后的物理根目录，保留归档内部链接与越界检查。\n- 修复阅读器横竖屏切换后自动阅读被中断的问题，旋转或每页图片数量变化时会清理失效的页面动画状态。\n- 修复手动同步下载无法再次导入同版本备份的问题，支持确认后覆盖本地修改并强制导入远端归档。\n- 修复 Hitomi 图片响应缺少可识别文件头时无法保存的问题，改用图片 URL 的扩展名作为安全回退。\n- 信息、警告和错误日志按批次追加并刷新到磁盘，补写启动早期日志；重启保留记录，超过 2 MiB 时轮转到 `logs.previous.txt`，退出／导出等待写入完成，避免常驻文件句柄及未处理的写入异常（#88）。\n- 修复 AVIF 的主品牌／兼容品牌和动画品牌识别，支持不同 ISO-BMFF 盒长度并拒绝截断或伪匹配；新增固定来源的测试样本与解码探测工具（#94）。\n- 去混淆的独立像素缓冲区改为按行／连续块批量复制，保留共享缓冲区原有脚本语义；PNG 输出只读取有效子视图，返回 Dart 字节后立即释放原生缓冲区，避免额外复制及等待 GC，新增可复现的像素复制基准（#91）。\n- 将纵向连续／瀑布流的边距设置明确标为「条漫缩小（每侧边距）」，补充平板使用说明、宽度比例表和 FAQ 入口；既有缩小功能保留当前阅读进度（#85）。\n- 修复阅读、同步、图片下载及 CI 校验的其余问题，收束源操作、弹窗与收藏交互的原宿主归属。\n\n### 维护与文档\n\n- 发布版本更新为 `1.18.0+234`，同步应用版本、发布配置与更新记录。\n- 定向升级 Rhttp 的 Rust 依赖，修复 10 条 GitHub 告警及全量扫描发现的 HTTP/2、QUIC 和内存安全问题；工具链更新至 1.92.0，补齐 Cargo 每周更新和完整锁文件审计，漏洞及 unsound 告警均阻断 CI（#101、#102、#103）。\n- 更新 battery_plus、Dio、enough_convert、url_launcher 等 Dart 依赖及 Rhttp 常规依赖，保留 Flutter Rust Bridge 2.11.1 与本地取消回调补丁；将 libc 暂时固定为 0.2.189，并增加 PR 的 iOS Rhttp 原生编译门禁与依赖锁定回归检查。\n- 在 WebDAV 同步关键代码块补充中文兼容性与安全约束注释，记录 123 云盘下载 302 回归原因、跨源凭据隔离、签名查询保留、404／ETag 判定及原生请求收尾要求。\n- 更新中英文 README 与 Linux 分发说明的稳定版信息，补充数据同步、条漫缩小和依赖治理文档。\n- 增加 Trendshift 项目徽章与 Dart 每日趋势排名徽章，并精简 README 目录与下载章节。\n\n### 已知限制与后续安排\n\n- 鸿蒙 HAP 支持（#77）、CBZ 分卷导出（#81）及图片请求 HTTP/3 回退（#100）留待后续版本；特定网络下部分图片 CDN 的 TCP／TLS 请求仍可能失败。\n- AVIF 格式识别改进不代表所有平台均已具备完整的通用／动画解码能力；通用内置解码器仍待接入（#94）。\n- 图片去混淆的移动端耗电收益仍需实机测量。\n\n### 运行说明\n\n- 升级前请导出本地数据备份，再覆盖安装新版；同步复用原有同步配置、数据库和恢复记录，无需清空应用数据或重建 WebDAV 账号。\n- 应用数据同步沿用 v1.17.0 协议，多设备同时编辑不会合并，也不提供条件写入／删除的并发保护；请避免在多台设备上同时修改同一份数据后立即同步。\n- Linux AppImage 需要 glibc 2.35 或更新版本、兼容的 OpenGL／EGL 驱动，以及可写、可执行且留有约 100 MB 空间的 `/tmp`。",
+          "downloadURL": "https://github.com/CyrilPeng/Venera-Next/releases/download/v1.18.0/VeneraNext-ios-1.18.0%2B234.ipa",
+          "size": 21127254,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "YouProEXTRA",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "alibusut",
+      "subtitle": "可自定义调整的 YouTube 修改版",
+      "localizedDescription": "适用于 iOS 的 YouTube YouPro 修改版。提供无广告、后台播放、下载、iSponsorBlock、画中画以及大量可自定义的调整选项。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/list.jpg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/play.jpg"
+      ],
+      "tintColor": "#FF0000",
+      "versions": [
+        {
+          "version": "21.41.5",
+          "buildVersion": "21.41.5",
+          "date": "2026-10-11",
+          "localizedDescription": "### 最新版本，尽情享用！\r\n> [!NOTE]\r\n> - **不包含 YTUHD**。支持 4K60HDR。\r\n> - 如果已退出登录，可以手动登录。\r\n> - 不含 iSponsorBlock。（在较新的构建版本中不稳定）\r\n> - 对于 A15 以下设备，播放 AV1 视频时，请点击向下箭头面板中的分享按钮并使用外部播放器。\r\n> - A15 以下设备的下载功能不稳定，部分内容会因缺少 AV1 编解码器而下载失败。\r\n> - - -\r\n> #### 额外调整：\r\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \r\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \r\n\r\n> [!WARNING]\r\n> - 21.34.3+ 版本现要求 iOS 17 或更高版本。",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.41.5_1.3.1.ipa",
+          "size": 130721602,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "ZhihuMinusMinus",
+      "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
+      "developerName": "huamurui",
+      "subtitle": "轻量、纯净的第三方知乎客户端",
+      "localizedDescription": "基于 React Native (Expo) 构建的轻量级第三方知乎客户端，无广告，支持多账号切换、游客模式、全局主题色自定义与深色模式，可查看热榜、推荐、回答、文章、想法与评论区，并支持从 GitHub Releases 自动更新。",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/home.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/detail.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/hot.png"
+      ],
+      "tintColor": "#0084ff",
+      "versions": [
+        {
+          "version": "0.9.2",
+          "date": "2026-10-20",
+          "localizedDescription": "* 修复：修复关注页异常响应导致的崩溃，并补充脱敏错误诊断，作者 @huamurui，详见 https://github.com/huamurui/zhihu-minus-minus/pull/136\r\n* 更新疑似用于标记内容已读的接口调用。（可能无效；即使有效，也需要使用一段时间后才能改善推流内容重复的问题）\r\n* 修复主题色选择。\r\n* 修复小问题 #125 #120 \r\n\r\n**完整更新日志**：https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.1...v0.9.2",
+          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.2/zhihu-minus-minus-v0.9.2-unsigned.ipa",
+          "size": 16033253,
+          "minOSVersion": "15.1"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "sh.celia.novella",
+      "title": "Novella 2.6.0 · 20 Oct 2026",
+      "identifier": "Novella-release-v2.6.0",
+      "caption": "Novella 2.6.0 is available.",
+      "date": "2026-10-20T07:35:20Z",
+      "tintColor": "#2E2E2E",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Novella/images/news.png",
+      "notify": true,
+      "url": "https://github.com/celia-sh/Novella/releases/tag/v2.6.0"
+    },
+    {
+      "appID": "com.zarz.spotiflac",
+      "title": "SpotiFLAC 5.2.1 · 20 Oct 2026",
+      "identifier": "SpotiFLAC-release-v5.2.1",
+      "caption": "SpotiFLAC 5.2.1 is available.",
+      "date": "2026-10-20T06:36:14Z",
+      "tintColor": "#1DB954",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/images/news.png",
+      "notify": true,
+      "url": "https://github.com/spotiflacapp/SpotiFLAC-Mobile/releases/tag/v5.2.1"
+    },
+    {
+      "appID": "com.huamu013.ZhihuMinusMinus",
+      "title": "ZhihuMinusMinus 0.9.2 · 20 Oct 2026",
+      "identifier": "ZhihuMinusMinus-release-v0.9.2",
+      "caption": "ZhihuMinusMinus 0.9.2 is available.",
+      "date": "2026-10-20T06:16:17Z",
+      "tintColor": "#0084ff",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.9.2"
+    },
+    {
+      "appID": "org.eu.eslzzyl.Pixiv-SwiftUI",
+      "title": "Pixiv-SwiftUI 0.16.3 · 19 Oct 2026",
+      "identifier": "Pixiv-SwiftUI-release-v0.16.3",
+      "caption": "Pixiv-SwiftUI 0.16.3 is available.",
+      "date": "2026-10-19T14:07:18Z",
+      "tintColor": "#13A1FD",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/tag/v0.16.3"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 2.6.0-nightly.20261019.1539 · 19 Oct 2026",
+      "identifier": "ARMSX2-release-nightly-20261019",
+      "caption": "ARMSX2 2.6.0-nightly.20261019.1539 is available.",
+      "date": "2026-10-19T13:17:07Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261019"
+    },
+    {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.21 · 19 Oct 2026",
+      "identifier": "Kumone-release-v0.3.21",
+      "caption": "Kumone 0.3.21 is available.",
+      "date": "2026-10-19T10:16:25Z",
+      "tintColor": "#F0D060",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.21"
+    },
+    {
+      "appID": "com.dddevid.musly",
+      "title": "Musly 2.0.3 · 18 Oct 2026",
+      "identifier": "Musly-release-v2.0.3",
+      "caption": "Musly 2.0.3 is available.",
+      "date": "2026-10-18T18:19:33Z",
+      "tintColor": "#FA243C",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dddevid/Musly/releases/tag/v2.0.3"
+    },
+    {
+      "appID": "com.ligg.anime_flow",
+      "title": "AnimeFlow 2.6.4 · 18 Oct 2026",
+      "identifier": "AnimeFlow-release-v2.6.4",
+      "caption": "AnimeFlow 2.6.4 is available.",
+      "date": "2026-10-18T15:14:24Z",
+      "tintColor": "#124EB3",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
+      "notify": true,
+      "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.6.4"
+    },
+    {
+      "appID": "com.neogamelab.neostation",
+      "title": "NeoStation iOS 0.0.8 · 18 Oct 2026",
+      "identifier": "NeoStation iOS-release-0.0.8",
+      "caption": "NeoStation iOS 0.0.8 is available.",
+      "date": "2026-10-18T14:13:32Z",
+      "tintColor": "#01E989",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/NeoStation/images/news.png",
+      "notify": true,
+      "url": "https://github.com/TarbleFR/neostation-ios/releases/tag/0.0.8"
+    },
+    {
+      "appID": "ani.baka",
+      "title": "AniBaka 5.2.2 · 18 Oct 2026",
+      "identifier": "AniBaka-release-5.2.2+1017",
+      "caption": "AniBaka 5.2.2 is available.",
+      "date": "2026-10-18T11:13:56Z",
+      "tintColor": "#0077B6",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/images/news.png",
+      "notify": true,
+      "url": "https://github.com/AniBakaBaka/AniBaka/releases/tag/5.2.2+1017"
+    },
+    {
+      "appID": "com.husk.app",
+      "title": "Husk 3.0 · 17 Oct 2026",
+      "identifier": "Husk-release-3.0",
+      "caption": "Husk 3.0 is available.",
+      "date": "2026-10-17T21:34:58Z",
+      "tintColor": "#5949E5",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Husk/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Leviidev/Husk/releases/tag/3.0"
+    },
+    {
+      "appID": "com.kdt.livecontainer",
+      "title": "LiveContainer+SideStore 3.8.11 · 17 Oct 2026",
+      "identifier": "LiveContainer+SideStore-release-nightly",
+      "caption": "LiveContainer+SideStore 3.8.11 is available.",
+      "date": "2026-10-17T08:31:56Z",
+      "tintColor": "#0784FC",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/images/news.png",
+      "notify": true,
+      "url": "https://github.com/LiveContainer/LiveContainer/releases/tag/nightly"
+    },
+    {
+      "appID": "com.utmapp.UTM",
+      "title": "UTM 5.0.8 · 17 Oct 2026",
+      "identifier": "UTM-release-v5.0.8",
+      "caption": "UTM 5.0.8 is available.",
+      "date": "2026-10-17T02:44:56Z",
+      "tintColor": "#1a2cc2",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/images/news.png",
+      "notify": true,
+      "url": "https://github.com/utmapp/UTM/releases/tag/v5.0.8"
+    },
+    {
+      "appID": "app.aidoku.Aidoku",
+      "title": "Aidoku 0.9-4 · 16 Oct 2026",
+      "identifier": "Aidoku-release-v0.9-4",
+      "caption": "Aidoku 0.9-4 is available.",
+      "date": "2026-10-16T22:25:27Z",
+      "tintColor": "#FF375F",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Aidoku/Aidoku/releases/tag/v0.9-4"
+    },
+    {
+      "appID": "com.altman.moviepilot",
+      "title": "MoviePilotLite 1.2.5 · 16 Oct 2026",
+      "identifier": "MoviePilotLite-release-release-v1.2.5-2026-10-16",
+      "caption": "MoviePilotLite 1.2.5 is available.",
+      "date": "2026-10-16T03:25:57Z",
+      "tintColor": "#8050F0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
+      "notify": true,
+      "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.2.5-2026-10-16"
+    },
+    {
+      "appID": "com.stik.stikdebug",
+      "title": "StikDebug 3.1.15 · 15 Oct 2026",
+      "identifier": "StikDebug-release-3.1.15",
+      "caption": "StikDebug 3.1.15 is available.",
+      "date": "2026-10-15T14:31:50Z",
+      "tintColor": "#3B86F7",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/StikDebug/images/news.png",
+      "notify": true,
+      "url": "https://github.com/StikDebug/StikDebug/releases/tag/3.1.15"
+    },
+    {
+      "appID": "com.example.kazumi",
+      "title": "Kazumi 2.3.9 · 14 Oct 2026",
+      "identifier": "Kazumi-release-2.3.9",
+      "caption": "Kazumi 2.3.9 is available.",
+      "date": "2026-10-14T13:21:43Z",
+      "tintColor": "#4CAF50",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.3.9"
+    },
+    {
+      "appID": "com.github.cyrilpeng.veneranext",
+      "title": "VeneraNext 1.18.0 · 14 Oct 2026",
+      "identifier": "VeneraNext-release-v1.18.0",
+      "caption": "VeneraNext 1.18.0 is available.",
+      "date": "2026-10-14T09:59:36Z",
+      "tintColor": "#2090E0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/images/news.png",
+      "notify": true,
+      "url": "https://github.com/CyrilPeng/Venera-Next/releases/tag/v1.18.0"
+    },
+    {
+      "appID": "org.animeko.animeko",
+      "title": "Animeko 6.3.0 · 13 Oct 2026",
+      "identifier": "Animeko-release-v6.3.0",
+      "caption": "Animeko 6.3.0 is available.",
+      "date": "2026-10-13T06:34:15Z",
+      "tintColor": "#0050A0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/news.png",
+      "notify": true,
+      "url": "https://github.com/open-ani/animeko/releases/tag/v6.3.0"
+    },
+    {
+      "appID": "com.suwayomi.tachideskSorayomi",
+      "title": "Tsumiru 1.4.0 · 13 Oct 2026",
+      "identifier": "Tsumiru-release-v1.4.0",
+      "caption": "Tsumiru 1.4.0 is available.",
+      "date": "2026-10-13T05:54:44Z",
+      "tintColor": "#7c7bff",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/tag/v1.4.0"
+    },
+    {
+      "appID": "org.zhaohe.MiniWatts",
+      "title": "MiniWatts 1.5.1 · 13 Oct 2026",
+      "identifier": "MiniWatts-release-v1.5.1",
+      "caption": "MiniWatts 1.5.1 is available.",
+      "date": "2026-10-13T02:45:39Z",
+      "tintColor": "#30E0F0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ResistanceTo/MiniWatts/releases/tag/v1.5.1"
+    },
+    {
+      "appID": "com.kodjodevf.mangayomi",
+      "title": "Mangayomi 0.9.9 · 12 Oct 2026",
+      "identifier": "Mangayomi-release-v0.9.9",
+      "caption": "Mangayomi 0.9.9 is available.",
+      "date": "2026-10-12T15:52:14Z",
+      "tintColor": "#EF4444",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.9"
+    },
+    {
+      "appID": "com.google.ios.youtube",
+      "title": "YouProEXTRA 21.41.5 · 11 Oct 2026",
+      "identifier": "YouProEXTRA-release-youproextra-ipa2",
+      "caption": "YouProEXTRA 21.41.5 is available.",
+      "date": "2026-10-11T23:19:12Z",
+      "tintColor": "#FF0000",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
+    },
+    {
+      "appID": "com.example.piliplus",
+      "title": "PiliPlus 2.1.6 · 10 Oct 2026",
+      "identifier": "PiliPlus-release-2.1.6.2",
+      "caption": "PiliPlus 2.1.6 is available.",
+      "date": "2026-10-10T13:07:12Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6.2"
+    },
+    {
+      "appID": "com.naine.doer",
+      "title": "Doer 1.8.6 · 10 Oct 2026",
+      "identifier": "Doer-release-v1.8.6",
+      "caption": "Doer 1.8.6 is available.",
+      "date": "2026-10-10T08:03:04Z",
+      "tintColor": "#4080E0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/images/news.png",
+      "notify": true,
+      "url": "https://github.com/moliango/doer/releases/tag/v1.8.6"
+    },
+    {
+      "appID": "dev.infinityf4p.tiebapure",
+      "title": "TiebaPure 1.4.15 · 10 Oct 2026",
+      "identifier": "TiebaPure-release-v1.4.15",
+      "caption": "TiebaPure 1.4.15 is available.",
+      "date": "2026-10-10T06:07:37Z",
+      "tintColor": "#708070",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/news.png",
+      "notify": true,
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.15"
+    },
+    {
+      "appID": "com.mystyle.purelive.liu",
+      "title": "PureLive 3.1.19 · 10 Oct 2026",
+      "identifier": "PureLive-release-v3.1.19",
+      "caption": "PureLive 3.1.19 is available.",
+      "date": "2026-10-10T04:32:55Z",
+      "tintColor": "#50B0F0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PureLive/images/news.png",
+      "notify": true,
+      "url": "https://github.com/liuchuancong/pure_live/releases/tag/v3.1.19"
+    },
+    {
+      "appID": "com.christianselig.Apollo",
+      "title": "Apollo for Reddit - GLASS 3.9.0 · 09 Oct 2026",
+      "identifier": "Apollo for Reddit - GLASS-release-v1.15.11_3.9.0",
+      "caption": "Apollo for Reddit - GLASS 3.9.0 is available.",
+      "date": "2026-10-09T22:56:25Z",
+      "tintColor": "#6050F0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_3.9.0"
+    },
+    {
+      "appID": "com.sean.roamcontrol",
+      "title": "Roam Control 0.9.7 · 08 Oct 2026",
+      "identifier": "Roam Control-release-v0.9.7",
+      "caption": "Roam Control 0.9.7 is available.",
+      "date": "2026-10-08T19:54:46Z",
+      "tintColor": "#1090F0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Roam-Control/images/news.png",
+      "notify": true,
+      "url": "https://github.com/seanhowarthdev/Roam-Control/releases/tag/v0.9.7"
+    },
+    {
+      "appID": "dev.playport.app",
+      "title": "Playport 0.4.0 · 08 Oct 2026",
+      "identifier": "Playport-release-v0.4.0",
+      "caption": "Playport 0.4.0 is available.",
+      "date": "2026-10-08T13:34:57Z",
+      "tintColor": "#F5B544",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Playport/images/news.png",
+      "notify": true,
+      "url": "https://github.com/playportdev/playport/releases/tag/v0.4.0"
+    },
+    {
+      "appID": "com.mak5er.aircard",
+      "title": "AirCard-iOS 1.3.2 · 04 Oct 2026",
+      "identifier": "AirCard-iOS-release-v1.3.2",
+      "caption": "AirCard-iOS 1.3.2 is available.",
+      "date": "2026-10-04T12:22:53Z",
+      "tintColor": "#5020E0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AirCard/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Mak5er/AirCard-iOS/releases/tag/v1.3.2"
+    },
+    {
+      "appID": "software.iridium",
+      "title": "Iridium 0.2.0 · 04 Oct 2026",
+      "identifier": "Iridium-release-v0.2.0",
+      "caption": "Iridium 0.2.0 is available.",
+      "date": "2026-10-04T02:20:31Z",
+      "tintColor": "#1C1C1E",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Iridium/images/news.png",
+      "notify": true,
+      "url": "https://github.com/intraducine/iridium/releases/tag/v0.2.0"
+    },
+    {
+      "appID": "com.willfaust.madeora",
+      "title": "Madeira 0.1.3 · 03 Oct 2026",
+      "identifier": "Madeira-release-v0.1.3",
+      "caption": "Madeira 0.1.3 is available.",
+      "date": "2026-10-03T16:49:54Z",
+      "tintColor": "#7B68EE",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Madeira/images/news.png",
+      "notify": true,
+      "url": "https://github.com/willfaust/Madeira/releases/tag/v0.1.3"
+    },
+    {
+      "appID": "com.makr.orchard",
+      "title": "Orchard 0.2 · 25 Sep 2026",
+      "identifier": "Orchard-release-v0.2",
+      "caption": "Orchard 0.2 is available.",
+      "date": "2026-09-25T16:12:05Z",
+      "tintColor": "#F0C060",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Orchard/images/news.png",
+      "notify": true,
+      "url": "https://github.com/MakrSas/orchard-ios/releases/tag/v0.2"
+    },
+    {
+      "appID": "app.scenebox.SceneBox",
+      "title": "SceneBox 1.0.4 · 23 Sep 2026",
+      "identifier": "SceneBox-release-v1.0.4",
+      "caption": "SceneBox 1.0.4 is available.",
+      "date": "2026-09-23T15:44:54Z",
+      "tintColor": "#E0E000",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SceneBox/images/news.png",
+      "notify": true,
+      "url": "https://github.com/donbytyqi/scenebox/releases/tag/v1.0.4"
+    },
+    {
+      "appID": "com.aoshuang.manicemu",
+      "title": "ManicEMU 2.0.1 · 18 Sep 2026",
+      "identifier": "ManicEMU-release-v2.0.1",
+      "caption": "ManicEMU 2.0.1 is available.",
+      "date": "2026-09-18T09:29:42Z",
+      "tintColor": "#F02040",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ManicEMU/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Manic-EMU/ManicEMU/releases/tag/v2.0.1"
+    },
+    {
+      "appID": "app.fathom.emulator",
+      "title": "Fathom 1.0.0 · 14 Sep 2026",
+      "identifier": "Fathom-release-v1.0.0",
+      "caption": "Fathom 1.0.0 is available.",
+      "date": "2026-09-14T23:13:23Z",
+      "tintColor": "#68D8D8",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Fathom/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Leviidev/Fathom/releases/tag/v1.0.0"
+    },
+    {
+      "appID": "com.verback.YTLite",
+      "title": "Opaline 1.12.0 · 10 Sep 2026",
+      "identifier": "Opaline-release-1.12.0",
+      "caption": "Opaline 1.12.0 is available.",
+      "date": "2026-09-10T02:02:27Z",
+      "tintColor": "#FF0000",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Opaline/images/news.png",
+      "notify": true,
+      "url": "https://github.com/verback2308/Opaline/releases/tag/1.12.0"
+    },
+    {
+      "appID": "com.miguel.psx3ios",
+      "title": "PSX3IOS 0.2.7-beta · 01 Sep 2026",
+      "identifier": "PSX3IOS-release-v0.2.7-beta",
+      "caption": "PSX3IOS 0.2.7-beta is available.",
+      "date": "2026-09-01T12:12:58Z",
+      "tintColor": "#5080D0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PSX3IOS/images/news.png",
+      "notify": true,
+      "url": "https://github.com/xmiguel911x/PSX3IOS/releases/tag/v0.2.7-beta"
+    },
+    {
+      "appID": "app.ehpanda",
+      "title": "EhPanda 2.8.1 · 20 Jul 2026",
+      "identifier": "EhPanda-release-v2.8.1",
+      "caption": "EhPanda 2.8.1 is available.",
+      "date": "2026-07-20T12:12:04Z",
+      "tintColor": "#0f766e",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/images/news.png",
+      "notify": true,
+      "url": "https://github.com/EhPanda-Team/EhPanda/releases/tag/v2.8.1"
+    },
+    {
+      "appID": "com.xitrix.iTorrent2",
+      "title": "iTorrent 2.2.0-1 · 19 Jul 2026",
+      "identifier": "iTorrent-release-v2.2.0-1",
+      "caption": "iTorrent 2.2.0-1 is available.",
+      "date": "2026-07-19T09:59:41Z",
+      "tintColor": "#F19E69",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/images/news.png",
+      "notify": true,
+      "url": "https://github.com/XITRIX/iTorrent/releases/tag/v2.2.0-1"
+    },
+    {
+      "appID": "com.kdt.livecontainer",
+      "title": "LiveContainer+SideStore 3.8.0 · 17 Jul 2026",
+      "identifier": "LiveContainer+SideStore-release-3.8.0",
+      "caption": "LiveContainer+SideStore 3.8.0 is available.",
+      "date": "2026-07-17T07:44:20Z",
+      "tintColor": "#0784FC",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/images/news.png",
+      "notify": true,
+      "url": "https://github.com/LiveContainer/LiveContainer/releases/tag/3.8.0"
+    },
+    {
+      "appID": "com.mafty.dukex",
+      "title": "DukeX 1.0.2 · 30 Jun 2026",
+      "identifier": "DukeX-release-v1.0.2",
+      "caption": "DukeX 1.0.2 is available.",
+      "date": "2026-06-30T12:21:27Z",
+      "tintColor": "#8FCA39",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/images/news.png",
+      "notify": true,
+      "url": "https://github.com/MaftyManicEMU/DukeX/releases/tag/v1.0.2"
+    },
+    {
+      "appID": "me.oatmealdome.DolphiniOS-njb-patreon-beta",
+      "title": "DolphiniOS 5.0.0b6 · 20 Jun 2026",
+      "identifier": "DolphiniOS-release-v5.0.0b6",
+      "caption": "DolphiniOS 5.0.0b6 is available.",
+      "date": "2026-06-20T07:01:54Z",
+      "tintColor": "#E0B030",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/images/news.png",
+      "notify": true,
+      "url": "https://github.com/OatmealDome/dolphin-ios/releases/tag/v5.0.0b6"
+    },
+    {
+      "appID": "com.macxk.KMusic",
+      "title": "KMusic 2.3.0 · 12 Mar 2026",
+      "identifier": "KMusic-release-歌一刀2.3.0",
+      "caption": "KMusic 2.3.0 is available.",
+      "date": "2026-03-12T08:39:59Z",
+      "tintColor": "#F03050",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/KMusic/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Mac-XK/KMusic/releases/tag/歌一刀2.3.0"
+    }
+  ]
+}

@@ -1,0 +1,743 @@
+{
+  "name": "Kevin 的正版 GitHub 侧载源",
+  "identifier": "com.kevin.legit-github-sideload",
+  "subtitle": "开源应用 + 修改版 IPA——所有 IPA 均来自 GitHub Releases",
+  "description": "精选 Sidestore/AltStore 软件源——包含 25 款可通过 Sidestore 安装的 IPA（开源应用 + SwiftUI/修改版应用 + AppDB）。所有 downloadURL 均指向上游 GitHub Release 中的 IPA（已于 2026-08-08 验证 25 个链接均返回 HEAD 200）。TrollRecorder 通话录音应用仅支持 TrollStore（详见 README），未包含在此 Sidestore 软件源中。通过 Sidestore 添加：Settings > Sources > Add Source > https://kb01111.github.io/Sideload-Sources/source.json",
+  "iconURL": "https://github.com/KB01111.png",
+  "website": "https://github.com/KB01111/Sideload-Sources",
+  "sourceURL": "https://kb01111.github.io/Sideload-Sources/source.json",
+  "tintColor": "0A84FF",
+  "featuredApps": [
+    "com.rileytestut.Delta",
+    "org.provenance-emu.provenance",
+    "com.utmapp.UTM",
+    "org.ppsspp.ppsspp-free"
+  ],
+  "apps": [
+    {
+      "name": "Delta",
+      "bundleIdentifier": "com.rileytestut.Delta",
+      "developerName": "Riley Testut",
+      "subtitle": "一体化复古游戏模拟器（NES/SNES/N64/GBA/DS）",
+      "localizedDescription": "Delta 是 GBA4iOS 的官方开源继任者。支持 NES、SNES、N64、Game Boy、Game Boy Advance 和 Nintendo DS，并提供手柄皮肤、存档状态、作弊码和 AirPlay 支持。采用 AGPL-3.0 许可。直接提供 GitHub Release 版本，未经修改。",
+      "iconURL": "https://github.com/RileyTestut.png",
+      "tintColor": "5CA9E6",
+      "category": "games",
+      "size": 87734964,
+      "version": "1.6",
+      "versionDate": "2024-07-11T01:08:23Z",
+      "versionDescription": "iPad support, brand new icon, melonDS 0.9.5, menu-button gestures. See https://github.com/RileyTestut/Delta/releases/tag/v1.6",
+      "downloadURL": "https://github.com/RileyTestut/Delta/releases/download/v1.6/Delta_1_6.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "1.6",
+          "date": "2024-07-11T01:08:23Z",
+          "size": 87734964,
+          "downloadURL": "https://github.com/RileyTestut/Delta/releases/download/v1.6/Delta_1_6.ipa",
+          "localizedDescription": "支持 iPad、Handoff、melonDS 0.9.5 和菜单手势。完整更新说明：https://github.com/RileyTestut/Delta/releases/tag/v1.6",
+          "minOSVersion": "14.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": []
+      },
+      "screenshots": []
+    },
+    {
+      "name": "Provenance",
+      "bundleIdentifier": "org.provenance-emu.provenance",
+      "developerName": "Provenance Emu",
+      "subtitle": "适用于 iOS/tvOS 的多系统模拟器前端",
+      "localizedDescription": "功能最全面的 iOS/tvOS 模拟器前端之一——通过一个应用支持 Atari、Bandai、NEC、Nintendo、Sega、SNK 和 Sony 等平台。支持 3.3.0，包含 iCloud 同步、焕新的 tvOS 界面和视频滤镜。构建配置：org.provenance-emu.provenance。Wiki：https://wiki.provenance-emu.com",
+      "iconURL": "https://github.com/Provenance-Emu.png",
+      "tintColor": "2B4C7E",
+      "category": "games",
+      "size": 1076407494,
+      "version": "3.3.0",
+      "versionDate": "2026-03-14T02:17:44Z",
+      "versionDescription": "Biggest release in 4 months: iCloud sync, tvOS redesign, video filters + core stability. https://github.com/Provenance-Emu/Provenance/releases/tag/3.3.0",
+      "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-iOS.ipa",
+      "minOSVersion": "15.0",
+      "versions": [
+        {
+          "version": "3.3.0",
+          "date": "2026-03-14T02:17:44Z",
+          "size": 1076407494,
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-iOS.ipa",
+          "localizedDescription": "支持 iCloud 同步，采用全新 tvOS 界面，并新增视频滤镜。请查看 GitHub 上的发行说明。",
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "UTM",
+      "bundleIdentifier": "com.utmapp.UTM",
+      "developerName": "UTM Team (osy)",
+      "subtitle": "适用于 iOS 和 macOS 的虚拟机（QEMU）",
+      "localizedDescription": "在 iOS 上通过虚拟机运行 Windows、Linux 等系统。使用完整的 QEMU 后端，可通过 AltJIT/StikDebug 启用 JIT。采用 Apache-2.0 许可证。4.7.5 版 IPA 为 HV 版本（需要 JIT）。不支持 JIT 的设备请使用下方的 UTM SE。获 3.4 万多个星标。",
+      "iconURL": "https://github.com/utmapp.png",
+      "tintColor": "FF9500",
+      "category": "utilities",
+      "size": 130058389,
+      "version": "4.7.5",
+      "versionDate": "2026-01-03T17:51:54Z",
+      "versionDescription": "UTM 4.7.5 - includes UTM.ipa (HV), UTM-SE variants and visionOS builds. https://github.com/utmapp/UTM/releases/tag/v4.7.5",
+      "downloadURL": "https://github.com/utmapp/UTM/releases/download/v4.7.5/UTM.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "4.7.5",
+          "date": "2026-01-03T17:51:54Z",
+          "size": 130058389,
+          "downloadURL": "https://github.com/utmapp/UTM/releases/download/v4.7.5/UTM.ipa",
+          "localizedDescription": "完整 UTM，支持 hypervisor/JIT。非越狱设备需要使用 JIT 启用工具（StikDebug/LiveContainer）。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "UTM SE",
+      "bundleIdentifier": "com.utmapp.UTM-SE",
+      "developerName": "UTM Team (osy)",
+      "subtitle": "UTM 慢速版——无需 JIT，符合 App Store 规范",
+      "localizedDescription": "UTM SE 是符合 App Store 规范的版本，无需 JIT/hypervisor 即可运行——速度较慢，但不需要 JIT 启用工具。如果不想管理 JIT，非常适合侧载。与 UTM 同为 4.7.5 版。",
+      "iconURL": "https://github.com/utmapp.png",
+      "tintColor": "FF9500",
+      "category": "utilities",
+      "size": 213878374,
+      "version": "4.7.5",
+      "versionDate": "2026-01-03T17:51:54Z",
+      "versionDescription": "SE variant of 4.7.5 for devices without JIT. https://github.com/utmapp/UTM/releases/tag/v4.7.5",
+      "downloadURL": "https://github.com/utmapp/UTM/releases/download/v4.7.5/UTM-SE.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "4.7.5",
+          "date": "2026-01-03T17:51:54Z",
+          "size": 213878374,
+          "downloadURL": "https://github.com/utmapp/UTM/releases/download/v4.7.5/UTM-SE.ipa",
+          "localizedDescription": "慢速版——无需 JIT 即可运行。如果没有 StikDebug/JIT，请使用此版本。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "PPSSPP",
+      "bundleIdentifier": "org.ppsspp.ppsspp-free",
+      "developerName": "Henrik Rydgard",
+      "subtitle": "PSP 模拟器（iOS、Android、桌面端）",
+      "localizedDescription": "顶级 PSP 模拟器，可在 iOS 上畅玩 PSP ISO 游戏，支持 Vulkan/Metal、即时存档、联网和作弊功能。采用 GPL-2.0+ 许可。已从 ios/PPSSPP-Info.plist 验证 Bundle ID org.ppsspp.ppsspp-free。1.20.4 是最新的 iOS IPA 版本。",
+      "iconURL": "https://github.com/hrydgard.png",
+      "tintColor": "1ABC9C",
+      "category": "games",
+      "size": 31124277,
+      "version": "1.20.4",
+      "versionDate": "2026-05-16T12:35:08Z",
+      "versionDescription": "https://github.com/hrydgard/ppsspp/releases/tag/v1.20.4",
+      "downloadURL": "https://github.com/hrydgard/ppsspp/releases/download/v1.20.4/PPSSPP-iOS-v1.20.4.ipa",
+      "minOSVersion": "12.0",
+      "versions": [
+        {
+          "version": "1.20.4",
+          "date": "2026-05-16T12:35:08Z",
+          "size": 31124277,
+          "downloadURL": "https://github.com/hrydgard/ppsspp/releases/download/v1.20.4/PPSSPP-iOS-v1.20.4.ipa",
+          "localizedDescription": "适用于 iOS 的最新稳定版 PPSSPP。",
+          "minOSVersion": "12.0"
+        }
+      ]
+    },
+    {
+      "name": "iTorrent",
+      "bundleIdentifier": "com.xitrix.iTorrent2",
+      "developerName": "XITRIX",
+      "subtitle": "适用于 iOS 16+ 的 Torrent 客户端",
+      "localizedDescription": "原生 Swift Torrent 客户端，支持与“文件”集成、磁力链接、后台下载、RSS 和媒体播放器。采用 MIT 许可。Bundle ID 为 com.xitrix.iTorrent2 (APPLICATION_ID)。持续开发中，获得 3.1k 星标。",
+      "iconURL": "https://github.com/XITRIX.png",
+      "tintColor": "34C759",
+      "category": "utilities",
+      "size": 24288935,
+      "version": "2.2.0",
+      "versionDate": "2026-07-19T09:59:41Z",
+      "versionDescription": "iTorrent 2.2.0-1 - latest GitHub IPA. https://github.com/XITRIX/iTorrent/releases/tag/v2.2.0-1",
+      "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.2.0-1/iTorrent.ipa",
+      "minOSVersion": "16.0",
+      "versions": [
+        {
+          "version": "2.2.0",
+          "date": "2026-07-19T09:59:41Z",
+          "size": 24288935,
+          "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.2.0-1/iTorrent.ipa",
+          "localizedDescription": "适用于 iOS 16+ 的 Torrent 客户端，支持后台下载。",
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "Feather",
+      "bundleIdentifier": "thewonderofyou.Feather",
+      "developerName": "Samara (khcrysalis)",
+      "subtitle": "设备端 IPA 签名与安装工具",
+      "localizedDescription": "免费的设备端 iOS 应用管理与安装工具，使用 Apple Developer 证书，无需电脑即可签名并安装 IPA。采用 GPL-3.0 许可。Bundle ID 为 thewonderofyou.Feather。图标和代码仓库来自 khcrysalis/Feather，IPA 托管于 declration/Feather（官方镜像）。",
+      "iconURL": "https://github.com/khcrysalis.png",
+      "tintColor": "848EF9",
+      "category": "utilities",
+      "size": 14241853,
+      "version": "2.9.0",
+      "versionDate": "2026-07-05T02:11:53Z",
+      "versionDescription": "Feather 2.9.0 - https://github.com/khcrysalis/Feather releases (IPA via declration mirror)",
+      "downloadURL": "https://github.com/claration/Feather/releases/download/v2.9.0/Feather.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "2.9.0",
+          "date": "2026-07-05T02:11:53Z",
+          "size": 14241853,
+          "downloadURL": "https://github.com/claration/Feather/releases/download/v2.9.0/Feather.ipa",
+          "localizedDescription": "设备端签名——导入证书并直接在 iPhone 上安装 IPA。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "LiveContainer",
+      "bundleIdentifier": "com.kdt.livecontainer",
+      "developerName": "LiveContainer Team",
+      "subtitle": "无需安装即可运行 iOS 应用",
+      "localizedDescription": "在容器中启动未签名的 iOS 应用，无需实际安装。需要 SideStore 0.6.2+ 或 AltStore 2.2.1+。也提供 LiveContainer+SideStore 套装。AGPL-3.0。获得 10k+ 星标。",
+      "iconURL": "https://github.com/LiveContainer.png",
+      "tintColor": "AF52DE",
+      "category": "utilities",
+      "size": 4707271,
+      "version": "3.8.0",
+      "versionDate": "2026-07-17T07:44:20Z",
+      "versionDescription": "3.8.0 - standalone requires SideStore/AltStore. Use LiveContainer+SideStore.ipa with Impactor/iloader if standalone fails. https://github.com/LiveContainer/LiveContainer/releases/tag/3.8.0",
+      "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/3.8.0/LiveContainer.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "3.8.0",
+          "date": "2026-07-17T07:44:20Z",
+          "size": 4707271,
+          "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/3.8.0/LiveContainer.ipa",
+          "localizedDescription": "独立版 LiveContainer（需要 SideStore 0.6.2+）。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "SideStore",
+      "bundleIdentifier": "com.SideStore.SideStore",
+      "developerName": "SideStore Team",
+      "subtitle": "AltStore 分支版本——无需 AltServer",
+      "localizedDescription": "AltStore 的社区分支版本，可通过 WireGuard/idevice 配对在设备端刷新应用。AGPL-3.0。可与 LiveContainer 搭配使用，也可作为日常使用的侧载商店。最新版本 0.6.3 修复了 iOS 26.4+ 上的 VPN 问题（建议通过 iloader 重新安装）。",
+      "iconURL": "https://github.com/SideStore.png",
+      "tintColor": "00C7BE",
+      "category": "utilities",
+      "size": 28632252,
+      "version": "0.6.3",
+      "versionDate": "2026-05-05T03:59:02Z",
+      "versionDescription": "0.6.3 - iOS 26.4 VPN fix. https://github.com/SideStore/SideStore/releases/tag/0.6.3",
+      "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.6.3/SideStore.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "0.6.3",
+          "date": "2026-05-05T03:59:02Z",
+          "size": 28632252,
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.6.3/SideStore.ipa",
+          "localizedDescription": "支持设备端刷新的 AltStore 分支版本。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "iSH",
+      "bundleIdentifier": "app.ish.iSH",
+      "developerName": "ish-app (TBL)",
+      "subtitle": "在 iOS 上运行 Linux shell——通过用户态 x86 仿真运行 Alpine",
+      "localizedDescription": "在 iOS 上运行完整的 Alpine Linux shell——通过闪电般快速的用户态 x86 仿真使用 apk、python、git、ssh 等工具。无需越狱。ROOT_BUNDLE_IDENTIFIER app.ish.iSH。最新 IPA 构建版本：494（2023 稳定版）。提供本地 iSH 应用商店。",
+      "iconURL": "https://github.com/ish-app.png",
+      "tintColor": "000000",
+      "category": "utilities",
+      "size": 4232682,
+      "version": "494",
+      "versionDate": "2023-05-20T23:52:42Z",
+      "versionDescription": "builds/494 - diagnostics fix. https://github.com/ish-app/ish/releases/tag/builds/494",
+      "downloadURL": "https://github.com/ish-app/ish/releases/download/builds/494/iSH.ipa",
+      "minOSVersion": "11.0",
+      "versions": [
+        {
+          "version": "494",
+          "date": "2023-05-20T23:52:42Z",
+          "size": 4232682,
+          "downloadURL": "https://github.com/ish-app/ish/releases/download/builds/494/iSH.ipa",
+          "localizedDescription": "适用于 iOS 的 Linux shell——在 iPhone/iPad 上运行 Alpine 软件包。",
+          "minOSVersion": "11.0"
+        }
+      ]
+    },
+    {
+      "name": "StikDebug",
+      "bundleIdentifier": "com.stik.stikdebug",
+      "developerName": "StiKDebug (StikDebug)",
+      "subtitle": "适用于 iOS 17.4 及更高版本的设备端调试器和 JIT 启用工具",
+      "localizedDescription": "通过 idevice 配对，无需 Mac/PC 即可为 UTM/Provenance/Delta 启用 JIT。它是 iOS 17.4 及更高版本上使用 UTM HV 和许多模拟器的必备配套应用。AGPL-3.0。使用 SideStore 配对流程。",
+      "iconURL": "https://github.com/StiKDebug.png",
+      "tintColor": "FF2D55",
+      "category": "developer",
+      "size": 12822956,
+      "version": "3.1.9",
+      "versionDate": "2026-08-01T20:09:58Z",
+      "versionDescription": "StikDebug 3.1.9 - https://github.com/StiKDebug/StikDebug/releases/tag/3.1.9",
+      "downloadURL": "https://github.com/StiKDebug/StikDebug/releases/download/3.1.9/StikDebug-3.1.9.ipa",
+      "minOSVersion": "17.4",
+      "versions": [
+        {
+          "version": "3.1.9",
+          "date": "2026-08-01T20:09:58Z",
+          "size": 12822956,
+          "downloadURL": "https://github.com/StiKDebug/StikDebug/releases/download/3.1.9/StikDebug-3.1.9.ipa",
+          "localizedDescription": "适用于 iOS 17.4 及更高版本的 JIT 启用工具——配对一次，即可为任意 App 启用 JIT。",
+          "minOSVersion": "17.4"
+        }
+      ]
+    },
+    {
+      "name": "Spotube",
+      "bundleIdentifier": "oss.krtirtho.spotube",
+      "developerName": "KRTirtho (Spotube)",
+      "subtitle": "开源 Spotify 客户端——无需 Premium（SwiftUI/Flutter）",
+      "localizedDescription": "Spotube 是一款轻量、注重隐私的 Spotify 前端，可从 YouTube Music / Piped 播放音乐——无需 Spotify Premium。采用 SwiftUI/Flutter 编写，兼容 GPL-3.0，拥有超过 4.8 万颗星标。此 iOS IPA 为官方 GitHub Release（Spotube-iOS.ipa）。2026 年最新高性价比之选。",
+      "iconURL": "https://github.com/KRTirtho.png",
+      "tintColor": "1DB954",
+      "category": "music",
+      "size": 34853093,
+      "version": "5.1.2",
+      "versionDate": "2026-06-05T05:10:18Z",
+      "versionDescription": "Spotube v5.1.2 — open-source music streaming. https://github.com/KRTirtho/spotube/releases/tag/v5.1.2",
+      "downloadURL": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "5.1.2",
+          "date": "2026-06-05T05:10:18Z",
+          "size": 34853093,
+          "downloadURL": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
+          "localizedDescription": "开源 Spotify 客户端，使用 YouTube/Piped 后端。无需账号。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "BHTwitter",
+      "bundleIdentifier": "com.atebits.Tweetie2",
+      "developerName": "BandarHL",
+      "subtitle": "增强版 Twitter/X — 屏蔽广告、下载内容、解锁高级功能（增强版）",
+      "localizedDescription": "BHTwitter 是功能最全面的 Twitter/X 增强插件：屏蔽广告和推广推文、下载视频/图片、隐藏趋势、解锁高级功能并使用自定义主题。该插件注入到已解密的 Twitter IPA 中——侧载版本保留原始 bundle ID com.atebits.Tweetie2，因此会替换 App Store 版本的应用。另有 BHTwitter-trollstore.tipa 版本。v4.4（2025-05-13）。",
+      "iconURL": "https://github.com/BandarHL.png",
+      "tintColor": "1DA1F2",
+      "category": "social",
+      "size": 167001383,
+      "version": "4.4",
+      "versionDate": "2025-05-13T20:33:01Z",
+      "versionDescription": "BHTwitter 4.4 sideloaded. https://github.com/BandarHL/BHTwitter/releases/tag/4.4 — also has trollstore.tipa + debs.",
+      "downloadURL": "https://github.com/BandarHL/BHTwitter/releases/download/4.4/BHTwitter-sideloaded.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "4.4",
+          "date": "2025-05-13T20:33:01Z",
+          "size": 167001383,
+          "downloadURL": "https://github.com/BandarHL/BHTwitter/releases/download/4.4/BHTwitter-sideloaded.ipa",
+          "localizedDescription": "增强版 Twitter，支持屏蔽广告、下载媒体内容和解锁高级功能。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "PojavLauncher",
+      "bundleIdentifier": "net.kdt.pojavlauncher",
+      "developerName": "PojavLauncherTeam",
+      "subtitle": "在 iOS 上运行 Minecraft: Java Edition（Swift/ObjC + Java）",
+      "localizedDescription": "在 iOS 上原生运行 Minecraft Java Edition——支持完整 Java 运行时、模组及 Fabric/Forge、触控操作和控制器。GPL-3.0。后续项目 Amethyst-iOS 正在开发中，但这个 2.2 IPA（2023-05-06）仍是最后一个稳定的可侧载版本，并且依然有其独特价值。要获得最佳性能，需要 JIT（可搭配 StikDebug 使用）。",
+      "iconURL": "https://github.com/PojavLauncherTeam.png",
+      "tintColor": "62B47A",
+      "category": "games",
+      "size": 108175347,
+      "version": "2.2",
+      "versionDate": "2023-05-06T20:56:25Z",
+      "versionDescription": "PojavLauncher iOS v2.2 — Minecraft Java on iOS. https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/tag/v2.2",
+      "downloadURL": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/v2.2/net.kdt.pojavlauncher-2.2-ios.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "2.2",
+          "date": "2023-05-06T20:56:25Z",
+          "size": 108175347,
+          "downloadURL": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/v2.2/net.kdt.pojavlauncher-2.2-ios.ipa",
+          "localizedDescription": "适用于 iOS 的 Minecraft Java Edition 启动器——支持模组、着色器和多人游戏。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "LBox",
+      "bundleIdentifier": "Lolendor.LBox",
+      "developerName": "Lolendor",
+      "subtitle": "LiveContainer 的 SwiftUI 源管理器（2025 全新推出）",
+      "localizedDescription": "LBox 是 LiveContainer 的原生 SwiftUI 配套应用，可浏览公开源、搜索和下载 IPA，并直接在设备上安装/启动应用，与 LiveContainer 无缝集成。采用 MIT 许可证，完全使用 SwiftUI 开发，是源中最新的精品应用（v1.2 — 2025-12-08）。与 LiveContainer + SideStore 搭配使用效果绝佳。",
+      "iconURL": "https://github.com/Lolendor.png",
+      "tintColor": "5856D6",
+      "category": "utilities",
+      "size": 614768,
+      "version": "1.2",
+      "versionDate": "2025-12-08T02:13:43Z",
+      "versionDescription": "LBox v1.2 — SwiftUI LiveContainer source browser. https://github.com/Lolendor/LBox/releases/tag/v1.2",
+      "downloadURL": "https://github.com/Lolendor/LBox/releases/download/v1.2/LBox.ipa",
+      "minOSVersion": "15.0",
+      "versions": [
+        {
+          "version": "1.2",
+          "date": "2025-12-08T02:13:43Z",
+          "size": 614768,
+          "downloadURL": "https://github.com/Lolendor/LBox/releases/download/v1.2/LBox.ipa",
+          "localizedDescription": "LiveContainer 的 SwiftUI 源管理器——浏览、下载并启动 IPA。",
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Apollo（已修补）",
+      "bundleIdentifier": "com.christianselig.Apollo",
+      "developerName": "ichitaso (ApolloPatcher)",
+      "subtitle": "Reddit 的 Apollo——通过自定义 API 密钥重获新生（修改版）",
+      "localizedDescription": "Apollo 已于 2023 年停止服务，ApolloPatcher 可在运行时注入你自己的 Reddit API 密钥，让它重获新生。此侧载 IPA（Apollo 1.15.11，使用 0.1.0 修补）让 iOS 上最出色的 Reddit 客户端重返舞台。采用 GPL-3.0 许可证，修补工具完全开源。请在设置中填入你自己的客户端 ID/密钥。献给喜爱经典 Apollo 体验的用户。",
+      "iconURL": "https://github.com/ichitaso.png",
+      "tintColor": "FF4500",
+      "category": "social",
+      "size": 111555956,
+      "version": "1.15.11-0.1.0",
+      "versionDate": "2026-02-18T11:15:37Z",
+      "versionDescription": "ApolloPatched v0.1.0 — Apollo 1.15.11 with custom API key support. https://github.com/ichitaso/ApolloPatcher/releases/tag/v0.1.0",
+      "downloadURL": "https://github.com/ichitaso/ApolloPatcher/releases/download/v0.1.0/Apollo-1.15.11_ApolloPatcher_0.1.0.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "1.15.11-0.1.0",
+          "date": "2026-02-18T11:15:37Z",
+          "size": 111555956,
+          "downloadURL": "https://github.com/ichitaso/ApolloPatcher/releases/download/v0.1.0/Apollo-1.15.11_ApolloPatcher_0.1.0.ipa",
+          "localizedDescription": "重获新生的 Apollo，支持配置 Reddit API 密钥——请自备凭据。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Cowabunga",
+      "bundleIdentifier": "com.leemin.Cowabunga",
+      "developerName": "leminlimez",
+      "subtitle": "适用于 iOS 14–16.1.2 的 MacDirtyCow 工具箱——主题、调整，无需越狱",
+      "localizedDescription": "Cowabunga 是适用于 iOS 14.0–15.7.1 和 16.0–16.1.2 的经典 MacDirtyCow 工具箱：无需越狱，即可自定义主题、图标主题、状态栏、程序坞和文件夹等。采用 GPL-3.0 许可证。v10.3.2 是 KFD 发布前最后一个稳定版 IPA。适用于受支持系统版本的主题美化必备工具。",
+      "iconURL": "https://github.com/leminlimez.png",
+      "tintColor": "30D158",
+      "category": "utilities",
+      "size": 16288960,
+      "version": "10.3.2",
+      "versionDate": "2023-05-29T20:49:25Z",
+      "versionDescription": "Cowabunga v10.3.2 — MacDirtyCow toolbox. https://github.com/leminlimez/Cowabunga/releases/tag/v10.3.2",
+      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "10.3.2",
+          "date": "2023-05-29T20:49:25Z",
+          "size": 16288960,
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+          "localizedDescription": "适用于 iOS 14–16.1.2 的 MacDirtyCow 工具箱——无需越狱即可更换主题和调整系统设置。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Misaka",
+      "bundleIdentifier": "com.straighttamago.misaka",
+      "developerName": "straight-tamago",
+      "subtitle": "适用于 KFD 和 MDC 的 iOS 与 tvOS 自定义工具——Cowabunga 的继任者",
+      "localizedDescription": "Misaka 是 Cowabunga 的现代继任者，支持 KFD (kfd) 和 MDC 漏洞，可自定义 iOS 与 tvOS：主题、调整项、画中画 (PiP)、全天候显示等。采用 MIT 许可证，获 2.7k 星标。v8.2.4（2024-01-20）是最新稳定版、可侧载的 IPA，支持的设备范围比 Cowabunga 更广。",
+      "iconURL": "https://github.com/straight-tamago.png",
+      "tintColor": "BF5AF2",
+      "category": "utilities",
+      "size": 30742697,
+      "version": "8.2.4",
+      "versionDate": "2024-01-20T04:49:47Z",
+      "versionDescription": "Misaka v8.2.4 — KFD & MDC customisation. https://github.com/straight-tamago/misaka/releases/tag/8.2.4",
+      "downloadURL": "https://github.com/straight-tamago/misaka/releases/download/8.2.4/misaka-v8.2.4.ipa",
+      "minOSVersion": "15.0",
+      "versions": [
+        {
+          "version": "8.2.4",
+          "date": "2024-01-20T04:49:47Z",
+          "size": 30742697,
+          "downloadURL": "https://github.com/straight-tamago/misaka/releases/download/8.2.4/misaka-v8.2.4.ipa",
+          "localizedDescription": "KFD 和 MDC 自定义工具——适用于 iOS/tvOS 的主题与调整项。",
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Yattee",
+      "bundleIdentifier": "stream.yattee.app",
+      "developerName": "yattee",
+      "subtitle": "适用于 iOS/tvOS/macOS 的注重隐私的 YouTube 客户端（AGPL）",
+      "localizedDescription": "Yattee 是一款适用于 iOS、tvOS 和 macOS、注重隐私的 YouTube 播放器，支持无广告播放、后台播放、SponsorBlock 以及 Invidious/Piped。采用 AGPL-3.0 许可证，基于 SwiftUI 开发，获 3.6k 星标。v1.5.1 是 2.0 Beta 分支推出前的最后一个稳定版 IPA（Beta 版目前尚无稳定版 IPA 标签）。包含 iOS 和 tvOS IPA。",
+      "iconURL": "https://github.com/yattee.png",
+      "tintColor": "FF375F",
+      "category": "entertainment",
+      "size": 20792685,
+      "version": "1.5.1",
+      "versionDate": "2024-01-28T14:45:07Z",
+      "versionDescription": "Yattee v1.5.1 — privacy YouTube player. https://github.com/yattee/yattee/releases/tag/v1.5.1",
+      "downloadURL": "https://github.com/yattee/yattee/releases/download/v1.5.1/Yattee-1.5.1-iOS.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "1.5.1",
+          "date": "2024-01-28T14:45:07Z",
+          "size": 20792685,
+          "downloadURL": "https://github.com/yattee/yattee/releases/download/v1.5.1/Yattee-1.5.1-iOS.ipa",
+          "localizedDescription": "注重隐私的 YouTube 播放器——无广告、支持后台播放和 Invidious/Piped。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Paperback",
+      "bundleIdentifier": "com.paperback.ios",
+      "developerName": "Paperback-iOS",
+      "subtitle": "漫画阅读器 — 扩展、追踪与下载",
+      "localizedDescription": "Paperback 是一款基于 SwiftUI 的现代 iOS 漫画阅读器，支持扩展源、书库追踪、离线下载和阅读器自定义。拥有 775 颗星，最近一次活跃发布于 2025-05-20。它是 iOS 上首选的开源 Tachiyomi 风格应用。v0.8.11-r2 是最新可侧载的 IPA。",
+      "iconURL": "https://github.com/Paperback-iOS.png",
+      "tintColor": "FF9F0A",
+      "category": "books",
+      "size": 13597210,
+      "version": "0.8.11-r2",
+      "versionDate": "2025-05-20T13:56:35Z",
+      "versionDescription": "Paperback v0.8.11-r2. https://github.com/Paperback-iOS/app/releases/tag/v0.8.11-r2",
+      "downloadURL": "https://github.com/Paperback-iOS/app/releases/download/v0.8.11-r2/Paperback.ipa",
+      "minOSVersion": "15.0",
+      "versions": [
+        {
+          "version": "0.8.11-r2",
+          "date": "2025-05-20T13:56:35Z",
+          "size": 13597210,
+          "downloadURL": "https://github.com/Paperback-iOS/app/releases/download/v0.8.11-r2/Paperback.ipa",
+          "localizedDescription": "支持扩展的漫画阅读器 — 追踪、下载并离线阅读。",
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "DebToIPA",
+      "bundleIdentifier": "net.sourceloc.DebToIPA",
+      "developerName": "sourcelocation",
+      "subtitle": "在设备上将 .deb 插件转换为 .ipa（SwiftUI）",
+      "localizedDescription": "DebToIPA 可直接在 iOS 设备上将越狱 .deb 软件包转换为可侧载的 .ipa 文件，无需电脑，全程本地处理。采用 GPL-3.0 许可和 SwiftUI 编写，是 BHTwitter、Apollo 及其他基于 deb 的插件的必备搭档。v1.1.1 是最新的 Release IPA。",
+      "iconURL": "https://github.com/sourcelocation.png",
+      "tintColor": "0A84FF",
+      "category": "developer",
+      "size": 1238055,
+      "version": "1.1.1",
+      "versionDate": "2022-10-18T21:37:30Z",
+      "versionDescription": "DebToIPA v1.1.1 — convert .deb to .ipa on device. https://github.com/sourcelocation/DebToIPA/releases/tag/1.1.1",
+      "downloadURL": "https://github.com/sourcelocation/DebToIPA/releases/download/1.1.1/DebToIPA-1.1.1.ipa",
+      "minOSVersion": "13.0",
+      "versions": [
+        {
+          "version": "1.1.1",
+          "date": "2022-10-18T21:37:30Z",
+          "size": 1238055,
+          "downloadURL": "https://github.com/sourcelocation/DebToIPA/releases/download/1.1.1/DebToIPA-1.1.1.ipa",
+          "localizedDescription": "在设备上将 .deb 转换为 .ipa — 插件安装辅助工具。",
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "ModMyIPA",
+      "bundleIdentifier": "com.powen.ModMyIPA",
+      "developerName": "powenn",
+      "subtitle": "复制任意 IPA — 并排安装多个副本",
+      "localizedDescription": "ModMyIPA 可修改 IPA 的 bundle ID，让你并排安装同一应用的多个副本（适用于双账号或测试修改版）。基于 Swift 开发，拥有 539 颗星。v1.0.2 是最新的 Release IPA。",
+      "iconURL": "https://github.com/powenn.png",
+      "tintColor": "64D2FF",
+      "category": "utilities",
+      "size": 2447058,
+      "version": "1.0.2",
+      "versionDate": "2022-10-26T07:34:08Z",
+      "versionDescription": "ModMyIPA v1.0.2 — duplicate IPAs with new bundle IDs. https://github.com/powenn/ModMyIPA/releases/tag/1.0.2",
+      "downloadURL": "https://github.com/powenn/ModMyIPA/releases/download/1.0.2/ModMyIPA-1.0.2.ipa",
+      "minOSVersion": "13.0",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2022-10-26T07:34:08Z",
+          "size": 2447058,
+          "downloadURL": "https://github.com/powenn/ModMyIPA/releases/download/1.0.2/ModMyIPA-1.0.2.ipa",
+          "localizedDescription": "修改 IPA 的 Bundle ID，即可安装同一应用的多个副本。",
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "Azula",
+      "bundleIdentifier": "com.paisseon.Azula",
+      "developerName": "Paisseon",
+      "subtitle": "在设备上向 IPA 注入动态库（SwiftUI + ElleKit）",
+      "localizedDescription": "Azula 可直接在 iOS 14-16 / macOS 11-13 上向任意 IPA 注入动态库（dylib），是 Azule/Insert_dylib 的设备端替代方案。采用 AGPL-3.0 许可和 SwiftUI 构建，适合用于修补 BHTwitter、Apollo 等应用。v1.0.1 是最新 Release IPA（也提供 macOS dmg）。",
+      "iconURL": "https://github.com/Paisseon.png",
+      "tintColor": "5E5CE6",
+      "category": "developer",
+      "size": 1532047,
+      "version": "1.0.1",
+      "versionDate": "2023-03-16T20:43:47Z",
+      "versionDescription": "Azula v1.0.1 — inject dylibs into IPAs on device. https://github.com/Paisseon/Azula/releases/tag/v1.0.1",
+      "downloadURL": "https://github.com/Paisseon/Azula/releases/download/v1.0.1/Azula.ipa",
+      "minOSVersion": "14.0",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "date": "2023-03-16T20:43:47Z",
+          "size": 1532047,
+          "downloadURL": "https://github.com/Paisseon/Azula/releases/download/v1.0.1/Azula.ipa",
+          "localizedDescription": "在设备上向 IPA 注入动态库 — 微调补丁工具。",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "AppDB",
+      "bundleIdentifier": "it.ned.appdb-ios",
+      "developerName": "n3d1117",
+      "subtitle": "appdb.to 的完整客户端 — 侧载应用数据库",
+      "localizedDescription": "AppDB 是 appdb.to 的功能齐全的 iOS 客户端，可浏览、搜索、破解并安装数千款侧载 IPA，还支持自定义商店管理。使用 Swift 5 构建，采用 MIT 许可，获得 351 颗星。v1.1.6 是最新 Release IPA（stev3fvcks 构建）。通往更广阔侧载生态的门户。",
+      "iconURL": "https://github.com/n3d1117.png",
+      "tintColor": "FF3B30",
+      "category": "utilities",
+      "size": 23229778,
+      "version": "1.1.6",
+      "versionDate": "2023-08-24T09:47:30Z",
+      "versionDescription": "AppDB v1.1.6 — full appdb.to client. https://github.com/n3d1117/appdb/releases/tag/v1.1.6",
+      "downloadURL": "https://github.com/n3d1117/appdb/releases/download/v1.1.6/appdb-v1.1.6-stev3fvcks.ipa",
+      "minOSVersion": "12.0",
+      "versions": [
+        {
+          "version": "1.1.6",
+          "date": "2023-08-24T09:47:30Z",
+          "size": 23229778,
+          "downloadURL": "https://github.com/n3d1117/appdb/releases/download/v1.1.6/appdb-v1.1.6-stev3fvcks.ipa",
+          "localizedDescription": "功能齐全的 appdb.to 客户端 — 浏览并安装破解 IPA。",
+          "minOSVersion": "12.0"
+        }
+      ]
+    },
+    {
+      "name": "Mirarr",
+      "bundleIdentifier": "com.example.Mirarr",
+      "developerName": "Mirarr App",
+      "subtitle": "免费开源的影视应用 — 观看电影和电视节目",
+      "localizedDescription": "Mirarr 是一款免费开源的影视应用，让观看电影和电视节目更加简单。这是一款使用 Flutter 开发的跨平台应用，支持 iOS、Android、Windows、Linux 和 Web。这是官方 GitHub 发布版 IPA（v3.3.2），未签名，可使用 Sidestore 签名。已获 850+ 颗星。",
+      "iconURL": "https://github.com/mirarr-app.png",
+      "tintColor": "E50914",
+      "category": "entertainment",
+      "size": 11717881,
+      "version": "3.3.2",
+      "versionDate": "2026-07-27T16:03:41Z",
+      "versionDescription": "Mirarr v3.3.2 — official Release IPA. https://github.com/mirarr-app/mirarr/releases/tag/3.3.2",
+      "downloadURL": "https://github.com/mirarr-app/mirarr/releases/download/3.3.2/mirarr.ipa",
+      "minOSVersion": "13.0",
+      "versions": [
+        {
+          "version": "3.3.2",
+          "date": "2026-07-27T16:03:41Z",
+          "size": 11717881,
+          "downloadURL": "https://github.com/mirarr-app/mirarr/releases/download/3.3.2/mirarr.ipa",
+          "localizedDescription": "官方 Mirarr v3.3.2 发布版 IPA（未签名，可使用 Sidestore 签名）。请参阅 GitHub 上的发行说明。",
+          "minOSVersion": "13.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "NEW: Mirarr 3.3.2 — FOSS movie & TV app (25 apps!)",
+      "identifier": "update-2026-08-08-mirarr",
+      "caption": "Mirarr, a free & open-source movie and TV app (Flutter, cross-platform), is now included from its official GitHub Release IPA v3.3.2. 25 apps live — pull-to-refresh Sources to update.",
+      "date": "2026-08-08T19:00:00Z",
+      "tintColor": "E50914",
+      "imageURL": "https://github.com/mirarr-app.png",
+      "notify": true,
+      "url": "https://github.com/mirarr-app/mirarr/releases/tag/3.3.2"
+    },
+    {
+      "title": "Call recorder? TrollRecorder is TrollStore-only",
+      "identifier": "note-call-recorder-2026-08-08",
+      "caption": "TrollRecorder (Lessica) is the only open-source iOS call recorder on GitHub, but it requires TrollStore (iOS 15-17, CoreTrust). It can NOT install via Sidestore/AltStore — Apple blocks call recording in the sandbox. We removed it from this Sidestore source; TrollStore users can install TRApp_4.5-3632.tipa directly from https://github.com/Lessica/TrollRecorder/releases/tag/v4.5-3632. No Sidestore-compatible call recorder exists.",
+      "date": "2026-08-08T18:00:00Z",
+      "tintColor": "8E8E93",
+      "imageURL": "https://github.com/Lessica.png",
+      "notify": true,
+      "url": "https://github.com/Lessica/TrollRecorder"
+    },
+    {
+      "title": "UPDATE: AppDB + 7 more added — 24 apps live!",
+      "identifier": "update-2026-08-08-appdb-plus7",
+      "caption": "NEW: AppDB (full appdb.to client) plus Cowabunga & Misaka (MDC/KFD theming), Yattee (privacy YouTube), Paperback (manga), DebToIPA/ModMyIPA/Azula (on-device patch helpers). All are official GitHub Release IPAs — pull-to-refresh Sources to update.",
+      "date": "2026-08-08T16:00:00Z",
+      "tintColor": "FF3B30",
+      "imageURL": "https://github.com/n3d1117.png",
+      "notify": false,
+      "url": "https://github.com/KB01111/Sideload-Sources"
+    },
+    {
+      "title": "Update: 5 new SwiftUI + tweaked picks added!",
+      "identifier": "update-2026-08-08-new5",
+      "caption": "NEW: Spotube (open Spotify client), BHTwitter (tweaked X), PojavLauncher (Minecraft Java), LBox (SwiftUI LiveContainer manager) and Apollo Patched (revived Reddit). All are official GitHub Release IPAs — tap to update/pull-to-refresh Sources.",
+      "date": "2026-08-08T12:00:00Z",
+      "tintColor": "FF2D55",
+      "imageURL": "https://github.com/Lolendor.png",
+      "notify": false,
+      "url": "https://github.com/KB01111/Sideload-Sources"
+    },
+    {
+      "title": "Welcome to Kevin's Legit Source",
+      "identifier": "welcome-2026-08-08",
+      "caption": "24 apps — open-source classics, SwiftUI value apps, vetted tweaked patchers and AppDB. Every IPA links straight to its upstream GitHub Release — no repacks. If an app vanishes, check its linked tag for a newer IPA.",
+      "date": "2026-08-08T00:00:00Z",
+      "tintColor": "0A84FF",
+      "imageURL": "https://github.com/SideStore.png",
+      "notify": false,
+      "url": "https://github.com/KB01111/Sideload-Sources"
+    },
+    {
+      "title": "How to add this source to Sidestore",
+      "identifier": "how-to-add-2026-08-08",
+      "caption": "Sidestore: Settings > Sources > Add Source > paste https://kb01111.github.io/Sideload-Sources/source.json . AltStore: Sources > + > same URL. Or tap at https://kb01111.github.io/Sideload-Sources/ on your iPhone.",
+      "date": "2026-08-08T00:00:00Z",
+      "tintColor": "0A84FF",
+      "imageURL": "https://github.com/SideStore.png",
+      "notify": false
+    },
+    {
+      "title": "Why these 24? Criteria",
+      "identifier": "legit-criteria-2026-08-08",
+      "caption": "All 24 have a tagged GitHub Release with a .ipa asset. Core = OSI + no piracy. Value = SwiftUI / patcher / AppDB where the IPA is the project's official artifact. Excluded: uYou+/Enhanced, YTLitePlus, EeveeSpotify (451) — no Release IPA.",
+      "date": "2026-08-08T00:00:00Z",
+      "tintColor": "34C759",
+      "imageURL": "https://github.com/hrydgard.png",
+      "notify": false
+    }
+  ]
+}

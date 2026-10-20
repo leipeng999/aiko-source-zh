@@ -1,0 +1,1005 @@
+{
+  "headerURL": "https://i.pinimg.com/736x/2e/4c/7c/2e4c7cc6b2a52a3113b6f1328d9d1e97.jpg",
+  "identifier": "com.wuxulibs.wuxuslibrary",
+  "tintColor": "d81a14",
+  "apps": [
+    {
+      "category": "Utilities",
+      "size": 0,
+      "version": "3.8.0",
+      "bundleIdentifier": "com.kdt.livecontainer",
+      "tintColor": "000000",
+      "versionDate": "2026-08-07",
+      "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/3.8.0/LiveContainer.ipa",
+      "subtitle": "无需实际安装即可运行 iOS 应用！",
+      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "developerName": "DuyTranKhanh",
+      "versionDescription": "Initial addition.",
+      "name": "LiveContainer",
+      "localizedDescription": "无需实际安装即可运行 iOS 应用！"
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "localizedDescription": "• 更新以支持使用 Xcode 15.4+ 编译\n• 移除 exploit 反初始化相关的易混淆日志\n• 更新 libgrabkernel2，修复 iOS 15.7.x 上无法下载 kernelcache 的 arm64e 设备问题",
+          "minOSVersion": "14.0",
+          "downloadURL": "https://github.com/alfiecg24/TrollInstallerX/releases/download/1.0.3/TrollInstallerX.ipa",
+          "version": "1.0.3",
+          "size": 25800000,
+          "date": "2024-09-12"
+        },
+        {
+          "localizedDescription": "• 全面支持 arm64 设备上的 iOS 17.0 beta 1 - 4\n\n注意：上述版本的 arm64e 支持仍在开发中。",
+          "downloadURL": "https://github.com/alfiecg24/TrollInstallerX/releases/download/1.0.2/TrollInstallerX.ipa",
+          "version": "1.0.2",
+          "size": 6570000,
+          "date": "2024-04-08"
+        }
+      ],
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/aIyWLRP.jpeg",
+        "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/o5REDKV.jpeg"
+      ],
+      "size": 6889214,
+      "version": "1.0.3",
+      "bundleIdentifier": "com.Alfie.TrollInstallerX",
+      "tintColor": "0363a9",
+      "versionDate": "2024-09-12",
+      "downloadURL": "https://github.com/alfiecg24/TrollInstallerX/releases/download/1.0.3/TrollInstallerX.ipa",
+      "subtitle": "适用于 iOS 14.0 - 17.0.0.0 beta 4 的通用 TrollStore 安装器",
+      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/lQt6WqH.png",
+      "developerName": "alfiecg24",
+      "versionDescription": "• Update for Xcode 15.4+ compilation\n• Removing confusing logging around exploit deinitialisation\n• Fix arm64e devices on iOS 15.7.x that couldn't download the kernelcache by updating libgrabkernel2",
+      "name": "TrollInstallerX",
+      "localizedDescription": "概述\n\nTrollInstallerX 是一款通用的 TrollStore 安装器，着重于可靠易用。在较新的设备上，它还可以在数秒内安装 TrollStore 和/或其持久化助手，速度非常快。\n\nTrollInstallerX 支持运行 iOS 14.0 - 16.6.1 的所有设备，包括 arm64 和 arm64e。它会根据你的设备和 iOS 版本，使用以下两种方法之一安装 TrollStore：\n\n• 直接安装：在 iOS 15.2+ 的 arm64e 设备上，利用 kfd 内核漏洞和 dmaFail PPL 绕过，TrollInstallerX 可以直接在设备上安装 TrollStore 及其持久化助手，无需离开安装器。\n\n   - 支持 iOS 14.0 - 16.6.1（arm64）和 iOS 14.0 - 16.5.1（arm64e）。\n      • 注意：运行 iOS 16.5.1 的 A15、A16 和 M2 设备不支持此方法。\n      • 注意：目前 A8 设备仅支持 iOS 14.0 - 15.1。\n• 间接安装：利用 kfd 内核漏洞，TrollInstallerX 可以将你选择的系统应用替换为 TrollStore 持久化助手。此方法仅因 iOS 16.6 及更高版本缺少 PPL 绕过方式，以及 dmaFail 在运行 iOS 16.5.1 的 A15、A16 和 M2 设备上无法使用而提供。\n\n   - 支持 iOS 16.5.1 - 16.6.1（arm64e）。\n      • 注意：对于运行 iOS 16.5.1 的 A15、A16 和 M2 设备，此方法是唯一可用的方法。\n\n两种方法都允许你将持久化助手安装到可移除的系统应用中。之所以需要这样做，是因为 CoreTrust 漏洞（TrollStore 所利用的漏洞）的工作方式所致：在某些情况下，TrollStore 及其安装的其他应用会被重置为用户注册，而不是系统注册。在使用持久化助手将它们恢复为系统注册之前，你无法打开这些应用。\n\n\n使用方法\n\nTrollInstallerX 非常易用。只需从 Releases 页面下载最新版本，然后使用你喜欢的方法侧载安装。安装完成后，打开应用并点击“Install”按钮。随后，TrollStore 和/或其持久化助手就会安装到你的设备上。\n\nTrollInstallerX 会自动为你的设备选择最佳 exploit。不过，在某些情况下，你可能希望选择特定的 exploit。为此，只需打开设置视图并选择要使用的 exploit。选择后，点击“Install TrollStore”按钮，TrollInstallerX 就会使用你所选的 exploit。\n\n注意：iOS 16.2 - 16.6.1 和 iOS 15.7.2 - 15.8.2 需要连接互联网，以便 TrollInstallerX 下载 kernelcache 并对其进行 patchfind。",
+      "appPermissions": {
+        "privacy": {
+          "NSAppleMusicUsageDescription": "Unsandboxing with MacDirtyCow"
+        }
+      }
+    },
+    {
+      "beta": true,
+      "versions": [
+        {
+          "localizedDescription": "• 添加 PostBox v0.8.1",
+          "minOSVersion": "10.0",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/PostBox.v0.8.1.ipa",
+          "version": "0.8.1",
+          "size": 8080000,
+          "date": "2023-05-14"
+        }
+      ],
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://www.postbox.news/assets/images/thumbPhone.webp",
+        "https://www.postbox.news/assets/images/newsPhone.webp",
+        "https://www.postbox.news/assets/images/extractPhone.webp",
+        "https://www.postbox.news/assets/images/repoPhone.webp",
+        "https://www.postbox.news/assets/images/reviewPhone.webp",
+        "https://www.postbox.news/assets/images/storyboardPhone.webp"
+      ],
+      "size": 8474074,
+      "version": "0.8.1",
+      "bundleIdentifier": "com.simplycode.PostBox",
+      "tintColor": "b3b3b3",
+      "versionDate": "2023-05-14",
+      "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/PostBox.v0.8.1.ipa",
+      "subtitle": "最新越狱资讯，尽在指尖",
+      "iconURL": "https://static.appdb.to/images/cydia-102005202-icon-1661962646.png",
+      "developerName": "PostBox Team",
+      "versionDescription": "• Added PostBox v0.8.1",
+      "name": "PostBox",
+      "localizedDescription": "• 丰富的信息流。畅享来自各种来源的动态，随时关注越狱圈的最新消息。信息源会频繁更新，让你不错过任何内容！\n\n• 支持外部信息源。PostBox 支持 r/jailbreak 和 iDownloadBlog 等第三方越狱信息源。未来还会推出更多内容。\n\n• 软件源是软件包的集合。PostBox 收录了 200 多个软件源，便于集中管理，并提供高效查找软件源的系统。现在，你可以轻松查找过去需要费力才能找到的信息。\n\n• 设计直观。不同对比度的按钮可引导用户进行操作。动画、触觉反馈和颜色变化则会在选择时提供灵动的交互反馈。\n\n• 评价软件包。评价软件包为用户和开发者创造了新的机会。无论软件源或描述页面有何差异，都可以评价任何软件包。",
+      "appPermissions": {
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "Please allow PostBox to save media into your photo library.",
+          "NSPhotoLibraryUsageDescription": "PostBox can save media (such as screenshots and banners) to your photo library."
+        },
+        "entitlements": [
+          "application-identifier",
+          "com.apple.developer.team-identifier",
+          "get-task-allow"
+        ]
+      }
+    },
+    {
+      "beta": true,
+      "versions": [
+        {
+          "minOSVersion": "15.0",
+          "localizedDescription": "新增：\n\n• 在游戏内选项按钮中加入模拟菜单。\n• 在模拟菜单中加入暂停和继续模拟选项。\n• 默认预加载纹理，以提升性能。\n• 支持竖屏触控和拖动。\n重新实现了横屏模式以供测试（屏幕暂时不会并排显示）。\n\n更改：\n\n• 调整模拟器布局，使其显示在状态栏下方。\n• 提高模拟线程的优先级，以进一步提升性能。\n\n修复：\n\n• 修复状态栏在黑色背景上显示黑色文字的问题。",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/emuThreeDS.v1.0.5.2.ipa",
+          "date": "2023-05-13",
+          "size": 30300000,
+          "version": "1.0.5.2"
+        }
+      ],
+      "category": "Games",
+      "screenshotURLs": [
+        "https://play-lh.googleusercontent.com/i3Fdd7SIrXYH_RIsypS8bwKnqq808h8XxO4fg3eYIrIqLg2bkf-Vm7LfBNDKOnLENQ=w1052-h592-rw",
+        "https://play-lh.googleusercontent.com/6pv18OLDP58bZLWH0RZMw5ZcYAYyEFmlA1sqX0BlrevPLWhTO7C0ua0X3sNiOlrkM1ZQ=w1052-h592-rw",
+        "https://play-lh.googleusercontent.com/doTVi2IWLPKGVCz2EeZKNEDOkjxIgbridWQiKqVgw7yhc0OQXNR7CvmcglgNv1M4kAQ=w1052-h592-rw",
+        "https://play-lh.googleusercontent.com/FZakW5LiR3dJen206_ZlIoxfICxFNX-f5lpxcYtouA5VShZtsZvCi5bEicSN_dLeUQ=w1052-h592-rw",
+        "https://play-lh.googleusercontent.com/UhUl8DQRlWiITbsrYEYb89rrvpALAUn7Wgyb6PKCjgiG5gF2WHL7piRBf2enCZZWwQ=w1052-h592-rw",
+        "https://play-lh.googleusercontent.com/uxwledxQN-64HfwyfbUFXa7pcgHTy_78iiKXZwArALZqhpR1PjWZfOGjdgwRCTgwnjY=w1052-h592-rw"
+      ],
+      "size": 31732972,
+      "version": "1.0.5.2",
+      "bundleIdentifier": "com.antique.emuThreeDS",
+      "tintColor": "acaea8",
+      "versionDate": "2023-05-13",
+      "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/emuThreeDS.v1.0.5.2.ipa",
+      "subtitle": "适用于 iOS 的 Nintendo 3DS 模拟器",
+      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/5wBkakf.png",
+      "developerName": "Antique",
+      "versionDescription": "Added:\n\n• Emulation menu to the in-game options button.\n• Pause and resume emulation option to the Emulation menu.\n• Preload textures by default to improve performance.\n• Portrait touch and drag support.\nReimplemented landscape mode for testing (screens will not be side-by-side yet).\n\nChanged:\n\n• Layout of the emulation to display below the status bar.\n• Increased priority of the emulation thread to squeeze out more performance.\n\nFixed:\n\n• Issue where the status bar would display black text on a black background.",
+      "name": "emuThreeDS",
+      "localizedDescription": "基于 Citra，为 Apple 设备打造的 Nintendo 3DS 模拟器。",
+      "appPermissions": {
+        "entitlements": [
+          "application-identifier",
+          "com.apple.developer.kernel.extended-virtual-addressing",
+          "com.apple.developer.kernel.increased-memory-limit",
+          "com.apple.developer.team-identifier",
+          "get-task-allow"
+        ]
+      }
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "localizedDescription": "• PPSSPP 已更新至 v1.20.4",
+          "downloadURL": "https://github.com/hrydgard/ppsspp/releases/download/v1.20.4/PPSSPP-iOS-v1.20.4.ipa",
+          "date": "2026-05-16",
+          "size": 31124277,
+          "version": "1.20.4"
+        },
+        {
+          "localizedDescription": "1.15.3",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/PPSSPP.v1.15.3.ipa",
+          "date": "2023-05-14",
+          "size": 27700000,
+          "version": "1.15.3"
+        }
+      ],
+      "category": "Games",
+      "screenshotURLs": [
+        "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/CWl6GgH.png",
+        "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/SxmN1M0.png",
+        "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/sGWgR6z.png",
+        "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/AFKTdmZ.png"
+      ],
+      "size": 31124277,
+      "version": "1.20.4",
+      "bundleIdentifier": "org.ppsspp.ppsspp",
+      "tintColor": "21486b",
+      "versionDate": "2026-05-16",
+      "downloadURL": "https://github.com/hrydgard/ppsspp/releases/download/v1.20.4/PPSSPP-iOS-v1.20.4.ipa",
+      "subtitle": "适用于 iOS 的快速便携 PSP 模拟器",
+      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/JP0Fncv.png",
+      "developerName": "Henrik Rydgård",
+      "versionDescription": "• PPSSPP updated to v1.20.4",
+      "name": "PPSSPP",
+      "localizedDescription": "PPSSPP 是 iOS 上最优秀、也是唯一一款使用 C++ 编写的 PSP 模拟器。它能够运行许多原版游戏，但受非越狱设备的限制，具体运行效果取决于设备性能，并非所有游戏都能满速运行。\n\n这款应用最初由 Henrik Rydgård 于 2012 年 11 月创建；不过，iOS 版本主要由才华横溢的开发者 Karen Tsai（又名 @angelxwind）以及众多提交问题报告和修复的贡献者维护。PPSSPP 的多个版本可在 Android、Windows、Mac、Linux 和 BlackBerry 10 等平台上运行。iOS 版本适用于越狱和非越狱设备。\n\nPPSSPP 支持运行 iOS 5 及更高版本的所有 iPad、iPhone 和 iPod touch，包括 iPhone 5 等配备 Retina 显示屏的设备。此模拟器无需 BIOS 即可运行游戏，在很多方面可算作一款“HLE”模拟器。PPSSPP 需要使用 ROM 镜像（具体为 .ISO 或 .CSO 文件）来运行游戏。本模拟器不包含任何 ROM。如果你拥有游戏，可以通过 iTunes 文件共享或“iExplorer”等程序添加。请注意，这些文件体积很大，有时会占用数 GB 空间。\n\n此模拟器旨在使用 JIT 反编译器（动态重编译器），但由于代码签名要求，只有越狱设备才能使用。因此，大多数游戏在非越狱设备上运行会非常缓慢；不过，一些较早的 PSP 游戏可以正常运行，甚至能达到满速，具体取决于你的 iOS 设备。",
+      "appPermissions": {
+        "privacy": {
+          "NSCameraUsageDescription": "Your camera may be used to emulate Go!Cam, a camera accessory",
+          "NSLocationWhenInUseUsageDescription": "Your location may be used to emulate Go!Explore, a GPS accessory",
+          "NSMicrophoneUsageDescription": "Your microphone may be used to emulate Go!Cam/Talkman, a microphone accessory"
+        }
+      }
+    },
+    {
+      "beta": true,
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://static.appdb.to/images/cydia-1900001033-iphone-0-1669967899.png",
+        "https://static.appdb.to/images/cydia-1900001033-iphone-1-1669967899.png",
+        "https://static.appdb.to/images/cydia-1900001033-iphone-2-1669967900.png",
+        "https://static.appdb.to/images/cydia-1900001033-iphone-3-1669967900.png"
+      ],
+      "size": 15515487,
+      "version": "1.0",
+      "bundleIdentifier": "com.DebianArch.ScarletPersonalXYZZZ",
+      "tintColor": "8d2229",
+      "versionDate": "2023-04-24",
+      "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/ScarletAlpha.ipa",
+      "subtitle": "不止是应用商店，还有 Scarlet。",
+      "iconURL": "https://pbs.twimg.com/profile_images/1367920028813787144/cwvAQV9f_400x400.jpg",
+      "developerName": "DebianArch",
+      "versionDescription": "• Added Ability to import/Export app backups.\n• Added ability to modify IPA (Add/Remove Tweaks etc.)",
+      "name": "Scarlet",
+      "localizedDescription": "注意：开发者不会更改版本号（1.0），因此，如果你在网上看到新功能，或应用停止运行，请卸载并重新安装。AltStore 上的下载链接来自官方网站，因此你在这里下载的始终是最新版本。\n\n此外，通过 AltStore 获取 Scarlet，只要持续刷新应用，就永远不会失去它；而从官方网站下载则很可能导致证书被撤销，你只能等待应用重新签名。\n\n\n为什么选择我们？\n\nScarlet 为开发者提供了一个全新的社区，可供他们提交付费应用，让用户轻松避免应用证书被撤销。我们打造 Scarlet 的目标，是让每个人都能使用一个不会让用户去折腾各种变通方法的应用商店。为此，我们开发了一款以每位用户为中心、力求带来流畅体验的应用。\n\n\n真正的源系统\n\nScarlet 为所有用户提供首个真正的源系统。\n什么是真正的源系统？我们的源系统支持越狱源，非越狱用户也能使用额外提供的部分功能。\n这些功能包括：\n1. 在非越狱状态下强制安装越狱应用\n2. 自动或手动将 tweak 注入指定应用（无需越狱）\n\n我们还提供专为 Scarlet 设计的原生源。开发者可以选择要注入指定应用的 dylib 或 deb 文件。\n \n\n专业打造\n\nScarlet 的图形界面由 Xeviks 设计。\n他为界面带来了色彩、活力、动感与现代感，同时保持了简洁的风格。\nDebianArch 是 Scarlet 应用的独立开发者，正通过创新功能，为这个停滞不前的社区带来改变。",
+      "appPermissions": {
+        "entitlements": [
+          "application-identifier",
+          "com.apple.developer.team-identifier",
+          "get-task-allow"
+        ],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "This app needs to access the local network to do wireless installs."
+        }
+      }
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "localizedDescription": "• 将 Sileo 更新至 2.3-1",
+          "minOSVersion": "13.0",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Odyssey.Jailbreak.v1.4.3.ipa",
+          "version": "1.4.3",
+          "size": 27200000,
+          "date": "2023-04-03"
+        }
+      ],
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://theodyssey.dev/assets/images/ss-1.png",
+        "https://theodyssey.dev/assets/images/ss-2.png",
+        "https://theodyssey.dev/assets/images/ss-3.png"
+      ],
+      "size": 27204395,
+      "version": "1.4.3",
+      "bundleIdentifier": "org.coolstar.odyssey",
+      "tintColor": "9766a7",
+      "versionDate": "2023-04-03",
+      "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Odyssey.Jailbreak.v1.4.3.ipa",
+      "subtitle": "新时代的新越狱工具。",
+      "iconURL": "https://theodyssey.dev/assets/images/icon.png",
+      "developerName": "Odyssey Team",
+      "versionDescription": "• Updated Sileo to 2.3-1",
+      "name": "Odyssey",
+      "localizedDescription": "支持的 iOS 版本：13.0 - 13.7。\n\nOdyssey 是首款几乎完全使用 Swift 编写的越狱工具。它完全开源，欢迎社区贡献代码和提交拉取请求，以此纪念已故的 s0uthwes，以及他对这个项目始终抱有的乐观与信念。它内置开源的 Procursus bootstrap，从设计之初就着眼于开放性和兼容性，并采用全新的 tweak 注入平台 libhooker。",
+      "appPermissions": {
+        "privacy": {
+          "NSPhotoLibraryUsageDescription": "For selecting a custom theme image"
+        }
+      }
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "minOSVersion": "14.0",
+          "localizedDescription": "• 修复 kfd 更改的实现错误",
+          "downloadURL": "https://github.com/Odyssey-Team/Taurine/releases/download/1.1.7-3/Taurine.1.1.7-3.ipa",
+          "date": "2023-09-23",
+          "size": 30838370,
+          "version": "1.1.7-3"
+        },
+        {
+          "localizedDescription": "• 移植 Taurine15 的 DER 权限修复\n• 移植 Taurine15 的代码签名修复\n• 移植 Taurine15 的其他多项修复",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Taurine.Jailbreak.v1.1.6.ipa",
+          "date": "2022-07-17",
+          "size": 31938370,
+          "version": "1.1.6"
+        }
+      ],
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://taurine.app/assets/images/ss-1.png",
+        "https://taurine.app/assets/images/ss-2.png",
+        "https://taurine.app/assets/images/ss-3.png"
+      ],
+      "size": 32244737,
+      "version": "1.1.7-3",
+      "bundleIdentifier": "org.coolstar.taurine",
+      "tintColor": "9e3a47",
+      "versionDate": "2023-09-23",
+      "downloadURL": "https://github.com/Odyssey-Team/Taurine/releases/download/1.1.7-3/Taurine.1.1.7-3.ipa",
+      "subtitle": "是时候嗨起来了。",
+      "iconURL": "https://taurine.app/assets/images/icon.png",
+      "developerName": "Odyssey Team",
+      "versionDescription": "• Fix kfd change being implemented incorrectly",
+      "name": "Taurine",
+      "localizedDescription": "Taurine 是适用于 iOS 14.0–14.8.1 的越狱工具，使用 Procursus 和 Libhooker。",
+      "appPermissions": {}
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "minOSVersion": "11.0",
+          "localizedDescription": "• 添加漏洞利用指引，提升运行 iOS 14.6–14.8 的 A12–A13 iPhone 的稳定性\n• 修复运行 iOS 14.6–14.8 的 iPhone XS 设备上的漏洞利用稳定性问题",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Unc0ver.Jailbreak.v8.0.2.ipa",
+          "date": "2021-12-29",
+          "size": 54489484,
+          "version": "8.0.2"
+        }
+      ],
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/ItMaRRV.png",
+        "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/bjzyqpY.png",
+        "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/3TMGkaO.png",
+        "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/gTYfncm.png"
+      ],
+      "size": 54489484,
+      "version": "8.0.2",
+      "bundleIdentifier": "science.xnu.undecimus",
+      "tintColor": "515151",
+      "versionDate": "2021-12-29",
+      "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Unc0ver.Jailbreak.v8.0.2.ipa",
+      "subtitle": "最先进的越狱工具。",
+      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/5aehDxj.png",
+      "developerName": "Pwn20wnd",
+      "versionDescription": "• Added exploit guidance to improve reliability on A12-A13 iPhones running iOS 14.6-14.8\n• Fixed exploit reliability on iPhone XS devices running iOS 14.6-14.8",
+      "name": "unc0ver",
+      "localizedDescription": "unc0ver 是一款适用于 iOS 设备的高级越狱工具。使用 unc0ver 越狱可释放 iDevice 的真正潜能。自定义设备外观、全面掌控设备运行方式、访问 iOS 隐藏功能等。\n\n兼容性：\n• unc0ver 支持 iOS 11.0 至 iOS 14.3（不包括 13.5.1 和 13.3.1）\n\n稳定性：\n• 使用最新稳定版 APT 和 Mobile Substrate，确保稳定运行。\n\n安全性：\n• 使用原生系统沙盒例外机制，在开放越狱文件访问权限的同时确保安全性。",
+      "appPermissions": {}
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "version": "3.0.12",
+          "date": "2026-10-20",
+          "localizedDescription": "• Dopamine 更新至 v3.0.12",
+          "downloadURL": "https://github.com/opa334/Dopamine/releases/download/3.0.12/Dopamine.ipa",
+          "size": 55420784
+        },
+        {
+          "minOSVersion": "15.0",
+          "localizedDescription": "• 修复对 iOS 16.0.x 的支持问题 [2.4 回归问题]\n• （此更新仅适用于 2.4.1，旧版更新说明请参阅官方 GitHub 页面）",
+          "downloadURL": "https://github.com/opa334/Dopamine/releases/download/2.4.1/Dopamine.ipa",
+          "date": "2025-02-25",
+          "size": 47700000,
+          "version": "2.4.1"
+        },
+        {
+          "localizedDescription": "• 仅自动修复 /var/jb/var/mobile 内相关目录的权限，而非整个目录的权限\n• 如果 /var/jb/var 或 /var/jb/var/mobile 是符号链接，则跳过权限修复。此前，如果其中任一目录指向实际的 /var 或 /var/mobile，可能会导致设备陷入启动循环",
+          "downloadURL": "https://github.com/opa334/Dopamine/releases/download/2.1.4/Dopamine.ipa",
+          "date": "2024-05-07",
+          "size": 47400000,
+          "version": "2.1.4"
+        }
+      ],
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://ellekit.space/dopamine/assets/screenshot_one.png",
+        "https://ellekit.space/dopamine/assets/screenshot_two.png"
+      ],
+      "size": 55420784,
+      "version": "3.0.12",
+      "bundleIdentifier": "com.opa334.Dopamine",
+      "tintColor": "0d7d65",
+      "versionDate": "2026-10-20",
+      "downloadURL": "https://github.com/opa334/Dopamine/releases/download/3.0.12/Dopamine.ipa",
+      "subtitle": "适用于 iOS 15 - 16 的半脱狱工具",
+      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/67ffxsD.jpeg",
+      "developerName": "opa334",
+      "versionDescription": "• Dopamine updated to v3.0.12",
+      "name": "Dopamine",
+      "localizedDescription": "适用于 iOS 15.0 - 16.5.1（arm64e）和 iOS 15.0 - 16.6.1（arm64）的无根 arm64e 越狱工具。更多详情即将发布。",
+      "appPermissions": {}
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "version": "2.2.0-1",
+          "date": "2026-07-19",
+          "localizedDescription": "• iTorrent 已更新至 v2.2.0-1",
+          "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.2.0-1/iTorrent.ipa",
+          "size": 24288935
+        },
+        {
+          "minOSVersion": "11.0",
+          "localizedDescription": "• iTorrent 已更新至 v1.9",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/iTorrent.v1.9.ipa",
+          "date": "2023-02-13",
+          "size": 12800000,
+          "version": "1.9"
+        }
+      ],
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://static.appdb.to/images/cydia-1900000455-iphone-0.png",
+        "https://static.appdb.to/images/cydia-1900000455-iphone-1.png",
+        "https://static.appdb.to/images/cydia-1900000455-iphone-2.png"
+      ],
+      "size": 24288935,
+      "version": "2.2.0-1",
+      "bundleIdentifier": "ru.nonamedude.iTorrent",
+      "tintColor": "b31c29",
+      "versionDate": "2026-07-19",
+      "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.2.0-1/iTorrent.ipa",
+      "subtitle": "支持“文件”App 的 iOS 普通种子客户端",
+      "iconURL": "https://user-images.githubusercontent.com/9553519/80646366-3d271680-8a75-11ea-8b60-9c5edd4ffd60.png",
+      "developerName": "XITRIX",
+      "versionDescription": "• iTorrent updated to v2.2.0-1",
+      "name": "iTorrent",
+      "localizedDescription": "iTorrent - 一款支持“文件”App 的 iOS 种子客户端。\n\n此 App 的功能：\n\n• 后台下载\n• 顺序下载（加载影片时可使用 VLC 观看）\n• 从共享菜单添加种子文件（Safari 和其他 App）\n• 直接从 Safari 添加磁力链接\n• 将文件存储在“文件”App 中（iOS 11+）\n• 直接通过 App 共享文件\n• 通过链接下载种子\n• 通过磁力链接下载种子\n• 种子下载完成时发送通知\n• WebDAV 服务器\n• 选择要下载或不下载的文件\n• 切换为深色主题\n• RSS Feed",
+      "appPermissions": {
+        "entitlements": [
+          "application-identifier",
+          "com.apple.developer.team-identifier",
+          "get-task-allow"
+        ],
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "Allow, if you want to be able to save files to Photos app",
+          "NSUserTrackingUsageDescription": "Support developer, allow personalized ads."
+        }
+      }
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "version": "10.3.2",
+          "date": "2023-05-29",
+          "localizedDescription": "• Cowabunga 已更新至 v10.3.2",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+          "size": 16288960
+        },
+        {
+          "localizedDescription": "• 添加了 JIT\n• 添加了通过面包屑在状态栏显示日期\n• 可使用快捷指令通过网址 cowabunga://dateset 自动化\n• 自动化设置方法见下文\n• 也可通过主页上的按钮进行更新\n• 添加了状态栏运营商标记自定义功能\n• 添加了设置数据网络类型的功能\n• 添加了在 iPad 上更改日期字符串的功能\n• 添加了通过 URL Scheme 重置状态栏的功能（cowabunga://statusbar:reset）\n• 添加了选择 respring 类型的功能（frontboard 或 backboard）\n• 修复了强制启用 mdc 时的问题",
+          "minOSVersion": "14.0",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Cowabunga.v10.2.0.ipa",
+          "version": "10.2.0",
+          "size": 15500000,
+          "date": "2023-05-14"
+        },
+        {
+          "localizedDescription": "• 新增移除 3 个应用限制\n• 新增单独编辑辅助运营商名称的功能\n• 出于安全原因，导入操作不再包含对 /var 中更改的备份文件（Model Name Changer 及其他会编辑 mobilegestalt plist 的操作不应再导致设备变砖或触发激活锁）\n• 修复文件路径操作中未显示生成填充按钮的问题",
+          "minOSVersion": "14.0.0",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Cowabunga.v10.1.1.ipa",
+          "version": "10.1.1",
+          "size": 20600000,
+          "date": "2023-04-01"
+        },
+        {
+          "localizedDescription": "• 现在可以选择启用 v8 和/或 v10 主题\n• 为文件路径替换操作添加填充功能\n• 恢复键盘按钮音效\n• 增强图标主题功能的安全性：中止前会先尝试还原损坏的文件\n• 改进错误消息\n• 修复 iPad 上 Springboard 工具视图的尺寸问题\n• 修复 RTL 语言中的 Springboard 工具问题\n• 更新“探索”页面的后端仓库",
+          "minOSVersion": "14.0.0",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Cowabunga.v10.1.0.ipa",
+          "version": "10.1.0",
+          "size": 20600000,
+          "date": "2023-03-29"
+        }
+      ],
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://github.com/leminlimez/Cowabunga/raw/main/Images/Home.PNG",
+        "https://github.com/leminlimez/Cowabunga/raw/main/Images/Tools.PNG",
+        "https://github.com/leminlimez/Cowabunga/raw/main/Images/SpringboardTools.PNG",
+        "https://github.com/leminlimez/Cowabunga/raw/main/Images/Audio_Changer.PNG",
+        "https://github.com/leminlimez/Cowabunga/raw/main/Images/Passcode_Editor.PNG",
+        "https://github.com/leminlimez/Cowabunga/raw/main/Images/LS_Footnote.PNG",
+        "https://github.com/leminlimez/Cowabunga/raw/main/Images/Misc.PNG",
+        "https://github.com/leminlimez/Cowabunga/raw/main/Images/Extra_Tools.PNG"
+      ],
+      "size": 16288960,
+      "version": "10.3.2",
+      "bundleIdentifier": "com.leemin.Cowabunga",
+      "tintColor": "0d6425",
+      "versionDate": "2023-05-29",
+      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+      "subtitle": "适用于 iOS 14–iOS 16 的 MacDirtyCow 工具箱",
+      "iconURL": "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png",
+      "developerName": "Leminlimez",
+      "versionDescription": "• Cowabunga updated to v10.3.2",
+      "name": "Cowabunga",
+      "localizedDescription": "一款适用于 iOS 14.0–15.7.1 和 16.0–16.1.2 的免越狱工具箱应用，使用 CVE-2022-46689\n\n请启用通知并将定位服务设为“始终”，以便应用在后台运行、保持隐藏 Dock 和文件夹背景，并防止某些音效恢复原状。\n\n警告：iOS 14.0–14.8.1 上的部分更改是永久性的\n\n\n功能：\n\n• 在后台运行，防止部分更改恢复原状\n\t- 根据测试结果，频繁使用时耗电可忽略不计（约每天 1%），但实际情况可能有所不同\n\nSpringboard\n\n• 隐藏 Dock\n• 隐藏主屏幕横条\n• 隐藏文件夹背景\n• 关闭文件夹背景模糊效果\n• 关闭应用切换器模糊效果\n• 隐藏控制中心模块背景\n• 隐藏通知横幅背景\n\n应用图标主题\n\n• 导入应用图标文件夹\n• 不使用 WebClip！\n\n音频\n\n• 自定义音效\n• 上传自己的音效（几乎支持所有音频格式！）\n• 上传音频大小上限为 150 kb；文件过大时不会应用音频！\n\n密码\n\n• 自定义密码键盘按键\n• 从 TrollTools 导入密码键盘按键文件（.passthm）\n\n锁屏\n\n• 从 TrollLock 导入锁屏\n• 自定义帧数和动画速度（见下文）\n\n探索\n\n• 查找并下载密码键盘、锁屏和应用图标主题！\n• 如需提交自己的作品，请加入 Discord\n\n状态栏\n\n• 更改运营商名称\n• 更改电池显示详情\n• 更改时间文本\n• 更改面包屑文本\n• 显示 Wi-Fi/蜂窝网络信号的数值\n• 隐藏状态栏中的多个图标\n\n其他工具\n\n• 自定义字体\n• 锁屏脚注\n• 通知标记更改工具（仅限 iOS 14–15）\n• Springboard 颜色\n• 设置应用自定义工具\n• 计算器错误消息\n\n杂项\n\n• 关闭快捷指令横幅\n• 将快捷指令转换为 App Clip\n• 监管设备警告：请自行承担使用以下功能的风险！\n• 更改系统版本（显示在“设置”中，iOS 15+）\n• 启用 iPhone X 手势\n• 启用灵动岛（iOS 16+）\n\n额外工具\n\n• 锁屏脚注\n• Respring 时不锁定\n• 关闭低电量提醒",
+      "appPermissions": {
+        "privacy": {
+          "NSAppleMusicUsageDescription": "Grant permission to the sandbox (needs it for Passcode keys + some other options)",
+          "NSLocationWhenInUseUsageDescription": "Cowabunga runs in the background to make sure tweaks remain applied. Usually iOS kills such apps after a period of time, but Cowabunga tricks iOS by requesting location data thus allowing much longer sessions. Data is never stored anywhere, only fetched.",
+          "NSPhotoLibraryUsageDescription": "Photos",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "Cowabunga runs in the background to make sure tweaks remain applied. Usually iOS kills such apps after a period of time, but Cowabunga tricks iOS by requesting location data thus allowing much longer sessions. Data is never stored anywhere, only fetched."
+        }
+      }
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "minOSVersion": "11.0",
+          "localizedDescription": "• ESign 更新至 v4.8.1\n• 已安装应用列表现支持筛选",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/ESign.v4.8.1.ipa",
+          "date": "2023-03-19",
+          "size": 8750000,
+          "version": "4.8.1"
+        },
+        {
+          "minOSVersion": "11.0",
+          "localizedDescription": "• ESign 更新至 v4.7.8\n• 支持签名后移除 mobileprovision\n• 支持清除应用数据（iOS 15–15.7.1 和 16.0–16.1.2）\n• 修复错误",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/ESign.v4.7.8.ipa",
+          "date": "2023-03-10",
+          "size": 8830000,
+          "version": "4.7.8"
+        },
+        {
+          "minOSVersion": "11.0",
+          "localizedDescription": "• ESign 更新至 v4.7.6\n• 支持备份和恢复应用数据（iOS 15–15.7.1 和 16.0–16.1.2）\n• 修复错误",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/ESign.v4.7.7.3.ipa",
+          "date": "2023-02-20",
+          "size": 10800000,
+          "version": "4.7.7.3"
+        },
+        {
+          "minOSVersion": "11.0",
+          "localizedDescription": "• ESign 更新至 v4.7.6",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/ESign.v4.7.6.ipa",
+          "date": "2023-02-20",
+          "size": 8200000,
+          "version": "4.7.6"
+        },
+        {
+          "minOSVersion": "11.0",
+          "localizedDescription": "• ESign 更新至 v4.7.5",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/ESign.v4.7.5.ipa",
+          "date": "2023-02-10",
+          "size": 8200000,
+          "version": "4.7.5"
+        }
+      ],
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://static.appdb.to/images/cydia-1900000897-iphone-0-1670149926.png",
+        "https://static.appdb.to/images/cydia-1900000897-iphone-1-1670149926.png",
+        "https://static.appdb.to/images/cydia-1900000897-iphone-2-1670149927.png",
+        "https://static.appdb.to/images/cydia-1900000897-iphone-3-1670149927.png"
+      ],
+      "size": 9174870,
+      "version": "4.8.1",
+      "bundleIdentifier": "p3.xyz.yyyue.esign",
+      "tintColor": "356ead",
+      "versionDate": "2023-03-19",
+      "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/ESign.v4.8.1.ipa",
+      "subtitle": "IPA 自签名、插件注入、文件管理器",
+      "iconURL": "https://static.appdb.to/images/cydia-1900000897-icon-1651011412.png",
+      "developerName": "esign.yyyue.xyz",
+      "versionDescription": "• ESign updated to v4.8.1\n• The list of installed applications supports filtering",
+      "name": "ESign",
+      "localizedDescription": "Easy Sign (esign) 是一款无需越狱即可签名 IPA 文件的工具，还支持注入或移除库等功能。",
+      "appPermissions": {
+        "entitlements": [
+          "application-identifier",
+          "com.apple.developer.team-identifier",
+          "get-task-allow"
+        ],
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "授权后才能将图片保存到本地相册",
+          "NSPhotoLibraryUsageDescription": "授权后才能访问您的手机相册，您才能上传对应的图片",
+          "NSAppleMusicUsageDescription": "点允许，才能使用。",
+          "NSCameraUsageDescription": "授权后才能使用您的相机进行扫一扫",
+          "NSLocationWhenInUseUsageDescription": "开启定位服务，我们将根据您的位置,为您提供当前城市的相关企业信息。在未经许可前不会开启定位服务，请放心使用。",
+          "NSUserTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you"
+        }
+      }
+    },
+    {
+      "beta": false,
+      "category": "Games",
+      "screenshotURLs": [
+        "https://img.ipa4fun.com/cc/d5/84/529479190-screenshot-1.webp",
+        "https://img.ipa4fun.com/cc/d5/84/529479190-screenshot-2.webp",
+        "https://img.ipa4fun.com/cc/d5/84/529479190-screenshot-3.webp",
+        "https://img.ipa4fun.com/cc/d5/84/529479190-screenshot-4.webp",
+        "https://img.ipa4fun.com/cc/d5/84/529479190-screenshot-5.webp",
+        "https://img.ipa4fun.com/cc/d5/84/529479190-screenshot-6.webp",
+        "https://img.ipa4fun.com/cc/d5/84/529479190-screenshot-7.webp"
+      ],
+      "size": 506956293,
+      "version": "18.400.8",
+      "bundleIdentifier": "com.atrasis.original",
+      "tintColor": "9e6193",
+      "versionDate": "2026-08-06",
+      "downloadURL": "https://atrasisclash.net/server-original-ios-download-ipa.php",
+      "subtitle": "魔改版《部落冲突》服务器！",
+      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/WfWpKOF.png",
+      "developerName": "Atrasis Team",
+      "versionDescription": "• Link now only installs latest version.",
+      "name": "Atrasis",
+      "localizedDescription": "这是一个魔改版《部落冲突》私人服务器。你拥有无限宝石、圣水和金币。在全球聊天中输入 /help 查看命令。\n\n注意：如果应用提示需要更新，请通过此链接重新安装，因为下载链接始终指向最新版本，我不会手动更改链接。\n\n如需保留进度，请创建 Atrasis ID，方法与创建 Supercell ID 相同；重新安装后登录即可。\n\n\n请注意，此魔改版与 Supercell 无关，未经其认可、赞助或特别批准，Supercell 也不对此负责。\n\n由 Ksyrex 魔改。他的 Telegram 群组➡️ https://t.me/+wwYy4wEMS1gwMTAy",
+      "appPermissions": {
+        "privacy": {
+          "NSUserTrackingUsageDescription": "Clash of Clans would like permission to track you across apps and websites owned by other companies.\\n\\nYour data will be used for audience insights, analytics and improving our services.",
+          "NSCameraUsageDescription": "Camera access is needed for scanning QR codes.",
+          "NSPhotoLibraryUsageDescription": "Photo library access is needed if player wants to send screenshots to Supercell Player Support."
+        },
+        "entitlements": [
+          "application-identifier",
+          "aps-environment",
+          "com.apple.developer.location.push",
+          "com.apple.developer.team-identifier",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "get-task-allow",
+          "keychain-access-groups"
+        ]
+      }
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "minOSVersion": "11.0",
+          "localizedDescription": "• 《皇室战争》已更新至 v4.88.4",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Clash.Royale.v4.88.4.Nulls.ipa",
+          "date": "2024-05-10",
+          "size": 329000000,
+          "version": "4.88.4"
+        },
+        {
+          "localizedDescription": "• 《皇室战争》已更新至 v3.3186.7",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Clash.Royale.Null.s.v3.3186.7.ipa",
+          "date": "2023-05-11",
+          "size": 234000000,
+          "version": "3.3186.7"
+        },
+        {
+          "localizedDescription": "• 《皇室战争》已更新至 v3.3074.6",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Clash.Royale.v3.3074.6.ipa",
+          "date": "2023-04-06",
+          "size": 160000000,
+          "version": "3.3074.6"
+        }
+      ],
+      "category": "Games",
+      "screenshotURLs": [
+        "https://img.ipa4fun.com/e8/16/53/1053012308-screenshot-1.webp",
+        "https://img.ipa4fun.com/e8/16/53/1053012308-screenshot-2.webp",
+        "https://img.ipa4fun.com/e8/16/53/1053012308-screenshot-3.webp",
+        "https://img.ipa4fun.com/e8/16/53/1053012308-screenshot-4.webp",
+        "https://img.ipa4fun.com/e8/16/53/1053012308-screenshot-5.webp",
+        "https://img.ipa4fun.com/e8/16/53/1053012308-screenshot-6.webp"
+      ],
+      "size": 345169728,
+      "version": "4.88.4",
+      "bundleIdentifier": "nt.nr.ios",
+      "tintColor": "092949",
+      "versionDate": "2024-05-10",
+      "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Clash.Royale.v4.88.4.Nulls.ipa",
+      "subtitle": "魔改版《皇室战争》服务器！",
+      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/ZDQVF7n.jpeg",
+      "developerName": "Null",
+      "versionDescription": "• Updated Clash Royale to v4.88.4",
+      "name": "Null's Royale",
+      "localizedDescription": "想在《皇室战争》中获得免费宝石、金币和资源吗？Null's Royale 可以帮你实现。\n\n• 解锁所有卡牌 - 现在可以免费获得《皇室战争》中的所有卡牌，包括挑战赛中的自定义卡牌。\n\n• 资源无限 - 不必再担心《皇室战争》中的宝石和金币用完。现在可以无限获取这些资源。\n\n• 与真实玩家对战 - 在网络稳定的 PvP 模式中，尽情与真实玩家在线竞技。",
+      "appPermissions": {
+        "entitlements": [
+          "application-identifier",
+          "com.apple.developer.team-identifier",
+          "get-task-allow",
+          "keychain-access-groups"
+        ],
+        "privacy": {
+          "NSPhotoLibraryUsageDescription": "Photo library access is needed to send screenshots to Supercell Player Support.",
+          "NSCameraUsageDescription": "Camera access is needed to scan QR codes."
+        }
+      }
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "localizedDescription": "• 修复了一些小问题，提升用户体验。",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Angry.Birds.Space.v2.2.13.ipa",
+          "version": "2.2.13",
+          "size": 49900000,
+          "date": "2018-05-25"
+        }
+      ],
+      "category": "Games",
+      "screenshotURLs": [
+        "https://img.ipa4fun.com/c2/46/8a/499511971-screenshot-1.webp",
+        "https://img.ipa4fun.com/c2/46/8a/499511971-screenshot-2.webp",
+        "https://img.ipa4fun.com/c2/46/8a/499511971-screenshot-3.webp",
+        "https://img.ipa4fun.com/c2/46/8a/499511971-screenshot-4.webp",
+        "https://img.ipa4fun.com/c2/46/8a/499511971-screenshot-5.webp"
+      ],
+      "size": 9,
+      "version": "2.2.13",
+      "bundleIdentifier": "com.rovio.AngryBirdsSpace",
+      "tintColor": "06253f",
+      "versionDate": "2018-05-25",
+      "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Angry.Birds.Space.v2.2.13.ipa",
+      "subtitle": "已从 App Store 下架！",
+      "iconURL": "https://img.ipa4fun.com/63/2d/06/501968250-logo.webp",
+      "developerName": "Rovio",
+      "versionDescription": "• We addressed some minor issues in order to improve the user experience.",
+      "name": "愤怒的小鸟：太空版",
+      "localizedDescription": "史上最受欢迎的手机游戏 #1，飞向太空！\n\n在 10 颗星球上畅玩 300 多个星际关卡，其中还包括我们自己的太阳系！\n\n无论是冰冷的 Cold Cuts 星球、火山喷发的 Red Planet、完全由垃圾食品构成的 Utopia 星球，还是我们自己的太阳系，每个篇章都充满了精彩的星际冒险！太空中的低重力环境带来了别具一格的玩法，从慢动作解谜到光速破坏，应有尽有。全新小鸟、特殊能力，还有整个银河系等你探索——天空不再是极限！\n\n-----\n\n“这场星际奇观，绝对物有所值” – AppCraver\n\n“它在原作基于物理原理的弹射玩法上大做文章……既畅快又熟悉，砸猪的乐趣更是十足。” – Gamespot\n\n“玩腻了普通弹射小鸟的玩家，一定会喜欢这款游戏超凡脱俗的冒险。” -- IGN\n\n-----\n\n- 300 多个星际关卡！\n- 全新可玩角色！\n- 每只小鸟都有独特的特殊能力！\n- 零重力太空冒险！\n- 利用行星引力打出妙趣横生的弹射！\n- 隐藏奖励关卡！\n- 精美细致的背景！\n- 每日任务！\n\n-----\n\n加入这场席卷全球的热潮，一同飞向银河！\n\n在 Facebook 上关注 Angry Birds：\nhttp://facebook.angrybirds.com\n\n在 Twitter 上关注我们：\nhttp://twitter.angrybirds.com\n\n使用条款：https://www.rovio.com/terms-of-service\n隐私政策：https://www.rovio.com/privacy\n\n本应用可能需要联网，可能会产生相应的数据流量费用。\n\n\n致家长的重要提示\n\n本游戏可能包含：\n- 指向社交网站的直接链接，相关网站面向 13 岁以上用户。\n- 指向互联网的直接链接，玩家可能因此离开游戏并浏览任意网页。\n- Rovio 产品及部分合作伙伴产品的广告。\n- 应用内购买选项。购买前请务必咨询付款人。"
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "localizedDescription": "• 修复了一些小问题，提升用户体验。",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Angry.Birds.Star.Wars.v1.5.12.ipa",
+          "version": "1.5.12",
+          "size": 58200000,
+          "date": "2018-05-25"
+        }
+      ],
+      "category": "Games",
+      "screenshotURLs": [
+        "https://img.ipa4fun.com/5d/50/b0/557137623-screenshot-1.webp",
+        "https://img.ipa4fun.com/5d/50/b0/557137623-screenshot-2.webp",
+        "https://img.ipa4fun.com/5d/50/b0/557137623-screenshot-3.webp",
+        "https://img.ipa4fun.com/5d/50/b0/557137623-screenshot-4.webp",
+        "https://img.ipa4fun.com/5d/50/b0/557137623-screenshot-5.webp"
+      ],
+      "size": 9,
+      "version": "1.5.12",
+      "bundleIdentifier": "com.rovio.angrybirdsstarwars",
+      "tintColor": "082448",
+      "versionDate": "2018-05-25",
+      "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Angry.Birds.Star.Wars.v1.5.12.ipa",
+      "subtitle": "已从 App Store 下架！",
+      "iconURL": "https://img.ipa4fun.com/56/fa/23/557138109-logo.webp",
+      "developerName": "Rovio",
+      "versionDescription": "• We addressed some minor issues in order to improve the user experience.",
+      "name": "愤怒的小鸟：星球大战",
+      "localizedDescription": "加入愤怒的小鸟，开启迄今为止最精彩的冒险！\n\n很久很久以前，在遥远的银河系……一群走投无路的反抗军小鸟挺身对抗银河系的威胁：邪恶帝国的猪兵！\n\n反抗军小鸟从秘密基地出击，首次战胜了邪恶的帝国猪。在战斗中，反抗军间谍成功窃取了帝国终极武器“猪星”的秘密计划，并正赶往反抗军基地交付计划。现在，他们需要你的帮助！\n\n加入愤怒的小鸟，在传奇的 Star Wars™ 宇宙中开启史诗冒险！运用原力、挥舞光剑，踏上星际旅程，从塔图因沙漠一路杀到猪星深处，击退猪兵——在那里，你将直面令人胆寒的猪人黑暗尊主达斯·维达！你能成为绝地大师，让银河系重获自由吗？\n\n拿起光剑，加入冒险吧！愿小鸟与你同在！\n\n数小时精彩游戏体验 - 探索 100 多个关卡，畅游塔图因和猪星等标志性地点。你能躲过帝国猪、激光炮塔、塔斯肯袭击者猪以及原力黑暗面的阻挠，拿到全部三颗星吗？\n\n全新玩法机制 - 使用光剑、爆能枪和绝地能力，横扫帝国猪！\n\n提升小鸟等级 - 不断游玩并提升小鸟等级，让它们变得更强！\n\n秘密与隐藏惊喜 - 你能解锁所有 R2-D2 和 C-3PO 奖励关卡吗？\n\n免费更新 - 这场史诗传奇才刚刚开始！\n\n强大的千年隼\n卡在棘手的关卡了？收集星星，召唤强大的千年隼发动毁灭性攻击。还有全新目标、成就和玩法等你体验！\n\n绝地之路\n年轻绝地的终极训练场。本篇章包含 40 个达戈巴挑战关卡，还有绝地大师尤达助阵！精通绝地之路，解锁终极光剑！可通过应用内购买获得，也可在每个关卡都拿到三颗星后解锁。\n\n在 Twitter 上关注 @angrybirds\n\n前往 angrybirds.com/starwars 观看视频、阅读漫画并提交粉丝作品\n\n在 facebook.com/angrybirds 点赞并与我们打个招呼！\n\n使用条款：https://www.rovio.com/terms-of-use\n隐私政策：https://www.rovio.com/privacy\n\n本应用可能需要联网，可能会产生相应的数据流量费用。\n\n\n致家长的重要提示\n\n本游戏可能包含：\n- 指向社交网站的直接链接，相关网站面向 13 岁以上用户。\n- 指向互联网的直接链接，玩家可能因此离开游戏并浏览任意网页。\n- Rovio 产品及部分合作伙伴产品的广告。\n- 应用内购买选项。购买前请务必咨询付款人。"
+    },
+    {
+      "beta": false,
+      "versions": [
+        {
+          "localizedDescription": "• 已将 Pokemon Go 更新至 v0.269.1",
+          "minOSVersion": "14.0",
+          "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Pokemon.Go.v0.269.1.+.SpooferPro.v0.148.ipa",
+          "version": "0.269.1",
+          "size": 118000000,
+          "date": "2023-05-11"
+        },
+        {
+          "localizedDescription": "• 已将 Pokemon Go 更新至 v0.265.0",
+          "downloadURL": "https://cdn.spooferpro.com/SpooferPro-0.265.0-0.137.ipa",
+          "version": "0.265.0",
+          "size": 115000000,
+          "date": "2023-04-04"
+        }
+      ],
+      "category": "Games",
+      "screenshotURLs": [
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/46/ac/07/46ac07d4-6c41-6206-edf7-cbc64a55d8ec/PGO_ASO-Screenshots-EG-01-S23_1242x2208__static_UA_EN_NV.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/11/60/aa/1160aa7c-0da2-0666-2844-2a46aa21af18/PGO_ASO-Screenshots-EG-02-WIN_1242x2208__static_UA_EN_NV.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/52/57/66/5257660d-f470-720e-9b0f-2f0bb67b6e0a/PGO_ASO-Screenshots-EG-03-RAID_1242x2208__static_UA_EN_NV.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f7/44/af/f744af54-b468-9342-77da-6f3c65387c8f/PGO_ASO-Screenshots-EG-04-CATCH_1242x2208__static_UA_EN_NV.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4b/46/17/4b461733-657b-4899-1409-036015b26a9c/PGO_ASO-Screenshots-EG-05-EVOLVE_1242x2208__static_UA_EN_NV.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7a/4b/5d/7a4b5d18-725d-467f-7435-4af16867006c/PGO_ASO-Screenshots-EG-06-DEFEAT_1242x2208__static_UA_EN_NV.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ef/5b/5d/ef5b5d96-3dab-dd84-43af-e36bcd9929ff/PGO_ASO-Screenshots-EG-07-COLLECT_1242x2208__static_UA_EN_NV.png/392x696bb.png"
+      ],
+      "size": 123629575,
+      "version": "0.269.1",
+      "bundleIdentifier": "com.nianticlabs.pokemongo",
+      "tintColor": "184f99",
+      "versionDate": "2023-05-11",
+      "downloadURL": "https://github.com/WuXu1/WuXu1.github.io/releases/download/Latest/Pokemon.Go.v0.269.1.+.SpooferPro.v0.148.ipa",
+      "subtitle": "已注入 SpooferPro 的 Pokemon Go",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1e/0d/a8/1e0da8c5-c56a-68ef-601f-33078883892c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "developerName": "SpooferPro Team",
+      "versionDescription": "• Updated Pokemon Go to v0.269.1",
+      "name": "Pokemon Go（含 SpooferPro）",
+      "localizedDescription": "适用于 POGO 的 SpooferPro - iOS GPS 位置修改工具\n\n使用我们这款插件中的工具，你可以更快升级，并在世界各地捕捉最棒的宝可梦。",
+      "appPermissions": {
+        "privacy": {
+          "NSLocationAlwaysUsageDescription": "Set your device’s location permissions to Always to collect Candy, hatch Eggs, and earn rewards—even when Pokémon GO isn’t open!",
+          "NSCalendarsUsageDescription": "In order to add Live Event calendar items",
+          "NSLocationWhenInUseUsageDescription": "Pokémon GO requires your mobile device’s location permissions to be enabled in order to find Pokémon and PokéStops near you.",
+          "NSMotionUsageDescription": "Pokémon GO requires your mobile device’s motion permissions to be enabled in order to let you know when new Pokémon are nearby.",
+          "NSPhotoLibraryAddUsageDescription": "In order to save pictures of encountered Pokémon",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "Set your device’s location permissions to Always to collect Candy, hatch Eggs, and earn rewards—even when Pokémon GO isn’t open!",
+          "NSPhotoLibraryUsageDescription": "In order to save pictures of encountered Pokémon",
+          "NSContactsUsageDescription": "Pokémon GO needs to access and upload your contacts to our servers to send game invites and friend requests to people in your address book.",
+          "NSHealthUpdateUsageDescription": "Pokémon GO needs your activity data to hatch Pokémon eggs, help your Pokémon find candies, and display total distance walked.",
+          "NSMicrophoneUsageDescription": "not used",
+          "NSUserTrackingUsageDescription": "If you enable this setting, your information can be used to deliver personalized ads to you regarding Pokémon GO exclusive offers, promotions, and events.",
+          "NSHealthShareUsageDescription": "Pokémon GO needs your activity data to hatch Pokémon eggs, help your Pokémon find candies, and display total distance walked.",
+          "NSCameraUsageDescription": "Enabling this setting allows you to use AR when catching Pokémon.",
+          "NSBluetoothAlwaysUsageDescription": "Allows pairing to devices including peripherals and consoles.",
+          "NSBluetoothPeripheralUsageDescription": "Allows for usage of the Pokémon GO Plus"
+        }
+      }
+    }
+  ],
+  "news": [
+    {
+      "title": "Cowabunga Updated!",
+      "identifier": "update-com.leemin.Cowabunga",
+      "caption": "Cowabunga updated to v10.3.2",
+      "date": "2026-10-20",
+      "tintColor": "0d6425",
+      "notify": false,
+      "appID": "com.leemin.Cowabunga",
+      "imageURL": "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png"
+    },
+    {
+      "title": "iTorrent Updated!",
+      "identifier": "update-ru.nonamedude.iTorrent",
+      "caption": "iTorrent updated to v2.2.0-1",
+      "date": "2026-10-20",
+      "tintColor": "b31c29",
+      "notify": false,
+      "appID": "ru.nonamedude.iTorrent",
+      "imageURL": "https://user-images.githubusercontent.com/9553519/80646366-3d271680-8a75-11ea-8b60-9c5edd4ffd60.png"
+    },
+    {
+      "title": "Dopamine Updated!",
+      "identifier": "update-com.opa334.Dopamine",
+      "caption": "Dopamine updated to v3.0.12",
+      "date": "2026-10-20",
+      "tintColor": "0d7d65",
+      "notify": false,
+      "appID": "com.opa334.Dopamine",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/67ffxsD.jpeg"
+    },
+    {
+      "tintColor": "21486b",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/WiLmov2.jpeg",
+      "identifier": "ppsspp-added",
+      "date": "2026-08-07",
+      "caption": "PPSSPP - the best and only PSP emulator for iOS - has been added to the source! Click here for more info",
+      "notify": false,
+      "appID": "org.ppsspp.ppsspp",
+      "title": "PPSSPP Added!"
+    },
+    {
+      "tintColor": "123047",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/pS8xh2f.jpeg",
+      "identifier": "clashofclans-updated",
+      "date": "2026-08-06",
+      "caption": "Modded Clash of Clans has been updated to the latest version, click here for more info",
+      "notify": false,
+      "appID": "com.atrasis.original",
+      "title": "Atrasis Updated!"
+    },
+    {
+      "tintColor": "0363a9",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/wtOgRBC.jpeg",
+      "identifier": "trollinstallerx-added",
+      "date": "2025-03-05",
+      "caption": "The Universal TrollStore Installer for iOS 14 - 17.0.0 beta 4 has been updated! Click here for more info",
+      "notify": true,
+      "appID": "com.Alfie.TrollInstallerX",
+      "title": "TrollInstallerX Updated!"
+    },
+    {
+      "tintColor": "9e3a47",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/ExAk9bo.png",
+      "identifier": "taurine-updated ",
+      "date": "2024-05-11",
+      "caption": "The Taurine Jailbreak has been updated, now supporting up to iOS 14.8.1! Click here for more info",
+      "notify": false,
+      "appID": "org.coolstar.taurine",
+      "title": "Taurine Updated!"
+    },
+    {
+      "tintColor": "134771",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/JlyS9ZK.jpeg",
+      "identifier": "clashroyale-updated",
+      "date": "2024-05-10",
+      "caption": "Modded Clash Royale has been updated to the latest version, click here for more info!",
+      "notify": true,
+      "appID": "com.supercell.scroll",
+      "title": "Null's Royale Updated!"
+    },
+    {
+      "tintColor": "b3b3b3",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/l0l2Uap.jpeg",
+      "identifier": "postbox-added",
+      "date": "2023-05-14",
+      "caption": "get the latest sideloading/jailbreak news with PostBox! Click here for more info",
+      "notify": false,
+      "appID": "com.simplycode.PostBox",
+      "title": "PostBox Added!"
+    },
+    {
+      "tintColor": "363634",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/8IpLrYC.jpeg",
+      "identifier": "emuthreeds-added",
+      "date": "2023-05-13",
+      "caption": "emuThreeDS - A Nintendo 3DS emulator for IOS - Has been added to the source! Click here for more info",
+      "notify": false,
+      "appID": "com.antique.emuThreeDS",
+      "title": "emuThreeDS Added!"
+    },
+    {
+      "tintColor": "184f99",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/1VmxdXs.jpeg",
+      "identifier": "pokemongo-updated",
+      "date": "2023-05-11",
+      "caption": "Pokemon Go has been updated to the latest version, click here for more info",
+      "notify": true,
+      "appID": "com.nianticlabs.pokemongo",
+      "title": "Pokemon Go (w/ SpooferPro) Updated!"
+    },
+    {
+      "tintColor": "8d2229",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/feGeBg8.jpeg",
+      "identifier": "scarlet-added",
+      "date": "2023-04-24",
+      "caption": "Scarlet, a popular 3rd party App Store, has been added to the source! Don't forget to add my source ;)",
+      "notify": false,
+      "appID": "com.DebianArch.ScarletPersonalXYZZZ",
+      "title": "Scarlet Added!"
+    },
+    {
+      "tintColor": "091323",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/gsvbM4C.jpeg",
+      "identifier": "abs-added",
+      "date": "2023-04-14",
+      "caption": "Relive your childhood with the nostalgic, Angry Birds Space game!",
+      "notify": false,
+      "appID": "com.rovio.AngryBirdsSpace",
+      "title": "Angry Birds Space Added!"
+    },
+    {
+      "tintColor": "080814",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/6sJllQr.jpeg",
+      "identifier": "absw-added",
+      "date": "2023-04-14",
+      "caption": "Relive your childhood with the nostalgic, Angry Birds Star Wars game!",
+      "notify": false,
+      "appID": "com.rovio.angrybirdsstarwars",
+      "title": "Angry Birds Star Wars Added!"
+    },
+    {
+      "tintColor": "9766a7",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/246tXNC.png",
+      "identifier": "odyssey-added",
+      "date": "2023-04-04",
+      "caption": "The Odyssey jailbreak tool has been added to the source! ",
+      "notify": false,
+      "appID": "org.coolstar.odyssey",
+      "title": "Odyssey Added!"
+    },
+    {
+      "tintColor": "515151",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/ai6QSbt.jpeg",
+      "identifier": "unc0ver-added",
+      "date": "2023-04-04",
+      "caption": "The unc0ver jailbreaking tool has been added to the source! ",
+      "notify": false,
+      "appID": "science.xnu.undecimus",
+      "title": "Unc0ver Added!"
+    },
+    {
+      "tintColor": "5865f2",
+      "imageURL": "https://imgur.com/A4d8bGv.png",
+      "url": "https://bit.ly/wuxuslibrary-discord",
+      "identifier": "discord-info",
+      "date": "2023-03-20",
+      "caption": "Click here join the server. A place to talk about sideloading, make requests, get support and give feedback!",
+      "notify": true,
+      "title": "Join the Discord!"
+    },
+    {
+      "tintColor": "356ead",
+      "imageURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/Nb9f2Zj.jpeg",
+      "identifier": "esign-updated",
+      "date": "2023-03-19",
+      "caption": "ESign has been updated to the latest version, click here for more info.",
+      "notify": true,
+      "appID": "p3.xyz.yyyue.esign",
+      "title": "ESign Updated!"
+    },
+    {
+      "title": "Welcome to WuXu's Library!",
+      "identifier": "welcome-message",
+      "tintColor": "fe0002",
+      "caption": "Welcome to WuXu's Library! This source contains all of your favourite emulators, games, jailbreaks, utilities, and more Updated Daily ;)",
+      "date": "2023-02-08",
+      "notify": true
+    }
+  ],
+  "name": "WuXu's Library",
+  "description": "欢迎来到 WuXu’s Library！\n\n本软件源汇集了你喜爱的模拟器、游戏、越狱工具、实用工具等！\n\n这个精心整理的 AltSource 收录了许多经过修改的应用。我会亲自将每个 deb/dylib（插件）注入其中，并确保一切正常运行，符合我的标准。\n\n本软件源每周更新 2 到 3 次，必要时会更频繁。我正在开发一个 Python 机器人来自动更新，目前已接近完成。\n\n如果你喜欢我的软件源，请帮忙宣传。它可以说是 QuarkSources 的升级版，我希望它能发展得一样大，甚至更大！\n\n如需提交请求、获取支持或与其他用户交流，请加入 Discord 服务器！https://discord.gg/nKXsSdbEDc\n\nWuXu’s Sources 官方网站：https://wuxu1.github.io/",
+  "featuredApps": [
+    "com.opa334.Dopamine",
+    "com.Alfie.TrollInstallerX",
+    "org.coolstar.taurine",
+    "com.supercell.magic",
+    "com.rovio.angrybirdsstarwars"
+  ],
+  "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.png",
+  "subtitle": "AltStore 上最新最全的 IPA 应用库。",
+  "website": "https://bit.ly/wuxus-sources"
+}
