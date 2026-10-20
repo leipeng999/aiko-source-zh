@@ -12,6 +12,8 @@
 
 ## Alan 中文源
 
+- Alan 兼容版（推荐）：`https://cdn.jsdelivr.net/gh/leipeng999/aiko-source-zh@main/alan_sidestore_zh.json`
+
 - Alan's Gigantic Repo（轻量版）：`https://raw.githubusercontent.com/leipeng999/aiko-source-zh/main/alan_zh.json`
 
 ## 上游源
